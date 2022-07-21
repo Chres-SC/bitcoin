@@ -1,9 +1,9 @@
-// Copyright (c) 2020-2021 The Revolt Core developers
+// Copyright (c) 2020-2021 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef REVOLT_INDEX_COINSTATSINDEX_H
-#define REVOLT_INDEX_COINSTATSINDEX_H
+#ifndef BITCOIN_INDEX_COINSTATSINDEX_H
+#define BITCOIN_INDEX_COINSTATSINDEX_H
 
 #include <chain.h>
 #include <crypto/muhash.h>
@@ -62,4 +62,4 @@ public:
 /// The global UTXO set hash object.
 extern std::unique_ptr<CoinStatsIndex> g_coin_stats_index;
 
-#endif // REVOLT_INDEX_COINSTATSINDEX_H
+#endif // BITCOIN_INDEX_COINSTATSINDEX_H
