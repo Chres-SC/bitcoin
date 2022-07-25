@@ -10,7 +10,7 @@ endif
 
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# bitcoin qt core #
+# revolt qt core #
 include Makefile.qt_locale.include
 
 QT_FORMS_UI = \
@@ -387,7 +387,7 @@ CLEANFILES += $(CLEAN_QT)
 bitcoin_qt_clean: FORCE
 	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_bitcoin_qt_OBJECTS) qt/bitcoin-qt$(EXEEXT) $(LIBBITCOINQT)
 
-bitcoin_qt : qt/bitcoin-qt$(EXEEXT)
+revolt_qt : qt/bitcoin-qt$(EXEEXT)
 
 APK_LIB_DIR = qt/android/libs/$(ANDROID_ARCH)
 QT_BASE_VERSION = $(lastword $(shell $(MOC) --version))
