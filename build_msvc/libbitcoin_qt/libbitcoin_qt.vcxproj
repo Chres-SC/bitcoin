@@ -13,7 +13,7 @@
     <ClCompile Include="..\..\src\qt\bantablemodel.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoin.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoinaddressvalidator.cpp" />
-    <ClCompile Include="..\..\src\qt\bitcoinamountfield.cpp" />
+    <ClCompile Include="..\..\src\qt\revoltamountfield.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoingui.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoinstrings.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoinunits.cpp" />
@@ -70,7 +70,7 @@
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bantablemodel.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoin.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoinaddressvalidator.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoinamountfield.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revoltamountfield.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoingui.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoinunits.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_clientmodel.cpp" />
@@ -142,7 +142,7 @@
   </ItemDefinitionGroup>
 
   <ItemGroup>
-    <QT_MOC Include="..\..\src\qt\bitcoinamountfield.cpp" />
+    <QT_MOC Include="..\..\src\qt\revoltamountfield.cpp" />
     <QT_MOC Include="..\..\src\qt\intro.cpp" />
     <QT_MOC Include="..\..\src\qt\overviewpage.cpp" />
     <QT_MOC Include="..\..\src\qt\rpcconsole.cpp" />

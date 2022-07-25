@@ -11,7 +11,7 @@
 class ArgsManager;
 
 /**
- * CBaseChainParams defines the base parameters (shared between bitcoin-cli and bitcoind)
+ * CBaseChainParams defines the base parameters (shared between revolt-cli and revoltd)
  * of a given instance of the REVOLT system.
  */
 class CBaseChainParams

@@ -19,13 +19,13 @@ if test "$PKG_CONFIG" = ""; then
   AC_MSG_ERROR([pkg-config not found])
 fi
 
-BITCOIN_DAEMON_NAME=bitcoind
+BITCOIN_DAEMON_NAME=revoltd
 BITCOIN_GUI_NAME=bitcoin-qt
-BITCOIN_CLI_NAME=bitcoin-cli
-BITCOIN_TX_NAME=bitcoin-tx
-BITCOIN_UTIL_NAME=bitcoin-util
-BITCOIN_CHAINSTATE_NAME=bitcoin-chainstate
-BITCOIN_WALLET_TOOL_NAME=bitcoin-wallet
+REVOLT_CLI_NAME=revolt-cli
+REVOLT_TX_NAME=revolt-tx
+BITCOIN_UTIL_NAME=revolt-util
+REVOLT_CHAINSTATE_NAME=revolt-chainstate
+REVOLT_WALLET_TOOL_NAME=revolt-wallet
 dnl Multi Process
 BITCOIN_MP_NODE_NAME=bitcoin-node
 BITCOIN_MP_GUI_NAME=bitcoin-gui
@@ -287,7 +287,7 @@ AC_ARG_WITH([mpgen],
 
 AC_ARG_ENABLE([multiprocess],
   [AS_HELP_STRING([--enable-multiprocess],
-  [build multiprocess bitcoin-node, bitcoin-wallet, and bitcoin-gui executables in addition to monolithic bitcoind and bitcoin-qt executables. Requires libmultiprocess library. Experimental (default is no)])],
+  [build multiprocess bitcoin-node, revolt-wallet, and bitcoin-gui executables in addition to monolithic revoltd and bitcoin-qt executables. Requires libmultiprocess library. Experimental (default is no)])],
   [enable_multiprocess=$enableval],
   [enable_multiprocess=no])
 
@@ -626,39 +626,39 @@ CORE_CPPFLAGS="$CORE_CPPFLAGS -DHAVE_BUILD_INFO"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build bitcoin-cli bitcoin-tx bitcoin-util bitcoin-wallet (default=yes)])],
+  [build revolt-cli revolt-tx revolt-util revolt-wallet (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
 AC_ARG_ENABLE([util-cli],
   [AS_HELP_STRING([--enable-util-cli],
-  [build bitcoin-cli])],
-  [build_bitcoin_cli=$enableval],
-  [build_bitcoin_cli=$build_bitcoin_utils])
+  [build revolt-cli])],
+  [build_revolt_cli=$enableval],
+  [build_revolt_cli=$build_bitcoin_utils])
 
 AC_ARG_ENABLE([util-tx],
   [AS_HELP_STRING([--enable-util-tx],
-  [build bitcoin-tx])],
-  [build_bitcoin_tx=$enableval],
-  [build_bitcoin_tx=$build_bitcoin_utils])
+  [build revolt-tx])],
+  [build_revolt_tx=$enableval],
+  [build_revolt_tx=$build_bitcoin_utils])
 
 AC_ARG_ENABLE([util-wallet],
   [AS_HELP_STRING([--enable-util-wallet],
-  [build bitcoin-wallet])],
-  [build_bitcoin_wallet=$enableval],
-  [build_bitcoin_wallet=$build_bitcoin_utils])
+  [build revolt-wallet])],
+  [build_revolt_wallet=$enableval],
+  [build_revolt_wallet=$build_bitcoin_utils])
 
 AC_ARG_ENABLE([util-util],
   [AS_HELP_STRING([--enable-util-util],
-  [build bitcoin-util])],
+  [build revolt-util])],
   [build_bitcoin_util=$enableval],
   [build_bitcoin_util=$build_bitcoin_utils])
 
 AC_ARG_ENABLE([experimental-util-chainstate],
   [AS_HELP_STRING([--enable-experimental-util-chainstate],
-  [build experimental bitcoin-chainstate executable (default=no)])],
-  [build_bitcoin_chainstate=$enableval],
-  [build_bitcoin_chainstate=no])
+  [build experimental revolt-chainstate executable (default=no)])],
+  [build_revolt_chainstate=$enableval],
+  [build_revolt_chainstate=no])
 
 AC_ARG_WITH([libs],
   [AS_HELP_STRING([--with-libs],
@@ -674,9 +674,9 @@ AC_ARG_WITH([experimental-kernel-lib],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build bitcoind daemon (default=yes)])],
-  [build_bitcoind=$withval],
-  [build_bitcoind=yes])
+  [build revoltd daemon (default=yes)])],
+  [build_revoltd=$withval],
+  [build_revoltd=yes])
 
 case $host in
   *mingw*)
@@ -996,7 +996,7 @@ AC_CHECK_DECLS([getifaddrs, freeifaddrs],[CHECK_SOCKET],,
     #include <ifaddrs.h>]
 )
 
-dnl These are used for daemonization in bitcoind
+dnl These are used for daemonization in revoltd
 AC_CHECK_DECLS([fork])
 AC_CHECK_DECLS([setsid])
 
@@ -1292,12 +1292,12 @@ dnl enable-fuzz should disable all other targets
 if test "$enable_fuzz" = "yes"; then
   AC_MSG_WARN([enable-fuzz will disable all other targets and force --enable-fuzz-binary=yes])
   build_bitcoin_utils=no
-  build_bitcoin_cli=no
-  build_bitcoin_tx=no
+  build_revolt_cli=no
+  build_revolt_tx=no
   build_bitcoin_util=no
-  build_bitcoin_chainstate=no
-  build_bitcoin_wallet=no
-  build_bitcoind=no
+  build_revolt_chainstate=no
+  build_revolt_wallet=no
+  build_revoltd=no
   build_bitcoin_libs=no
   bitcoin_enable_qt=no
   bitcoin_enable_qt_test=no
@@ -1396,7 +1396,7 @@ if test "$use_usdt" != "no"; then
 fi
 AM_CONDITIONAL([ENABLE_USDT_TRACEPOINTS], [test "$use_usdt" = "yes"])
 
-if test "$build_bitcoin_cli$build_bitcoin_tx$build_bitcoin_util$build_bitcoind$bitcoin_enable_qt$use_bench$use_tests" = "nonononononono"; then
+if test "$build_revolt_cli$build_revolt_tx$build_bitcoin_util$build_revoltd$bitcoin_enable_qt$use_bench$use_tests" = "nonononononono"; then
   use_upnp=no
   use_natpmp=no
   use_zmq=no
@@ -1444,7 +1444,7 @@ if test "$use_natpmp" != "no"; then
   CPPFLAGS="$TEMP_CPPFLAGS"
 fi
 
-if test "$build_bitcoin_wallet$build_bitcoin_cli$build_bitcoin_tx$build_bitcoind$bitcoin_enable_qt$use_tests$use_bench" = "nonononononono"; then
+if test "$build_revolt_wallet$build_revolt_cli$build_revolt_tx$build_revoltd$bitcoin_enable_qt$use_tests$use_bench" = "nonononononono"; then
   use_boost=no
 else
   use_boost=yes
@@ -1519,10 +1519,10 @@ fi
 AM_CONDITIONAL([ENABLE_EXTERNAL_SIGNER], [test "$use_external_signer" = "yes"])
 
 dnl Do not compile with syscall sandbox support when compiling under the sanitizers.
-dnl The sanitizers introduce use of syscalls that are not typically used in bitcoind
+dnl The sanitizers introduce use of syscalls that are not typically used in revoltd
 dnl (such as execve when the sanitizers execute llvm-symbolizer).
 if test "$use_sanitizers" != ""; then
-  AC_MSG_WARN([Specifying --with-sanitizers forces --without-seccomp since the sanitizers introduce use of syscalls not allowed by the bitcoind syscall sandbox (-sandbox=<mode>).])
+  AC_MSG_WARN([Specifying --with-sanitizers forces --without-seccomp since the sanitizers introduce use of syscalls not allowed by the revoltd syscall sandbox (-sandbox=<mode>).])
   seccomp_found=no
 fi
 if test "$seccomp_found" != "no"; then
@@ -1565,7 +1565,7 @@ fi
 dnl libevent check
 
 use_libevent=no
-if test "$build_bitcoin_cli$build_bitcoind$bitcoin_enable_qt$enable_fuzz_binary$use_tests$use_bench" != "nononononono"; then
+if test "$build_revolt_cli$build_revoltd$bitcoin_enable_qt$enable_fuzz_binary$use_tests$use_bench" != "nononononono"; then
   PKG_CHECK_MODULES([EVENT], [libevent >= 2.1.8], [use_libevent=yes], [AC_MSG_ERROR([libevent version 2.1.8 or greater not found.])])
   if test "$TARGET_OS" != "windows"; then
     PKG_CHECK_MODULES([EVENT_PTHREADS], [libevent_pthreads >= 2.1.8], [], [AC_MSG_ERROR([libevent_pthreads version 2.1.8 or greater not found.])])
@@ -1663,33 +1663,33 @@ if test "$build_multiprocess" != "no"; then
   AC_SUBST(MPGEN_PREFIX)
 fi
 
-AC_MSG_CHECKING([whether to build bitcoind])
-AM_CONDITIONAL([BUILD_BITCOIND], [test $build_bitcoind = "yes"])
-AC_MSG_RESULT($build_bitcoind)
+AC_MSG_CHECKING([whether to build revoltd])
+AM_CONDITIONAL([BUILD_REVOLTD], [test $build_revoltd = "yes"])
+AC_MSG_RESULT($build_revoltd)
 
-AC_MSG_CHECKING([whether to build bitcoin-cli])
-AM_CONDITIONAL([BUILD_BITCOIN_CLI], [test $build_bitcoin_cli = "yes"])
-AC_MSG_RESULT($build_bitcoin_cli)
+AC_MSG_CHECKING([whether to build revolt-cli])
+AM_CONDITIONAL([BUILD_REVOLT_CLI], [test $build_revolt_cli = "yes"])
+AC_MSG_RESULT($build_revolt_cli)
 
-AC_MSG_CHECKING([whether to build bitcoin-tx])
-AM_CONDITIONAL([BUILD_BITCOIN_TX], [test $build_bitcoin_tx = "yes"])
-AC_MSG_RESULT($build_bitcoin_tx)
+AC_MSG_CHECKING([whether to build revolt-tx])
+AM_CONDITIONAL([BUILD_REVOLT_TX], [test $build_revolt_tx = "yes"])
+AC_MSG_RESULT($build_revolt_tx)
 
-AC_MSG_CHECKING([whether to build bitcoin-wallet])
-AM_CONDITIONAL([BUILD_BITCOIN_WALLET], [test $build_bitcoin_wallet = "yes"])
-AC_MSG_RESULT($build_bitcoin_wallet)
+AC_MSG_CHECKING([whether to build revolt-wallet])
+AM_CONDITIONAL([BUILD_REVOLT_WALLET], [test $build_revolt_wallet = "yes"])
+AC_MSG_RESULT($build_revolt_wallet)
 
-AC_MSG_CHECKING([whether to build bitcoin-util])
+AC_MSG_CHECKING([whether to build revolt-util])
 AM_CONDITIONAL([BUILD_BITCOIN_UTIL], [test $build_bitcoin_util = "yes"])
 AC_MSG_RESULT($build_bitcoin_util)
 
-AC_MSG_CHECKING([whether to build experimental bitcoin-chainstate])
+AC_MSG_CHECKING([whether to build experimental revolt-chainstate])
 if test "$build_experimental_kernel_lib" = "no"; then
-AC_MSG_ERROR([experimental bitcoin-chainstate cannot be built without the experimental bitcoinkernel library. Use --with-experimental-kernel-lib]);
+AC_MSG_ERROR([experimental revolt-chainstate cannot be built without the experimental bitcoinkernel library. Use --with-experimental-kernel-lib]);
 else
-  AM_CONDITIONAL([BUILD_BITCOIN_CHAINSTATE], [test $build_bitcoin_chainstate = "yes"])
+  AM_CONDITIONAL([BUILD_REVOLT_CHAINSTATE], [test $build_revolt_chainstate = "yes"])
 fi
-AC_MSG_RESULT($build_bitcoin_chainstate)
+AC_MSG_RESULT($build_revolt_chainstate)
 
 AC_MSG_CHECKING([whether to build libraries])
 AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test $build_bitcoin_libs = "yes"])
@@ -1699,7 +1699,7 @@ if test "$build_bitcoin_libs" = "yes"; then
   AC_CONFIG_FILES([libbitcoinconsensus.pc:libbitcoinconsensus.pc.in])
 fi
 
-AM_CONDITIONAL([BUILD_BITCOIN_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_bitcoin_chainstate" = "yes" )])
+AM_CONDITIONAL([BUILD_BITCOIN_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_revolt_chainstate" = "yes" )])
 
 AC_MSG_RESULT($build_bitcoin_libs)
 
@@ -1852,7 +1852,7 @@ else
   AC_MSG_RESULT([no])
 fi
 
-if test "$build_bitcoin_wallet$build_bitcoin_cli$build_bitcoin_tx$build_bitcoin_libs$build_bitcoind$bitcoin_enable_qt$enable_fuzz_binary$use_bench$use_tests" = "nonononononononono"; then
+if test "$build_revolt_wallet$build_revolt_cli$build_revolt_tx$build_bitcoin_libs$build_revoltd$bitcoin_enable_qt$enable_fuzz_binary$use_bench$use_tests" = "nonononononononono"; then
   AC_MSG_ERROR([No targets! Please specify at least one of: --with-utils --with-libs --with-daemon --with-gui --enable-fuzz(-binary) --enable-bench or --enable-tests])
 fi
 
@@ -1907,11 +1907,11 @@ AC_SUBST(COPYRIGHT_HOLDERS_SUBSTITUTION, "_COPYRIGHT_HOLDERS_SUBSTITUTION")
 AC_SUBST(COPYRIGHT_HOLDERS_FINAL, "_COPYRIGHT_HOLDERS_FINAL")
 AC_SUBST(BITCOIN_DAEMON_NAME)
 AC_SUBST(BITCOIN_GUI_NAME)
-AC_SUBST(BITCOIN_CLI_NAME)
-AC_SUBST(BITCOIN_TX_NAME)
+AC_SUBST(REVOLT_CLI_NAME)
+AC_SUBST(REVOLT_TX_NAME)
 AC_SUBST(BITCOIN_UTIL_NAME)
-AC_SUBST(BITCOIN_CHAINSTATE_NAME)
-AC_SUBST(BITCOIN_WALLET_TOOL_NAME)
+AC_SUBST(REVOLT_CHAINSTATE_NAME)
+AC_SUBST(REVOLT_WALLET_TOOL_NAME)
 AC_SUBST(BITCOIN_MP_NODE_NAME)
 AC_SUBST(BITCOIN_MP_GUI_NAME)
 
@@ -2026,7 +2026,7 @@ echo "  with zmq        = $use_zmq"
 if test $enable_fuzz = "no"; then
     echo "  with test       = $use_tests"
 else
-    echo "  with test       = not building test_bitcoin because fuzzing is enabled"
+    echo "  with test       = not building test_revolt because fuzzing is enabled"
 fi
 echo "  with fuzz binary = $enable_fuzz_binary"
 echo "  with bench      = $use_bench"

@@ -8,7 +8,7 @@
 #include <interfaces/chain.h>
 #include <interfaces/node.h>
 #include <key_io.h>
-#include <qt/bitcoinamountfield.h>
+#include <qt/revoltamountfield.h>
 #include <qt/bitcoinunits.h>
 #include <qt/clientmodel.h>
 #include <qt/optionsmodel.h>
@@ -74,7 +74,7 @@ uint256 SendCoins(CWallet& wallet, SendCoinsDialog& sendCoinsDialog, const CTxDe
     QVBoxLayout* entries = sendCoinsDialog.findChild<QVBoxLayout*>("entries");
     SendCoinsEntry* entry = qobject_cast<SendCoinsEntry*>(entries->itemAt(0)->widget());
     entry->findChild<QValidatedLineEdit*>("payTo")->setText(QString::fromStdString(EncodeDestination(address)));
-    entry->findChild<BitcoinAmountField*>("payAmount")->setValue(amount);
+    entry->findChild<RevoltAmountField*>("payAmount")->setValue(amount);
     sendCoinsDialog.findChild<QFrame*>("frameFee")
         ->findChild<QFrame*>("frameFeeSelection")
         ->findChild<QCheckBox*>("optInRBF")
@@ -240,7 +240,7 @@ void TestGUI(interfaces::Node& node)
     labelInput->setText("TEST_LABEL_1");
 
     // Amount input
-    BitcoinAmountField* amountInput = receiveCoinsDialog.findChild<BitcoinAmountField*>("reqAmount");
+    RevoltAmountField* amountInput = receiveCoinsDialog.findChild<RevoltAmountField*>("reqAmount");
     amountInput->setValue(1);
 
     // Message input

@@ -1,10 +1,10 @@
 QT_TS = \
-  qt/locale/bitcoin_am.ts \
-  qt/locale/bitcoin_ar.ts \
-  qt/locale/bitcoin_az.ts \
-  qt/locale/bitcoin_be.ts \
-  qt/locale/bitcoin_bg.ts \
-  qt/locale/bitcoin_bn.ts \
+  qt/locale/revolt_am.ts \
+  qt/locale/revolt_ar.ts \
+  qt/locale/revolt_az.ts \
+  qt/locale/revolt_be.ts \
+  qt/locale/revolt_bg.ts \
+  qt/locale/revolt_bn.ts \
   qt/locale/bitcoin_bs.ts \
   qt/locale/bitcoin_ca.ts \
   qt/locale/bitcoin_cs.ts \

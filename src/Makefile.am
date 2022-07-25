@@ -28,7 +28,7 @@ BITCOIN_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(src
 LIBBITCOIN_NODE=libbitcoin_node.a
 LIBBITCOIN_COMMON=libbitcoin_common.a
 LIBBITCOIN_CONSENSUS=libbitcoin_consensus.a
-LIBBITCOIN_CLI=libbitcoin_cli.a
+LIBREVOLT_CLI=librevolt_cli.a
 LIBBITCOIN_UTIL=libbitcoin_util.a
 LIBBITCOIN_CRYPTO_BASE=crypto/libbitcoin_crypto_base.la
 LIBBITCOINQT=qt/libbitcoinqt.a
@@ -44,8 +44,8 @@ if BUILD_BITCOIN_KERNEL_LIB
 LIBBITCOINKERNEL=libbitcoinkernel.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libbitcoin_wallet.a
-LIBBITCOIN_WALLET_TOOL=libbitcoin_wallet_tool.a
+LIBREVOLT_WALLET=librevolt_wallet.a
+LIBREVOLT_WALLET_TOOL=librevolt_wallet_tool.a
 endif
 
 LIBBITCOIN_CRYPTO = $(LIBBITCOIN_CRYPTO_BASE)
@@ -77,40 +77,40 @@ EXTRA_LIBRARIES += \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_CONSENSUS) \
   $(LIBBITCOIN_NODE) \
-  $(LIBBITCOIN_CLI) \
+  $(LIBREVOLT_CLI) \
   $(LIBBITCOIN_IPC) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_WALLET_TOOL) \
+  $(LIBREVOLT_WALLET) \
+  $(LIBREVOLT_WALLET_TOOL) \
   $(LIBBITCOIN_ZMQ)
 
-if BUILD_BITCOIND
-  bin_PROGRAMS += bitcoind
+if BUILD_REVOLTD
+  bin_PROGRAMS += revoltd
 endif
 
 if BUILD_BITCOIN_NODE
   bin_PROGRAMS += bitcoin-node
 endif
 
-if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += bitcoin-cli
+if BUILD_REVOLT_CLI
+  bin_PROGRAMS += revolt-cli
 endif
 
-if BUILD_BITCOIN_TX
-  bin_PROGRAMS += bitcoin-tx
+if BUILD_REVOLT_TX
+  bin_PROGRAMS += revolt-tx
 endif
 
 if ENABLE_WALLET
-if BUILD_BITCOIN_WALLET
-  bin_PROGRAMS += bitcoin-wallet
+if BUILD_REVOLT_WALLET
+  bin_PROGRAMS += revolt-wallet
 endif
 endif
 
 if BUILD_BITCOIN_UTIL
-  bin_PROGRAMS += bitcoin-util
+  bin_PROGRAMS += revolt-util
 endif
 
-if BUILD_BITCOIN_CHAINSTATE
-  bin_PROGRAMS += bitcoin-chainstate
+if BUILD_REVOLT_CHAINSTATE
+  bin_PROGRAMS += revolt-chainstate
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -338,7 +338,7 @@ obj/build.h: FORCE
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 
-# server: shared between bitcoind and bitcoin-qt
+# server: shared between revoltd and bitcoin-qt
 # Contains code accessing mempool and chain state that is meant to be separated
 # from wallet and gui code (see node/README.md). Shared code should go in
 # libbitcoin_common or libbitcoin_util libraries, instead.
@@ -438,11 +438,11 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between bitcoind and bitcoin-qt, but only linked
+# wallet: shared between revoltd and bitcoin-qt, but only linked
 # when wallet enabled
-libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
-libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_wallet_a_SOURCES = \
+librevolt_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
+librevolt_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+librevolt_wallet_a_SOURCES = \
   wallet/coincontrol.cpp \
   wallet/context.cpp \
   wallet/crypter.cpp \
@@ -473,15 +473,15 @@ libbitcoin_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if USE_SQLITE
-libbitcoin_wallet_a_SOURCES += wallet/sqlite.cpp
+librevolt_wallet_a_SOURCES += wallet/sqlite.cpp
 endif
 if USE_BDB
-libbitcoin_wallet_a_SOURCES += wallet/bdb.cpp wallet/salvage.cpp
+librevolt_wallet_a_SOURCES += wallet/bdb.cpp wallet/salvage.cpp
 endif
 
-libbitcoin_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_wallet_tool_a_SOURCES = \
+librevolt_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+librevolt_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+librevolt_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
   $(BITCOIN_CORE_H)
 
@@ -603,7 +603,7 @@ libbitcoin_consensus_a_SOURCES = \
   util/strencodings.h \
   version.h
 
-# common: shared between bitcoind, and bitcoin-qt and non-server tools
+# common: shared between revoltd, and bitcoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -691,10 +691,10 @@ if USE_LIBEVENT
 libbitcoin_util_a_SOURCES += util/url.cpp
 endif
 
-# cli: shared between bitcoin-cli and bitcoin-qt
-libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_cli_a_SOURCES = \
+# cli: shared between revolt-cli and bitcoin-qt
+librevolt_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+librevolt_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+librevolt_cli_a_SOURCES = \
   compat/stdin.h \
   compat/stdin.cpp \
   rpc/client.cpp \
@@ -703,18 +703,18 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# bitcoind & bitcoin-node binaries #
-bitcoin_daemon_sources = bitcoind.cpp
+# revoltd & bitcoin-node binaries #
+bitcoin_daemon_sources = revoltd.cpp
 bitcoin_bin_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 bitcoin_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
 bitcoin_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoin_daemon_sources += bitcoind-res.rc
+bitcoin_daemon_sources += revoltd-res.rc
 endif
 
 bitcoin_bin_ldadd = \
-  $(LIBBITCOIN_WALLET) \
+  $(LIBREVOLT_WALLET) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBUNIVALUE) \
@@ -727,11 +727,11 @@ bitcoin_bin_ldadd = \
 
 bitcoin_bin_ldadd += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS)
 
-bitcoind_SOURCES = $(bitcoin_daemon_sources) init/bitcoind.cpp
-bitcoind_CPPFLAGS = $(bitcoin_bin_cppflags)
-bitcoind_CXXFLAGS = $(bitcoin_bin_cxxflags)
-bitcoind_LDFLAGS = $(bitcoin_bin_ldflags)
-bitcoind_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd)
+revoltd_SOURCES = $(bitcoin_daemon_sources) init/revoltd.cpp
+revoltd_CPPFLAGS = $(bitcoin_bin_cppflags)
+revoltd_CXXFLAGS = $(bitcoin_bin_cxxflags)
+revoltd_LDFLAGS = $(bitcoin_bin_ldflags)
+revoltd_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd)
 
 bitcoin_node_SOURCES = $(bitcoin_daemon_sources) init/bitcoin-node.cpp
 bitcoin_node_CPPFLAGS = $(bitcoin_bin_cppflags)
@@ -739,36 +739,36 @@ bitcoin_node_CXXFLAGS = $(bitcoin_bin_cxxflags)
 bitcoin_node_LDFLAGS = $(bitcoin_bin_ldflags)
 bitcoin_node_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
 
-# bitcoin-cli binary #
-bitcoin_cli_SOURCES = bitcoin-cli.cpp
-bitcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-bitcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# revolt-cli binary #
+revolt_cli_SOURCES = revolt-cli.cpp
+revolt_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+revolt_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+revolt_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoin_cli_SOURCES += bitcoin-cli-res.rc
+revolt_cli_SOURCES += revolt-cli-res.rc
 endif
 
-bitcoin_cli_LDADD = \
-  $(LIBBITCOIN_CLI) \
+revolt_cli_LDADD = \
+  $(LIBREVOLT_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-bitcoin_cli_LDADD += $(EVENT_LIBS)
+revolt_cli_LDADD += $(EVENT_LIBS)
 #
 
-# bitcoin-tx binary #
-bitcoin_tx_SOURCES = bitcoin-tx.cpp
-bitcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# revolt-tx binary #
+revolt_tx_SOURCES = revolt-tx.cpp
+revolt_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+revolt_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+revolt_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoin_tx_SOURCES += bitcoin-tx-res.rc
+revolt_tx_SOURCES += revolt-tx-res.rc
 endif
 
-bitcoin_tx_LDADD = \
+revolt_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -777,15 +777,15 @@ bitcoin_tx_LDADD = \
   $(LIBSECP256K1)
 #
 
-# bitcoin-wallet binary #
-bitcoin_wallet_SOURCES = bitcoin-wallet.cpp
-bitcoin_wallet_SOURCES += init/bitcoin-wallet.cpp
-bitcoin_wallet_CPPFLAGS = $(bitcoin_bin_cppflags)
-bitcoin_wallet_CXXFLAGS = $(bitcoin_bin_cxxflags)
-bitcoin_wallet_LDFLAGS = $(bitcoin_bin_ldflags)
-bitcoin_wallet_LDADD = \
-  $(LIBBITCOIN_WALLET_TOOL) \
-  $(LIBBITCOIN_WALLET) \
+# revolt-wallet binary #
+revolt_wallet_SOURCES = revolt-wallet.cpp
+revolt_wallet_SOURCES += init/revolt-wallet.cpp
+revolt_wallet_CPPFLAGS = $(bitcoin_bin_cppflags)
+revolt_wallet_CXXFLAGS = $(bitcoin_bin_cxxflags)
+revolt_wallet_LDFLAGS = $(bitcoin_bin_ldflags)
+revolt_wallet_LDADD = \
+  $(LIBREVOLT_WALLET_TOOL) \
+  $(LIBREVOLT_WALLET) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBUNIVALUE) \
@@ -796,18 +796,18 @@ bitcoin_wallet_LDADD = \
   $(SQLITE_LIBS)
 
 if TARGET_WINDOWS
-bitcoin_wallet_SOURCES += bitcoin-wallet-res.rc
+revolt_wallet_SOURCES += revolt-wallet-res.rc
 endif
 #
 
-# bitcoin-util binary #
-bitcoin_util_SOURCES = bitcoin-util.cpp
+# revolt-util binary #
+bitcoin_util_SOURCES = revolt-util.cpp
 bitcoin_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 bitcoin_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 bitcoin_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoin_util_SOURCES += bitcoin-util-res.rc
+bitcoin_util_SOURCES += revolt-util-res.rc
 endif
 
 bitcoin_util_LDADD = \
@@ -819,16 +819,16 @@ bitcoin_util_LDADD = \
   $(LIBSECP256K1)
 #
 
-# bitcoin-chainstate binary #
-bitcoin_chainstate_SOURCES = bitcoin-chainstate.cpp
-bitcoin_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcoin_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+# revolt-chainstate binary #
+revolt_chainstate_SOURCES = revolt-chainstate.cpp
+revolt_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+revolt_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 # $(LIBTOOL_APP_LDFLAGS) deliberately omitted here so that we can test linking
-# bitcoin-chainstate against libbitcoinkernel as a shared or static library by
+# revolt-chainstate against libbitcoinkernel as a shared or static library by
 # setting --{en,dis}able-shared.
-bitcoin_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS)
-bitcoin_chainstate_LDADD = $(LIBBITCOINKERNEL)
+revolt_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS)
+revolt_chainstate_LDADD = $(LIBBITCOINKERNEL)
 #
 
 # bitcoinkernel library #

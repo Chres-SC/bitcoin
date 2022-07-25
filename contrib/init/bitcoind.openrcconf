@@ -1,33 +1,33 @@
-# /etc/conf.d/bitcoind: config file for /etc/init.d/bitcoind
+# /etc/conf.d/revoltd: config file for /etc/init.d/revoltd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
+#REVOLTD_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/bitcoind"
+# What directory to write pidfile to?  (created and owned by $REVOLTD_USER)
+#REVOLTD_PIDDIR="/var/run/revoltd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bitcoind.pid"
+#REVOLTD_PIDFILE="${REVOLTD_PIDDIR}/revoltd.pid"
 
-# Where to write bitcoind data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/bitcoind"
+# Where to write revoltd data (be mindful that the blockchain is large)
+#REVOLTD_DATADIR="/var/lib/revoltd"
 
-# User and group to own bitcoind process
-#BITCOIND_USER="bitcoin"
-#BITCOIND_GROUP="bitcoin"
+# User and group to own revoltd process
+#REVOLTD_USER="bitcoin"
+#REVOLTD_GROUP="bitcoin"
 
-# Path to bitcoind executable
-#BITCOIND_BIN="/usr/bin/bitcoind"
+# Path to revoltd executable
+#REVOLTD_BIN="/usr/bin/revoltd"
 
-# Nice value to run bitcoind under
-#BITCOIND_NICE=0
+# Nice value to run revoltd under
+#REVOLTD_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-#BITCOIND_OPTS=""
+#REVOLTD_OPTS=""
 
-# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# The timeout in seconds OpenRC will wait for revoltd to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-BITCOIND_SIGTERM_TIMEOUT=600
+REVOLTD_SIGTERM_TIMEOUT=600

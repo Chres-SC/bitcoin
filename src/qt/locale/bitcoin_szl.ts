@@ -1024,7 +1024,7 @@
     </message>
     <message>
         <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Skupluj sie z necym Bitcoin bez SOCKS5 proxy.</translation>
+        <translation type="unfinished">Skupluj sie z necym Revolt bez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>

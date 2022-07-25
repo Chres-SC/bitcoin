@@ -170,7 +170,7 @@
         <item row="5" column="2">
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <item>
-           <widget class="BitcoinAmountField" name="reqAmount">
+           <widget class="RevoltAmountField" name="reqAmount">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -351,9 +351,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>BitcoinAmountField</class>
+   <class>RevoltAmountField</class>
    <extends>QLineEdit</extends>
-   <header>qt/bitcoinamountfield.h</header>
+   <header>qt/revoltamountfield.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

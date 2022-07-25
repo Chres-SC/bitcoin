@@ -397,8 +397,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Οι προγραμματιστές %s</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s κατεστραμμένο. Δοκιμάστε να το επισκευάσετε με το εργαλείο πορτοφολιού bitcoin-wallet, ή επαναφέρετε κάποιο αντίγραφο ασφαλείας.</translation>
+        <source>%s corrupt. Try using the wallet tool revolt-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s κατεστραμμένο. Δοκιμάστε να το επισκευάσετε με το εργαλείο πορτοφολιού revolt-wallet, ή επαναφέρετε κάποιο αντίγραφο ασφαλείας.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
@@ -425,8 +425,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Σφάλμα: Η καταγραφή του φορμά του αρχείου dump είναι εσφαλμένη. Ελήφθη: «%s», αναμενόταν: «φορμά».</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
-        <translation type="unfinished">Σφάλμα: Η έκδοση του αρχείου dump δεν υποστηρίζεται. Αυτή η έκδοση του bitcoin-wallet υποστηρίζει αρχεία dump μόνο της έκδοσης 1. Δόθηκε αρχείο dump έκδοσης %s.</translation>
+        <source>Error: Dumpfile version is not supported. This version of revolt-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <translation type="unfinished">Σφάλμα: Η έκδοση του αρχείου dump δεν υποστηρίζεται. Αυτή η έκδοση του revolt-wallet υποστηρίζει αρχεία dump μόνο της έκδοσης 1. Δόθηκε αρχείο dump έκδοσης %s.</translation>
     </message>
     <message>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>
