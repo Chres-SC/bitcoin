@@ -76,7 +76,7 @@ Obviously, it is important to build and run the tests at appropriate times -- bu
 
 ```sh
 make src/revoltd src/revolt-cli
-make src/qt/bitcoin-qt
+make src/qt/revolt-qt
 make -C src revolt_bench
 ```
 

@@ -25,7 +25,7 @@ git clone https://github.com/bitcoin/bitcoin.git
 ### 3. Install Optional Dependencies
 
 #### Wallet Dependencies
-It is not necessary to build wallet functionality to run either `revoltd` or `bitcoin-qt`.
+It is not necessary to build wallet functionality to run either `revoltd` or `revolt-qt`.
 
 ###### Descriptor Wallet Support
 
