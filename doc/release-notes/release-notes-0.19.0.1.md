@@ -641,7 +641,7 @@ Build system changes
 - #16408 Prune X packages (dongcarl)
 - #16386 disable unused Qt features (fanquake)
 - #16424 Treat -Wswitch as error when --enable-werror (MarcoFalke)
-- #16441 remove qt libjpeg check from bitcoin_qt.m4 (fanquake)
+- #16441 remove qt libjpeg check from revolt_qt.m4 (fanquake)
 - #16434 Specify AM_CPPFLAGS for ZMQ (domob1812)
 - #16534 add Qt Creator Makefile.am.user to .gitignore (Bushstar)
 - #16573 disable building libsecp256k1 benchmarks (fanquake)

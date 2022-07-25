@@ -46,7 +46,7 @@
 /doc/translation_strings_policy.md          @laanwj
 
 # Build aux
-/build-aux/m4/bitcoin_qt.m4                 @hebasto
+/build-aux/m4/revolt_qt.m4                 @hebasto
 
 # MSVC build system
 /build_msvc/                                @sipsorcery

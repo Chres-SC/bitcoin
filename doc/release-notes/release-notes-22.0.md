@@ -611,7 +611,7 @@ A detailed list of changes in this version follows. To keep the list to a manage
 - bitcoin/bitcoin#21495 build, qt: Fix static builds on macOS Big Sur (hebasto)
 - bitcoin/bitcoin#21497 Do not opt-in unused CoreWLAN stuff in depends for macOS (hebasto)
 - bitcoin/bitcoin#21543 Enable safe warnings for msvc builds (hebasto)
-- bitcoin/bitcoin#21565 Make `bitcoin_qt.m4` more generic (fanquake)
+- bitcoin/bitcoin#21565 Make `revolt_qt.m4` more generic (fanquake)
 - bitcoin/bitcoin#21610 remove -Wdeprecated-register from NOWARN flags (fanquake)
 - bitcoin/bitcoin#21613 enable -Wdocumentation (fanquake)
 - bitcoin/bitcoin#21629 Fix configuring when building depends with `NO_BDB=1` (fanquake)
