@@ -7,8 +7,8 @@
 | *libbitcoin_consensus*   | Stable, backwards-compatible consensus functionality used by *librevolt_node* and *librevolt_wallet* and also exposed as a [shared library](../shared-libraries.md). |
 | *libbitcoinconsensus*    | Shared library build of static *libbitcoin_consensus* library |
 | *libbitcoin_kernel*      | Consensus engine and support library used for validation by *librevolt_node* and also exposed as a [shared library](../shared-libraries.md). |
-| *libbitcoinqt*           | GUI functionality used by *bitcoin-qt* and *revolt gui* executables |
-| *libbitcoin_ipc*         | IPC functionality used by *revolt-node*, *revolt-wallet*, *revolt gui* executables to communicate when [`--enable-multiprocess`](multiprocess.md) is used. |
+| *libbitcoinqt*           | GUI functionality used by *bitcoin-qt* and *revolt-gui* executables |
+| *libbitcoin_ipc*         | IPC functionality used by *revolt-node*, *revolt-wallet*, *revolt-gui* executables to communicate when [`--enable-multiprocess`](multiprocess.md) is used. |
 | *librevolt_node*        | P2P and RPC server functionality used by *revoltd* and *bitcoin-qt* executables. |
 | *libbitcoin_util*        | Home for common functionality shared by different executables and libraries. Similar to *libbitcoin_common*, but lower-level (see [Dependencies](#dependencies)). |
 | *librevolt_wallet*      | Wallet functionality used by *revoltd* and *revolt-wallet* executables. |

@@ -5,7 +5,7 @@
 bin_PROGRAMS += qt/bitcoin-qt
 
 if BUILD_REVOLT_GUI
-  bin_PROGRAMS += revolt gui
+  bin_PROGRAMS += revolt-gui
 endif
 
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
@@ -315,7 +315,7 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 $(QT_MOC): $(QT_FORMS_H)
 $(qt_libbitcoinqt_a_OBJECTS) $(qt_bitcoin_qt_OBJECTS) $(revolt_gui_OBJECTS) : | $(QT_MOC)
 
-# bitcoin-qt and revolt gui binaries #
+# bitcoin-qt and revolt-gui binaries #
 bitcoin_qt_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QR_CFLAGS)
 bitcoin_qt_cxxflags = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
@@ -346,7 +346,7 @@ qt_bitcoin_qt_LIBTOOLFLAGS = $(bitcoin_qt_libtoolflags)
 
 revolt_gui_CPPFLAGS = $(bitcoin_qt_cppflags)
 revolt_gui_CXXFLAGS = $(bitcoin_qt_cxxflags)
-revolt_gui_SOURCES = $(bitcoin_qt_sources) init/revolt gui.cpp
+revolt_gui_SOURCES = $(bitcoin_qt_sources) init/revolt-gui.cpp
 revolt_gui_LDADD = $(bitcoin_qt_ldadd) $(LIBBITCOIN_IPC) $(LIBBITCOIN_UTIL) $(LIBMULTIPROCESS_LIBS)
 revolt_gui_LDFLAGS = $(bitcoin_qt_ldflags)
 revolt_gui_LIBTOOLFLAGS = $(bitcoin_qt_libtoolflags)

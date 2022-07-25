@@ -5,7 +5,7 @@
 src/bitcoin
 src/revoltd
 src/revolt-cli
-src/revolt gui
+src/revolt-gui
 src/revolt-node
 src/revolt-tx
 src/revolt-util

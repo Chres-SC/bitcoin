@@ -16,7 +16,7 @@
 
 namespace init {
 namespace {
-const char* EXE_NAME = "revolt gui";
+const char* EXE_NAME = "revolt-gui";
 
 class RevoltGuiInit : public interfaces::Init
 {
