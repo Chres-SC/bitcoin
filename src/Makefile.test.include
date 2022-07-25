@@ -7,11 +7,11 @@ noinst_PROGRAMS += test/fuzz/fuzz
 endif
 
 if ENABLE_TESTS
-bin_PROGRAMS += test/test_bitcoin
+bin_PROGRAMS += test/test_revolt
 endif
 
 TEST_SRCDIR = test
-TEST_BINARY=test/test_bitcoin$(EXEEXT)
+TEST_BINARY=test/test_revolt$(EXEEXT)
 FUZZ_BINARY=test/fuzz/fuzz$(EXEEXT)
 
 JSON_TEST_FILES = \
@@ -40,10 +40,10 @@ FUZZ_SUITE_LD_COMMON = \
  $(LIBTEST_FUZZ) \
  $(LIBREVOLT_NODE) \
  $(LIBREVOLT_WALLET) \
- $(LIBBITCOIN_COMMON) \
- $(LIBBITCOIN_UTIL) \
+ $(LIBREVOLT_COMMON) \
+ $(LIBREVOLT_UTIL) \
  $(LIBBITCOIN_CONSENSUS) \
- $(LIBBITCOIN_CRYPTO) \
+ $(LIBREVOLT_CRYPTO) \
  $(LIBREVOLT_CLI) \
  $(LIBUNIVALUE) \
  $(LIBLEVELDB) \
@@ -61,7 +61,7 @@ if USE_NATPMP
 FUZZ_SUITE_LD_COMMON += $(NATPMP_LIBS)
 endif
 
-# test_bitcoin binary #
+# test_revolt binary #
 REVOLT_TESTS =\
   test/addrman_tests.cpp \
   test/allocator_tests.cpp \
@@ -196,24 +196,24 @@ REVOLT_TEST_SUITE += \
   wallet/test/init_test_fixture.h
 endif # ENABLE_WALLET
 
-test_test_bitcoin_SOURCES = $(REVOLT_TEST_SUITE) $(REVOLT_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-test_test_bitcoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(TESTDEFS) $(EVENT_CFLAGS)
-test_test_bitcoin_LDADD = $(LIBTEST_UTIL)
+test_test_revolt_SOURCES = $(REVOLT_TEST_SUITE) $(REVOLT_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+test_test_revolt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(TESTDEFS) $(EVENT_CFLAGS)
+test_test_revolt_LDADD = $(LIBTEST_UTIL)
 if ENABLE_WALLET
-test_test_bitcoin_LDADD += $(LIBREVOLT_WALLET)
-test_test_bitcoin_CPPFLAGS += $(BDB_CPPFLAGS)
+test_test_revolt_LDADD += $(LIBREVOLT_WALLET)
+test_test_revolt_CPPFLAGS += $(BDB_CPPFLAGS)
 endif
 
-test_test_bitcoin_LDADD += $(LIBREVOLT_NODE) $(LIBREVOLT_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
+test_test_revolt_LDADD += $(LIBREVOLT_NODE) $(LIBREVOLT_CLI) $(LIBREVOLT_COMMON) $(LIBREVOLT_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBREVOLT_CRYPTO) $(LIBUNIVALUE) \
   $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1) $(EVENT_LIBS) $(EVENT_PTHREADS_LIBS) $(MINISKETCH_LIBS)
-test_test_bitcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+test_test_revolt_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
-test_test_bitcoin_LDADD += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(SQLITE_LIBS)
-test_test_bitcoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS) -static
+test_test_revolt_LDADD += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(SQLITE_LIBS)
+test_test_revolt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS) -static
 
 if ENABLE_ZMQ
-test_test_bitcoin_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-FUZZ_SUITE_LD_COMMON += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+test_test_revolt_LDADD += $(LIBREVOLT_ZMQ) $(ZMQ_LIBS)
+FUZZ_SUITE_LD_COMMON += $(LIBREVOLT_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_FUZZ_BINARY
@@ -332,7 +332,7 @@ test_fuzz_fuzz_SOURCES = \
  test/fuzz/versionbits.cpp
 endif # ENABLE_FUZZ_BINARY
 
-nodist_test_test_bitcoin_SOURCES = $(GENERATED_TEST_FILES)
+nodist_test_test_revolt_SOURCES = $(GENERATED_TEST_FILES)
 
 $(REVOLT_TESTS): $(GENERATED_TEST_FILES)
 
@@ -354,7 +354,7 @@ revolt_test_check: $(TEST_BINARY) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
 revolt_test_clean : FORCE
-	rm -f $(CLEAN_REVOLT_TEST) $(test_test_bitcoin_OBJECTS) $(TEST_BINARY)
+	rm -f $(CLEAN_REVOLT_TEST) $(test_test_revolt_OBJECTS) $(TEST_BINARY)
 
 check-local: $(REVOLT_TESTS:.cpp=.cpp.test)
 if BUILD_REVOLT_TX
@@ -366,7 +366,7 @@ endif
 if TARGET_WINDOWS
 else
 if ENABLE_BENCH
-	@echo "Running bench/bench_bitcoin (one iteration sanity check)..."
+	@echo "Running bench/revolt_bitcoin (one iteration sanity check)..."
 	$(BENCH_BINARY) --sanity-check > /dev/null
 endif
 endif

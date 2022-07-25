@@ -65,7 +65,7 @@ def cli_get_info_string_to_dict(cli_get_info_string):
     return cli_get_info
 
 
-class TestBitcoinCli(BitcoinTestFramework):
+class TestRevoltCli(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -323,4 +323,4 @@ class TestBitcoinCli(BitcoinTestFramework):
 
 
 if __name__ == '__main__':
-    TestBitcoinCli().main()
+    TestRevoltCli().main()

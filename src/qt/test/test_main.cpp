@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/revolt-config.h>
 #endif
 
 #include <interfaces/init.h>
@@ -84,7 +84,7 @@ int main(int argc, char* argv[])
     // Don't remove this, it's needed to access
     // QApplication:: and QCoreApplication:: in the tests
     BitcoinApplication app;
-    app.setApplicationName("Bitcoin-Qt-test");
+    app.setApplicationName("Revolt-Qt-test");
     app.createNode(*init);
 
     int num_test_failures{0};

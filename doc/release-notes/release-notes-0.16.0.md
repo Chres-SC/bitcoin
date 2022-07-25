@@ -18,8 +18,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `revoltd`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
+or `revoltd`/`revolt-qt` (on Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database will be converted to a
 new format, which will take anywhere from a few minutes to half an hour,
@@ -198,7 +198,7 @@ Other changed command-line options
 Testing changes
 ----------------
 - The default regtest JSON-RPC port has been changed to 18443 to avoid conflict with testnet's default of 18332.
-- Segwit is now always active in regtest mode by default. Thus, if you upgrade a regtest node you will need to either -reindex or use the old rules by adding `vbparams=segwit:0:999999999999` to your regtest bitcoin.conf. Failure to do this will result in a CheckBlockIndex() assertion failure that will look like: Assertion `(pindexFirstNeverProcessed != nullptr) == (pindex->nChainTx == 0)' failed.
+- Segwit is now always active in regtest mode by default. Thus, if you upgrade a regtest node you will need to either -reindex or use the old rules by adding `vbparams=segwit:0:999999999999` to your regtest revolt.conf. Failure to do this will result in a CheckBlockIndex() assertion failure that will look like: Assertion `(pindexFirstNeverProcessed != nullptr) == (pindex->nChainTx == 0)' failed.
 
 0.16.0 change log
 ------------------
@@ -535,7 +535,7 @@ Testing changes
 - #10781 `60dd9cc` Python cleanups (practicalswift)
 - #10701 `50fae68` Remove the virtual specifier for functions with the override specifier (practicalswift)
 - #11164 `38a54a5` Fix boost headers included as user instead of system headers (danra)
-- #11143 `3aa60b7` Fix include path for bitcoin-config.h (danra)
+- #11143 `3aa60b7` Fix include path for revolt-config.h (danra)
 - #8330 `59e1789` Structure Packing Optimizations in C{,Mutable}Transaction (JeremyRubin)
 - #10845 `39ae413` Remove unreachable code (practicalswift)
 - #11238 `6acdb1f` Add assertions before potential null deferences (MeshCollider)

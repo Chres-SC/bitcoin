@@ -1,8 +1,8 @@
 # Multiprocess Bitcoin
 
-On unix systems, the `--enable-multiprocess` build option can be passed to `./configure` to build new `revolt-node`, `revolt-wallet`, and `revolt-gui` executables alongside existing `revoltd` and `bitcoin-qt` executables.
+On unix systems, the `--enable-multiprocess` build option can be passed to `./configure` to build new `revolt-node`, `revolt-wallet`, and `revolt-gui` executables alongside existing `revoltd` and `revolt-qt` executables.
 
-`revolt-node` is a drop-in replacement for `revoltd`, and `revolt-gui` is a drop-in replacement for `bitcoin-qt`, and there are no differences in use or external behavior between the new and old executables. But internally (after [#10102](https://github.com/bitcoin/bitcoin/pull/10102)), `revolt-gui` will spawn a `revolt-node` process to run P2P and RPC code, communicating with it across a socket pair, and `revolt-node` will spawn `revolt-wallet` to run wallet code, also communicating over a socket pair. This will let node, wallet, and GUI code run in separate address spaces for better isolation, and allow future improvements like being able to start and stop components independently on different machines and environments.
+`revolt-node` is a drop-in replacement for `revoltd`, and `revolt-gui` is a drop-in replacement for `revolt-qt`, and there are no differences in use or external behavior between the new and old executables. But internally (after [#10102](https://github.com/bitcoin/bitcoin/pull/10102)), `revolt-gui` will spawn a `revolt-node` process to run P2P and RPC code, communicating with it across a socket pair, and `revolt-node` will spawn `revolt-wallet` to run wallet code, also communicating over a socket pair. This will let node, wallet, and GUI code run in separate address spaces for better isolation, and allow future improvements like being able to start and stop components independently on different machines and environments.
 
 ## Next steps
 

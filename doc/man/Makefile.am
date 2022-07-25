@@ -5,7 +5,7 @@ if BUILD_REVOLTD
 endif
 
 if ENABLE_QT
-  dist_man1_MANS+=bitcoin-qt.1
+  dist_man1_MANS+=revolt-qt.1
 endif
 
 if BUILD_REVOLT_CLI

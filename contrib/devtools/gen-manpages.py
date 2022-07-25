@@ -13,7 +13,7 @@ BINARIES = [
 'src/revolt-tx',
 'src/revolt-wallet',
 'src/revolt-util',
-'src/qt/bitcoin-qt',
+'src/qt/revolt-qt',
 ]
 
 # Paths to external utilities.

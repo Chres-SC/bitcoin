@@ -18,8 +18,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the 
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `revoltd`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
+or `revoltd`/`revolt-qt` (on Linux).
 
 The first time you run version 0.15.0, your chainstate database will be converted to a
 new format, which will take anywhere from a few minutes to half an hour,
@@ -146,7 +146,7 @@ Bitcoin Core now supports loading multiple, separate wallets (See [PR 8694](http
 
 Multi-wallet is enabled by using more than one `-wallet` argument when starting Bitcoin, either on the command line or in the Bitcoin config file.
 
-**In Bitcoin-Qt, only the first wallet will be displayed and accessible for creating and signing transactions.** GUI selectable multiple wallets will be supported in a future version. However, even in 0.15 other loaded wallets will remain synchronized to the node's current tip in the background. This can be useful if running a pruned node, since loading a wallet where the most recent sync is beyond the pruned height results in having to download and revalidate the whole blockchain. Continuing to synchronize all wallets in the background avoids this problem.
+**In Revolt-Qt, only the first wallet will be displayed and accessible for creating and signing transactions.** GUI selectable multiple wallets will be supported in a future version. However, even in 0.15 other loaded wallets will remain synchronized to the node's current tip in the background. This can be useful if running a pruned node, since loading a wallet where the most recent sync is beyond the pruned height results in having to download and revalidate the whole blockchain. Continuing to synchronize all wallets in the background avoids this problem.
 
 Bitcoin Core 0.15.0 contains the following changes to the RPC interface and `revolt-cli` for multi-wallet:
 
@@ -450,7 +450,7 @@ Low-level RPC changes
 - #10136 `81da4c7` build: Disable Wshadow warning (laanwj)
 - #10166 `64962ae` Ignore Doxyfile generated from Doxyfile.in template (paveljanik)
 - #10239 `0416ea9` Make Boost use std::atomic internally (sipa)
-- #10228 `27faa6c` build: regenerate bitcoin-config.h as necessary (theuni)
+- #10228 `27faa6c` build: regenerate revolt-config.h as necessary (theuni)
 - #10273 `8979f45` [scripts] Minor improvements to `macdeployqtplus` script (chrisgavin)
 - #10325 `a26280b` 0.15.0 Depends Updates (fanquake)
 - #10328 `79aeff6` Update contrib/debian to latest Ubuntu PPA upload (TheBlueMatt)
@@ -771,7 +771,7 @@ Low-level RPC changes
 - #10837 `8bc6d1f` Fix resource leak on error in GetDevURandom (corebob)
 - #10832 `89bb036` init: Factor out AppInitLockDataDirectory and fix startup core dump issue (laanwj)
 - #10914 `b995a37` Add missing lock in CScheduler::AreThreadsServicingQueue() (TheBlueMatt)
-- #10958 `659c096` Update to latest Bitcoin patches for LevelDB (sipa)
+- #10958 `659c096` Update to latest Revolt patches for LevelDB (sipa)
 - #10919 `c1c671f` Fix more init bugs (TheBlueMatt)
 
 Credits

@@ -17,8 +17,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
-revoltd/bitcoin-qt (on Linux).
+installer (on Windows) or just copy over /Applications/Revolt-Qt (on Mac) or
+revoltd/revolt-qt (on Linux).
 
 Downgrading warning
 ---------------------
@@ -229,7 +229,7 @@ critical to Bitcoin's consensus available to other applications, e.g. to languag
 bindings such as [python-bitcoinlib](https://pypi.python.org/pypi/python-bitcoinlib) or
 alternative node implementations.
 
-This library is called `libbitcoinconsensus.so` (or, `.dll` for Windows).
+This library is called `librevoltconsensus.so` (or, `.dll` for Windows).
 Its interface is defined in the C header [bitcoinconsensus.h](https://github.com/bitcoin/bitcoin/blob/0.10/src/script/bitcoinconsensus.h).
 
 In its initial version the API includes two functions:
@@ -498,7 +498,7 @@ Build system:
 - `af0bd5e` osx: fix signing to make Gatekeeper happy (again)
 - `a7d1f03` build: fix dynamic boost check when --with-boost= is used
 - `d5fd094` build: fix qt test build when libprotobuf is in a non-standard path
-- `2cf5f16` Add libbitcoinconsensus library
+- `2cf5f16` Add librevoltconsensus library
 - `914868a` build: add a deterministic dmg signer 
 - `2d375fe` depends: bump openssl to 1.0.1k
 - `b7a4ecc` Build: Only check for boost when building code that requires it
@@ -539,7 +539,7 @@ GUI:
 - `7007402` Implement SI-style (thin space) thoudands separator
 - `91cce17` Use fixed-point arithmetic in amount spinbox
 - `bdba2dd` Remove an obscure option no-one cares about
-- `bd0aa10` Replace the temporary file hack currently used to change Bitcoin-Qt's dock icon (OS X) with a buffer-based solution
+- `bd0aa10` Replace the temporary file hack currently used to change Revolt-Qt's dock icon (OS X) with a buffer-based solution
 - `94e1b9e` Re-work overviewpage UI
 - `8bfdc9a` Better looking trayicon
 - `b197bf3` disable tray interactions when client model set to 0
