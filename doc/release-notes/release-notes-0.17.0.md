@@ -184,10 +184,10 @@ Here are the changes to RPC methods:
 | `listtransactions`     | The `account` named parameter has been renamed to `dummy`. If provided, the `dummy` parameter must be set to the string `*`, unless running with the `-deprecatedrpc=accounts` argument (in which case functionality is unchanged). |
 | `getbalance`           | `account`, `minconf` and `include_watchonly` parameters are deprecated, and can only be used if running with '-deprecatedrpc=accounts' |
 
-BIP 174 Partially Signed Bitcoin Transactions support
+BIP 174 Partially Signed Revolt Transactions support
 -----------------------------------------------------
 
-[BIP 174 PSBT](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) is an interchange format for Bitcoin transactions that are not fully signed
+[BIP 174 PSBT](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) is an interchange format for Revolt Transactions that are not fully signed
 yet, together with relevant metadata to help entities work towards signing it.
 It is intended to simplify workflows where multiple parties need to cooperate to
 produce a transaction. Examples include hardware wallets, multisig setups, and
@@ -195,7 +195,7 @@ produce a transaction. Examples include hardware wallets, multisig setups, and
 
 ### Overall workflow
 
-Overall, the construction of a fully signed Bitcoin transaction goes through the
+Overall, the construction of a fully signed Revolt Transaction goes through the
 following steps:
 
 - A **Creator** proposes a particular transaction to be created. He constructs
@@ -210,7 +210,7 @@ following steps:
   partial signature for the inputs for which they have relevant key(s).
 - A **Finalizer** is run for each input to convert the partial signatures and
   possibly script information into a final `scriptSig` and/or `scriptWitness`.
-- An **Extractor** produces a valid Bitcoin transaction (in network format)
+- An **Extractor** produces a valid Revolt Transaction (in network format)
   from a PSBT for which all inputs are finalized.
 
 Generally, each of the above (excluding Creator and Extractor) will simply
@@ -587,7 +587,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13043 `6e249e4` OptionsDialog: add prune setting (Sjors)
 - #13506 `6579d80` load wallet in UI after possible init aborts (jonasschnelli)
 - #13458 `dc53f7f` Drop qt4 support (laanwj)
-- #13528 `b877c39` Move BitcoinGUI initializers to class, fix initializer order warning (laanwj)
+- #13528 `b877c39` Move RevoltGuI initializers to class, fix initializer order warning (laanwj)
 - #13536 `baf3a3a` coincontrol: Remove unused qt4 workaround (MarcoFalke)
 - #13537 `10ffca7` Peer table: Visualize inbound/outbound state for every row (wodry)
 - #13791 `2c14c1f` Reject dialogs if key escape is pressed (promag)

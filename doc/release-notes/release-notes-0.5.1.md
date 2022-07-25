@@ -35,7 +35,7 @@ if one of the dns seed machines is down.
 Tooltips on the transaction list view were rendering incorrectly (as black boxes
 or with a transparent background).
 
-Prevent a denial-of-service attack involving flooding a bitcoin node with
+Prevent a denial-of-service attack involving flooding a revolt node with
 orphan blocks.
 
 The wallet passphrase dialog now warns you if the caps lock key was pressed.

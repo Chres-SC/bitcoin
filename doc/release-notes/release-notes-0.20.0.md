@@ -213,7 +213,7 @@ GUI changes
 
 - For watch-only wallets, creating a new transaction in the Send screen
   or fee bumping an existing transaction in the Transactions screen will
-  automatically copy a Partially-Signed Bitcoin Transaction (PSBT) to
+  automatically copy a Partially-Signed Revolt Transaction (PSBT) to
   the system clipboard.  This can then be pasted into an external
   program such as [HWI](https://github.com/bitcoin-core/HWI) for
   signing.  Future versions of Bitcoin Core should support a GUI option

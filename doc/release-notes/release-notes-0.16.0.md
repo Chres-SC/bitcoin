@@ -94,7 +94,7 @@ use the `replaceable` argument for individual transactions.
 
 Bitcoin Core now has more flexibility in where the wallets directory can be
 located. Previously wallet database files were stored at the top level of the
-bitcoin data directory. The behavior is now:
+revolt data directory. The behavior is now:
 
 - For new installations (where the data directory doesn't already exist),
   wallets will now be stored in a new `wallets/` subdirectory inside the data

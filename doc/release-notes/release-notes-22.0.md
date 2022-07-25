@@ -95,7 +95,7 @@ New and Updated RPCs
   of `decodescript` these fields are top-level attributes, and included again as attributes
   of the `scriptPubKey` object. (#20286)
 
-- When creating a hex-encoded bitcoin transaction using the `revolt-tx` utility
+- When creating a hex-encoded revolt transaction using the `revolt-tx` utility
   with the `-json` option set, the following fields: `addresses`, `reqSigs` are no longer
   returned in the tx output of the response. (#20286)
 
@@ -524,7 +524,7 @@ A detailed list of changes in this version follows. To keep the list to a manage
 - bitcoin-core/gui#375 Emit dataChanged signal to dynamically re-sort Peers table (hebasto)
 - bitcoin-core/gui#393 Fix regression in "Encrypt Wallet" menu item (hebasto)
 - bitcoin-core/gui#396 Ensure external signer option remains disabled without signers (achow101)
-- bitcoin-core/gui#406 Handle new added plurals in `bitcoin_en.ts` (hebasto)
+- bitcoin-core/gui#406 Handle new added plurals in `revolt_en.ts` (hebasto)
 
 ### Build system
 - bitcoin/bitcoin#17227 Add Android packaging support (icota)
@@ -555,7 +555,7 @@ A detailed list of changes in this version follows. To keep the list to a manage
 - bitcoin/bitcoin#20471 Use C++17 in depends (fanquake)
 - bitcoin/bitcoin#20496 Drop unneeded macOS framework dependencies (hebasto)
 - bitcoin/bitcoin#20520 Do not force Precompiled Headers (PCH) for building Qt on Linux (hebasto)
-- bitcoin/bitcoin#20549 Support make src/bitcoin-node and src/bitcoin-gui (promag)
+- bitcoin/bitcoin#20549 Support make src/revolt-node and src/revolt-gui (promag)
 - bitcoin/bitcoin#20565 Ensure PIC build for bdb on Android (BlockMechanic)
 - bitcoin/bitcoin#20594 Fix getauxval calls in randomenv.cpp (jonasschnelli)
 - bitcoin/bitcoin#20603 Update crc32c subtree (MarcoFalke)

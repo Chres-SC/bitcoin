@@ -254,7 +254,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>RevoltGuI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;አጠቃላይ እይታ</translation>
@@ -363,7 +363,7 @@
         <translation type="unfinished">እሳድግ</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Revolt network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

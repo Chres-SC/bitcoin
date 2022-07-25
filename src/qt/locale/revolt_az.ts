@@ -252,7 +252,7 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>RevoltGuI</name>
     <message>
         <source>&amp;Settings</source>
         <translation type="unfinished">&amp;Tənzimləmələr</translation>
@@ -281,7 +281,7 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
         <translation type="unfinished">Bir pulqabı aç</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Revolt network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

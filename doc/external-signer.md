@@ -53,7 +53,7 @@ Replace `<address>` with the result of `getnewaddress`.
 
 ### Spending
 
-Under the hood this uses a [Partially Signed Bitcoin Transaction](psbt.md).
+Under the hood this uses a [Partially Signed Revolt Transaction](psbt.md).
 
 ```sh
 $ revolt-cli -rpcwallet=<wallet> sendtoaddress <address> <amount>
@@ -72,7 +72,7 @@ In order to be compatible with Bitcoin Core any signer command should conform to
 
 Prerequisite knowledge:
 * [Output Descriptors](descriptors.md)
-* Partially Signed Bitcoin Transaction ([PSBT](psbt.md))
+* Partially Signed Revolt Transaction ([PSBT](psbt.md))
 
 ### `enumerate` (required)
 

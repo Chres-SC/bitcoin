@@ -34,7 +34,7 @@ Options menu.  You will be prompted to enter a passphrase, which
 will be used as the key to encrypt your wallet and will be needed
 every time you wish to send Bitcoins.  If you lose this passphrase,
 you will lose access to spend all of the bitcoins in your wallet,
-no one, not even the Bitcoin developers can recover your Bitcoins.
+no one, not even the Revolt Developers can recover your Bitcoins.
 This means you are responsible for your own security, store your
 passphrase in a secure location and do not forget it.
 

@@ -63,7 +63,7 @@ class ClickableProgressBar;
 }
 
 /**
-  Revolt GUI main class. This class represents the main window of the Revolt UI. It communicates with both the client and
+  Revolt-gui main class. This class represents the main window of the Revolt UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
 class RevoltGUI : public QMainWindow

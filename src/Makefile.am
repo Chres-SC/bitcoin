@@ -25,7 +25,7 @@ BENCHMARKS =
 
 BITCOIN_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(srcdir)/secp256k1/include -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS)
 
-LIBBITCOIN_NODE=libbitcoin_node.a
+LIBREVOLT_NODE=librevolt_node.a
 LIBBITCOIN_COMMON=libbitcoin_common.a
 LIBBITCOIN_CONSENSUS=libbitcoin_consensus.a
 LIBREVOLT_CLI=librevolt_cli.a
@@ -76,7 +76,7 @@ EXTRA_LIBRARIES += \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_NODE) \
+  $(LIBREVOLT_NODE) \
   $(LIBREVOLT_CLI) \
   $(LIBBITCOIN_IPC) \
   $(LIBREVOLT_WALLET) \
@@ -87,8 +87,8 @@ if BUILD_REVOLTD
   bin_PROGRAMS += revoltd
 endif
 
-if BUILD_BITCOIN_NODE
-  bin_PROGRAMS += bitcoin-node
+if BUILD_REVOLT_NODE
+  bin_PROGRAMS += revolt-node
 endif
 
 if BUILD_REVOLT_CLI
@@ -342,9 +342,9 @@ libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 # Contains code accessing mempool and chain state that is meant to be separated
 # from wallet and gui code (see node/README.md). Shared code should go in
 # libbitcoin_common or libbitcoin_util libraries, instead.
-libbitcoin_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libbitcoin_node_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_node_a_SOURCES = \
+librevolt_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+librevolt_node_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+librevolt_node_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   banman.cpp \
@@ -419,11 +419,11 @@ libbitcoin_node_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_WALLET
-libbitcoin_node_a_SOURCES += wallet/init.cpp
-libbitcoin_node_a_CPPFLAGS += $(BDB_CPPFLAGS)
+librevolt_node_a_SOURCES += wallet/init.cpp
+librevolt_node_a_CPPFLAGS += $(BDB_CPPFLAGS)
 endif
 if !ENABLE_WALLET
-libbitcoin_node_a_SOURCES += dummywallet.cpp
+librevolt_node_a_SOURCES += dummywallet.cpp
 endif
 
 if ENABLE_ZMQ
@@ -703,14 +703,14 @@ librevolt_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# revoltd & bitcoin-node binaries #
-bitcoin_daemon_sources = revoltd.cpp
+# revoltd & revolt-node binaries #
+revolt_daemon_sources = revoltd.cpp
 bitcoin_bin_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 bitcoin_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
 bitcoin_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-bitcoin_daemon_sources += revoltd-res.rc
+revolt_daemon_sources += revoltd-res.rc
 endif
 
 bitcoin_bin_ldadd = \
@@ -727,17 +727,17 @@ bitcoin_bin_ldadd = \
 
 bitcoin_bin_ldadd += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS)
 
-revoltd_SOURCES = $(bitcoin_daemon_sources) init/revoltd.cpp
+revoltd_SOURCES = $(revolt_daemon_sources) init/revoltd.cpp
 revoltd_CPPFLAGS = $(bitcoin_bin_cppflags)
 revoltd_CXXFLAGS = $(bitcoin_bin_cxxflags)
 revoltd_LDFLAGS = $(bitcoin_bin_ldflags)
-revoltd_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd)
+revoltd_LDADD = $(LIBREVOLT_NODE) $(bitcoin_bin_ldadd)
 
-bitcoin_node_SOURCES = $(bitcoin_daemon_sources) init/bitcoin-node.cpp
-bitcoin_node_CPPFLAGS = $(bitcoin_bin_cppflags)
-bitcoin_node_CXXFLAGS = $(bitcoin_bin_cxxflags)
-bitcoin_node_LDFLAGS = $(bitcoin_bin_ldflags)
-bitcoin_node_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
+revolt_node_SOURCES = $(revolt_daemon_sources) init/revolt-node.cpp
+revolt_node_CPPFLAGS = $(bitcoin_bin_cppflags)
+revolt_node_CXXFLAGS = $(bitcoin_bin_cxxflags)
+revolt_node_LDFLAGS = $(bitcoin_bin_ldflags)
+revolt_node_LDADD = $(LIBREVOLT_NODE) $(bitcoin_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
 
 # revolt-cli binary #
 revolt_cli_SOURCES = revolt-cli.cpp

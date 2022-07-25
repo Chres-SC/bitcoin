@@ -11,7 +11,7 @@
 #include <utility>
 
 class BitcoinApplication;
-class BitcoinGUI;
+class RevoltGuI;
 class RPCConsole;
 
 class AppTests : public QObject
@@ -22,7 +22,7 @@ public:
 
 private Q_SLOTS:
     void appTests();
-    void guiTests(BitcoinGUI* window);
+    void guiTests(RevoltGuI* window);
     void consoleTests(RPCConsole* console);
 
 private:

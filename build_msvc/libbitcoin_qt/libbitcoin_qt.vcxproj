@@ -14,7 +14,7 @@
     <ClCompile Include="..\..\src\qt\bitcoin.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoinaddressvalidator.cpp" />
     <ClCompile Include="..\..\src\qt\revoltamountfield.cpp" />
-    <ClCompile Include="..\..\src\qt\bitcoingui.cpp" />
+    <ClCompile Include="..\..\src\qt\revoltgui.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoinstrings.cpp" />
     <ClCompile Include="..\..\src\qt\bitcoinunits.cpp" />
     <ClCompile Include="..\..\src\qt\clientmodel.cpp" />
@@ -71,7 +71,7 @@
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoin.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoinaddressvalidator.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revoltamountfield.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoingui.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revoltgui.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoinunits.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_clientmodel.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_coincontroldialog.cpp" />
