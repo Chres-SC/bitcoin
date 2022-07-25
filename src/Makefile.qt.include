@@ -388,7 +388,7 @@ bitcoin_qt_clean: FORCE
 	rm -f $(CLEAN_QT) $(qt_librevoltqt_a_OBJECTS) $(qt_bitcoin_qt_OBJECTS) qt/revolt-qt$(EXEEXT) $(LIBREVOLTQT)
 
 <<<<<<< HEAD
-revolt_qt : qt/bitcoin-qt$(EXEEXT)
+revolt_qt : qt/revolt-qt$(EXEEXT)
 =======
 bitcoin_qt : qt/revolt-qt$(EXEEXT)
 >>>>>>> e30cd82c70ed1a88e1e6b168855cadf30ac94dbb
