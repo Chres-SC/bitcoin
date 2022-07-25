@@ -18,8 +18,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `revoltd`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
+or `revoltd`/`revolt-qt` (on Linux).
 
 Upgrading directly from a version of Bitcoin Core that has reached its EOL is
 possible, but might take some time if the datadir needs to be migrated.  Old
@@ -654,7 +654,7 @@ Build system changes
 - #16654 build: update RapidCheck Makefile (jonatack)
 - #16370 cleanup package configure flags (fanquake)
 - #16746 msbuild: Ignore linker warning (sipsorcery)
-- #16750 msbuild: adds bench_bitcoin to auto generated project files (sipsorcery)
+- #16750 msbuild: adds revolt_bitcoin to auto generated project files (sipsorcery)
 - #16810 guix: Remove ssp spec file hack (dongcarl)
 - #16477 skip deploying plugins we dont use in macdeployqtplus (fanquake)
 - #16413 Bump QT to LTS release 5.9.8 (THETCR)
@@ -691,7 +691,7 @@ Build system changes
 - #15773 Add BitcoinTestFramework::sync_* methods (MarcoFalke)
 - #15797 travis: Bump second timeout to 33 minutes, add rationale (MarcoFalke)
 - #15788 Unify testing setups for fuzz, bench, and unit tests (MarcoFalke)
-- #15352 Reduce noise level in test_bitcoin output (practicalswift)
+- #15352 Reduce noise level in test_revolt output (practicalswift)
 - #15779 Add wallet_balance benchmark (MarcoFalke)
 - #15843 fix outdated include in blockfilter_index_tests (jamesob)
 - #15866 Add missing syncwithvalidationinterfacequeue to wallet_import_rescan (MarcoFalke)
@@ -751,7 +751,7 @@ Build system changes
 - #16505 Changes verbosity of msbuild from quiet to normal in the appveyor script (sipsorcery)
 - #16293 Make test cases separate functions (MarcoFalke)
 - #16470 Fail early on disconnect in mininode.wait_for_* (MarcoFalke)
-- #16277 Suppress output in test_bitcoin for expected errors (gertjaap)
+- #16277 Suppress output in test_revolt for expected errors (gertjaap)
 - #16493 Fix test failures (MarcoFalke)
 - #16538 Add missing sync_blocks to feature_pruning (MarcoFalke)
 - #16509 Adapt test framework for chains other than "regtest" (MarcoFalke)
@@ -891,7 +891,7 @@ Build system changes
 - #15777 Add doxygen comments for keypool classes (jnewbery)
 - #15820 Add productivity notes for dummy rebases (dongcarl)
 - #15922 Explain how to pass in non-fundamental types into functions (MarcoFalke)
-- #16080 build/doc: update bitcoin_config.h packages, release process (jonatack)
+- #16080 build/doc: update revolt_config.h packages, release process (jonatack)
 - #16047 analyzepsbt description in doc/psbt.md (jonatack)
 - #16039 add release note for 14954 (fanquake)
 - #16139 Add riscv64 to outputs list in release-process.md (JeremyRand)

@@ -7,7 +7,7 @@
 #define REVOLT_VALIDATION_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/revolt-config.h>
 #endif
 
 #include <arith_uint256.h>

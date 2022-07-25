@@ -12,8 +12,8 @@ src/revolt-util
 src/revolt-chainstate
 src/revolt-wallet
 src/test/fuzz/fuzz
-src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+src/test/test_revolt
+src/qt/test/test_revolt-qt
 
 # autoreconf
 Makefile.in
@@ -37,8 +37,8 @@ config.log
 config.status
 configure
 libtool
-src/config/bitcoin-config.h
-src/config/bitcoin-config.h.in
+src/config/revolt-config.h
+src/config/revolt-config.h.in
 src/config/stamp-h1
 src/obj
 share/setup.nsi
@@ -50,11 +50,11 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
-src/qt/bitcoin-qt.config
-src/qt/bitcoin-qt.creator
-src/qt/bitcoin-qt.creator.user
-src/qt/bitcoin-qt.files
-src/qt/bitcoin-qt.includes
+src/qt/revolt-qt.config
+src/qt/revolt-qt.creator
+src/qt/revolt-qt.creator.user
+src/qt/revolt-qt.files
+src/qt/revolt-qt.includes
 
 .deps
 .dirstamp
@@ -92,8 +92,8 @@ src/qt/bitcoin-qt.includes
 *.qm
 Makefile
 !depends/Makefile
-src/qt/bitcoin-qt
-Bitcoin-Qt.app
+src/qt/revolt-qt
+Revolt-Qt.app
 
 # Qt Creator
 Makefile.am.user
@@ -116,7 +116,7 @@ releases
 *.gcno
 *.gcda
 /*.info
-test_bitcoin.coverage/
+test_revolt.coverage/
 total.coverage/
 fuzz.coverage/
 coverage_percent.txt
@@ -135,7 +135,7 @@ test/.mypy_cache/
 
 /doc/doxygen/
 
-libbitcoinconsensus.pc
+librevoltconsensus.pc
 contrib/devtools/split-debug.sh
 
 # Output from running db4 installation

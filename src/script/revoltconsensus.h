@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 #if defined(BUILD_REVOLT_INTERNAL) && defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/revolt-config.h>
   #if defined(_WIN32)
     #if defined(HAVE_DLLEXPORT_ATTRIBUTE)
       #define EXPORT_SYMBOL __declspec(dllexport)

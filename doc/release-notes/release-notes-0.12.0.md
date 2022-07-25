@@ -16,8 +16,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
-revoltd/bitcoin-qt (on Linux).
+installer (on Windows) or just copy over /Applications/Revolt-Qt (on Mac) or
+revoltd/revolt-qt (on Linux).
 
 Downgrade warning
 -----------------
@@ -637,7 +637,7 @@ git merge commit are mentioned.
 ### Build system
 
 - #6210 `0e4f2a0` build: disable optional use of gmp in internal secp256k1 build (Wladimir J. van der Laan)
-- #6214 `87406aa` [OSX] revert renaming of Bitcoin-Qt.app and use CFBundleDisplayName (partial revert of #6116) (Jonas Schnelli)
+- #6214 `87406aa` [OSX] revert renaming of Revolt-Qt.app and use CFBundleDisplayName (partial revert of #6116) (Jonas Schnelli)
 - #6218 `9d67b10` build/gitian misc updates (Cory Fields)
 - #6269 `d4565b6` gitian: Use the new bitcoin-detached-sigs git repo for OSX signatures (Cory Fields)
 - #6418 `d4a910c` Add autogen.sh to source tarball. (randy-waterhouse)
@@ -766,7 +766,7 @@ git merge commit are mentioned.
 - #5994 `786ed11` detach wallet from miner (Jonas Schnelli)
 - #6387 `11576a5` [revolt-cli] improve error output (Jonas Schnelli)
 - #6401 `6db53b4` Add REVOLTD_SIGTERM_TIMEOUT to OpenRC init scripts (Florian Schmaus)
-- #6430 `b01981e` doc: add documentation for shared library libbitcoinconsensus (Braydon Fuller)
+- #6430 `b01981e` doc: add documentation for shared library librevoltconsensus (Braydon Fuller)
 - #6372 `dcc495e` Update Linearize tool to support Windows paths; fix variable scope; update README and example configuration (Paul Georgiou)
 - #6453 `8fe5cce` Separate core memory usage computation in core_memusage.h (Pieter Wuille)
 - #6149 `633fe10` Buffer log messages and explicitly open logs (Adam Weiss)

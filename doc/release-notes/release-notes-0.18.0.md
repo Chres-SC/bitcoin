@@ -19,7 +19,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has
 completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-`/Applications/Bitcoin-Qt` (on Mac) or `revoltd`/`bitcoin-qt` (on
+`/Applications/Revolt-Qt` (on Mac) or `revoltd`/`revolt-qt` (on
 Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database
@@ -185,7 +185,7 @@ Build system changes
 --------------------
 
 - A new `--disable-bip70` option may be passed to `./configure` to
-  prevent Bitcoin-Qt from being built with support for the BIP70 payment
+  prevent Revolt-Qt from being built with support for the BIP70 payment
   protocol or from linking libssl.  As the payment protocol has exposed
   Bitcoin Core to libssl vulnerabilities in the past, builders who don't
   need BIP70 support are encouraged to use this option to reduce their
@@ -717,7 +717,7 @@ Changes for particular platforms
 - #14554 Remove unused `adjustedTime` parameter (hebasto)
 - #14228 Enable system tray icon by default if available (hebasto)
 - #14608 Remove the "Pay only required fee…" checkbox (hebasto)
-- #14521 qt, docs: Fix `bitcoin-qt -version` output formatting (hebasto)
+- #14521 qt, docs: Fix `revolt-qt -version` output formatting (hebasto)
 - #13966 When private key is disabled, only show watch-only balance (ken2812221)
 - #14828 Remove hidden columns in coin control dialog (promag)
 - #14783 Fix `boost::signals2::no_slots_error` in early calls to InitWarning (promag)
@@ -859,7 +859,7 @@ Changes for particular platforms
 - #14631 Move deterministic address import to `setup_nodes` (jnewbery)
 - #14630 test: Remove travis specific code (MarcoFalke)
 - #14528 travis: Compile once on xenial (MarcoFalke)
-- #14092 Dry run `bench_bitcoin` as part `make check` to allow for quick identification of assertion/sanitizer failures in benchmarking code (practicalswift)
+- #14092 Dry run `revolt_bitcoin` as part `make check` to allow for quick identification of assertion/sanitizer failures in benchmarking code (practicalswift)
 - #14664 `example_test.py`: fixup coinbase height argument, derive number clearly (instagibbs)
 - #14522 Add invalid P2P message tests (jamesob)
 - #14619 Fix value display name in `test_runner` help text (merland)
@@ -903,7 +903,7 @@ Changes for particular platforms
 - #14969 Fix `cuckoocache_tests` TSAN failure introduced in 14935 (practicalswift)
 - #14964 Fix race in `mempool_accept` (MarcoFalke)
 - #14829 travis: Enable functional tests in the threadsanitizer (tsan) build job (practicalswift)
-- #14985 Remove `thread_local` from `test_bitcoin` (MarcoFalke)
+- #14985 Remove `thread_local` from `test_revolt` (MarcoFalke)
 - #15005 Bump timeout to run tests in travis thread sanitizer (MarcoFalke)
 - #15013 Avoid race in `p2p_timeouts` (MarcoFalke)
 - #14960 lint/format-strings: Correctly exclude escaped percent symbols (luke-jr)
