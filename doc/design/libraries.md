@@ -2,18 +2,18 @@
 
 | Name                     | Description |
 |--------------------------|-------------|
-| *libbitcoin_cli*         | RPC client functionality used by *bitcoin-cli* executable |
+| *librevolt_cli*         | RPC client functionality used by *revolt-cli* executable |
 | *libbitcoin_common*      | Home for common functionality shared by different executables and libraries. Similar to *libbitcoin_util*, but higher-level (see [Dependencies](#dependencies)). |
-| *libbitcoin_consensus*   | Stable, backwards-compatible consensus functionality used by *libbitcoin_node* and *libbitcoin_wallet* and also exposed as a [shared library](../shared-libraries.md). |
+| *libbitcoin_consensus*   | Stable, backwards-compatible consensus functionality used by *libbitcoin_node* and *librevolt_wallet* and also exposed as a [shared library](../shared-libraries.md). |
 | *libbitcoinconsensus*    | Shared library build of static *libbitcoin_consensus* library |
 | *libbitcoin_kernel*      | Consensus engine and support library used for validation by *libbitcoin_node* and also exposed as a [shared library](../shared-libraries.md). |
 | *libbitcoinqt*           | GUI functionality used by *bitcoin-qt* and *bitcoin-gui* executables |
-| *libbitcoin_ipc*         | IPC functionality used by *bitcoin-node*, *bitcoin-wallet*, *bitcoin-gui* executables to communicate when [`--enable-multiprocess`](multiprocess.md) is used. |
-| *libbitcoin_node*        | P2P and RPC server functionality used by *bitcoind* and *bitcoin-qt* executables. |
+| *libbitcoin_ipc*         | IPC functionality used by *bitcoin-node*, *revolt-wallet*, *bitcoin-gui* executables to communicate when [`--enable-multiprocess`](multiprocess.md) is used. |
+| *libbitcoin_node*        | P2P and RPC server functionality used by *revoltd* and *bitcoin-qt* executables. |
 | *libbitcoin_util*        | Home for common functionality shared by different executables and libraries. Similar to *libbitcoin_common*, but lower-level (see [Dependencies](#dependencies)). |
-| *libbitcoin_wallet*      | Wallet functionality used by *bitcoind* and *bitcoin-wallet* executables. |
-| *libbitcoin_wallet_tool* | Lower-level wallet functionality used by *bitcoin-wallet* executable. |
-| *libbitcoin_zmq*         | [ZeroMQ](../zmq.md) functionality used by *bitcoind* and *bitcoin-qt* executables. |
+| *librevolt_wallet*      | Wallet functionality used by *revoltd* and *revolt-wallet* executables. |
+| *librevolt_wallet_tool* | Lower-level wallet functionality used by *revolt-wallet* executable. |
+| *libbitcoin_zmq*         | [ZeroMQ](../zmq.md) functionality used by *revoltd* and *bitcoin-qt* executables. |
 
 ## Conventions
 
@@ -22,7 +22,7 @@
 - Generally each library should have a corresponding source directory and namespace. Source code organization is a work in progress, so it is true that some namespaces are applied inconsistently, and if you look at [`libbitcoin_*_SOURCES`](../../src/Makefile.am) lists you can see that many libraries pull in files from outside their source directory. But when working with libraries, it is good to follow a consistent pattern like:
 
   - *libbitcoin_node* code lives in `src/node/` in the `node::` namespace
-  - *libbitcoin_wallet* code lives in `src/wallet/` in the `wallet::` namespace
+  - *librevolt_wallet* code lives in `src/wallet/` in the `wallet::` namespace
   - *libbitcoin_ipc* code lives in `src/ipc/` in the `ipc::` namespace
   - *libbitcoin_util* code lives in `src/util/` in the `util::` namespace
   - *libbitcoin_consensus* code lives in `src/consensus/` in the `Consensus::` namespace
@@ -39,20 +39,20 @@
 
 graph TD;
 
-bitcoin-cli[bitcoin-cli]-->libbitcoin_cli;
+revolt-cli[revolt-cli]-->librevolt_cli;
 
-bitcoind[bitcoind]-->libbitcoin_node;
-bitcoind[bitcoind]-->libbitcoin_wallet;
+revoltd[revoltd]-->libbitcoin_node;
+revoltd[revoltd]-->librevolt_wallet;
 
 bitcoin-qt[bitcoin-qt]-->libbitcoin_node;
 bitcoin-qt[bitcoin-qt]-->libbitcoinqt;
-bitcoin-qt[bitcoin-qt]-->libbitcoin_wallet;
+bitcoin-qt[bitcoin-qt]-->librevolt_wallet;
 
-bitcoin-wallet[bitcoin-wallet]-->libbitcoin_wallet;
-bitcoin-wallet[bitcoin-wallet]-->libbitcoin_wallet_tool;
+revolt-wallet[revolt-wallet]-->librevolt_wallet;
+revolt-wallet[revolt-wallet]-->librevolt_wallet_tool;
 
-libbitcoin_cli-->libbitcoin_common;
-libbitcoin_cli-->libbitcoin_util;
+librevolt_cli-->libbitcoin_common;
+librevolt_cli-->libbitcoin_util;
 
 libbitcoin_common-->libbitcoin_util;
 libbitcoin_common-->libbitcoin_consensus;
@@ -68,14 +68,14 @@ libbitcoin_node-->libbitcoin_util;
 libbitcoinqt-->libbitcoin_common;
 libbitcoinqt-->libbitcoin_util;
 
-libbitcoin_wallet-->libbitcoin_common;
-libbitcoin_wallet-->libbitcoin_util;
+librevolt_wallet-->libbitcoin_common;
+librevolt_wallet-->libbitcoin_util;
 
-libbitcoin_wallet_tool-->libbitcoin_util;
-libbitcoin_wallet_tool-->libbitcoin_wallet;
+librevolt_wallet_tool-->libbitcoin_util;
+librevolt_wallet_tool-->librevolt_wallet;
 
 classDef bold stroke-width:2px, font-weight:bold, font-size: smaller;
-class bitcoin-qt,bitcoind,bitcoin-cli,bitcoin-wallet bold
+class bitcoin-qt,revoltd,revolt-cli,revolt-wallet bold
 ```
 </td></tr><tr><td>
 
@@ -83,7 +83,7 @@ class bitcoin-qt,bitcoind,bitcoin-cli,bitcoin-wallet bold
 
 </td></tr></table>
 
-- The graph shows what _linker symbols_ (functions and variables) from each library other libraries can call and reference directly, but it is not a call graph. For example, there is no arrow connecting *libbitcoin_wallet* and *libbitcoin_node* libraries, because these libraries are intended to be modular and not depend on each other's internal implementation details. But wallet code still is still able to call node code indirectly through the `interfaces::Chain` abstract class in [`interfaces/chain.h`](../../src/interfaces/chain.h) and node code calls wallet code through the `interfaces::ChainClient` and `interfaces::Chain::Notifications` abstract classes in the same file. In general, defining abstract classes in [`src/interfaces/`](../../src/interfaces/) can be a convenient way of avoiding unwanted direct dependencies or circular dependencies between libraries.
+- The graph shows what _linker symbols_ (functions and variables) from each library other libraries can call and reference directly, but it is not a call graph. For example, there is no arrow connecting *librevolt_wallet* and *libbitcoin_node* libraries, because these libraries are intended to be modular and not depend on each other's internal implementation details. But wallet code still is still able to call node code indirectly through the `interfaces::Chain` abstract class in [`interfaces/chain.h`](../../src/interfaces/chain.h) and node code calls wallet code through the `interfaces::ChainClient` and `interfaces::Chain::Notifications` abstract classes in the same file. In general, defining abstract classes in [`src/interfaces/`](../../src/interfaces/) can be a convenient way of avoiding unwanted direct dependencies or circular dependencies between libraries.
 
 - *libbitcoin_consensus* should be a standalone dependency that any library can depend on, and it should not depend on any other libraries itself.
 
@@ -94,9 +94,9 @@ class bitcoin-qt,bitcoind,bitcoin-cli,bitcoin-wallet bold
 
 - *libbitcoin_kernel* should only depend on *libbitcoin_util* and *libbitcoin_consensus*.
 
-- The only thing that should depend on *libbitcoin_kernel* internally should be *libbitcoin_node*. GUI and wallet libraries *libbitcoinqt* and *libbitcoin_wallet* in particular should not depend on *libbitcoin_kernel* and the unneeded functionality it would pull in, like block validation. To the extent that GUI and wallet code need scripting and signing functionality, they should be get able it from *libbitcoin_consensus*, *libbitcoin_common*, and *libbitcoin_util*, instead of *libbitcoin_kernel*.
+- The only thing that should depend on *libbitcoin_kernel* internally should be *libbitcoin_node*. GUI and wallet libraries *libbitcoinqt* and *librevolt_wallet* in particular should not depend on *libbitcoin_kernel* and the unneeded functionality it would pull in, like block validation. To the extent that GUI and wallet code need scripting and signing functionality, they should be get able it from *libbitcoin_consensus*, *libbitcoin_common*, and *libbitcoin_util*, instead of *libbitcoin_kernel*.
 
-- GUI, node, and wallet code internal implementations should all be independent of each other, and the *libbitcoinqt*, *libbitcoin_node*, *libbitcoin_wallet* libraries should never reference each other's symbols. They should only call each other through [`src/interfaces/`](`../../src/interfaces/`) abstract interfaces.
+- GUI, node, and wallet code internal implementations should all be independent of each other, and the *libbitcoinqt*, *libbitcoin_node*, *librevolt_wallet* libraries should never reference each other's symbols. They should only call each other through [`src/interfaces/`](`../../src/interfaces/`) abstract interfaces.
 
 ## Work in progress
 

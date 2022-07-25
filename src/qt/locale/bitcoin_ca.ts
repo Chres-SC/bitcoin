@@ -388,8 +388,8 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
         <translation type="unfinished">Els desenvolupadors %s</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s està malmès. Proveu d’utilitzar l’eina bitcoin-wallet per a recuperar o restaurar una còpia de seguretat.</translation>
+        <source>%s corrupt. Try using the wallet tool revolt-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s està malmès. Proveu d’utilitzar l’eina revolt-wallet per a recuperar o restaurar una còpia de seguretat.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
@@ -424,8 +424,8 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
         <translation type="unfinished">Error: el registre de l'identificador del fitxer de bolcat és incorrecte. S'ha obtingut «%s», s'esperava «%s».</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
-        <translation type="unfinished">Error: la versió del fitxer de bolcat no és compatible. Aquesta versió de bitcoin-wallet només admet fitxers de bolcat de la versió 1. S'ha obtingut un fitxer de bolcat amb la versió %s</translation>
+        <source>Error: Dumpfile version is not supported. This version of revolt-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <translation type="unfinished">Error: la versió del fitxer de bolcat no és compatible. Aquesta versió de revolt-wallet només admet fitxers de bolcat de la versió 1. S'ha obtingut un fitxer de bolcat amb la versió %s</translation>
     </message>
     <message>
         <source>Error: Legacy wallets only support the "legacy", "p2sh-segwit", and "bech32" address types</source>
@@ -3355,7 +3355,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 satoshis per k
     <message>
         <source>Please, review your transaction proposal. This will produce a Partially Signed Bitcoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Si us plau, revisa la teva proposta de transacció. Es produirà una transacció de Bitcoin amb firma parcial (PSBT) que podeu guardar o copiar i després firmar, per exemple, amb una cartera %1, o amb una cartera física compatible amb PSBT.</translation>
+        <translation type="unfinished">Si us plau, revisa la teva proposta de transacció. Es produirà una transacció de Revolt amb firma parcial (PSBT) que podeu guardar o copiar i després firmar, per exemple, amb una cartera %1, o amb una cartera física compatible amb PSBT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3544,7 +3544,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 satoshis per k
     </message>
     <message>
         <source>The Bitcoin address to sign the message with</source>
-        <translation type="unfinished">L'adreça Bitcoin amb què signar el missatge</translation>
+        <translation type="unfinished">L'adreça Revolt amb què signar el missatge</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3596,7 +3596,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 satoshis per k
     </message>
     <message>
         <source>The Bitcoin address the message was signed with</source>
-        <translation type="unfinished">L'adreça Bitcoin amb què va ser signat el missatge</translation>
+        <translation type="unfinished">L'adreça Revolt amb què va ser signat el missatge</translation>
     </message>
     <message>
         <source>The signed message to verify</source>

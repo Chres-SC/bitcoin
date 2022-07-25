@@ -46,7 +46,7 @@ def _get_header_id(header_file: str) -> str:
     """ Helper function to get the header id from a header file
         string.
 
-        eg: 'src/wallet/walletdb.h' -> 'BITCOIN_WALLET_WALLETDB_H'
+        eg: 'src/wallet/walletdb.h' -> 'REVOLT_WALLET_WALLETDB_H'
 
     Args:
         header_file: Filepath to header file.

@@ -8,11 +8,11 @@ import sys
 import tempfile
 
 BINARIES = [
-'src/bitcoind',
-'src/bitcoin-cli',
-'src/bitcoin-tx',
-'src/bitcoin-wallet',
-'src/bitcoin-util',
+'src/revoltd',
+'src/revolt-cli',
+'src/revolt-tx',
+'src/revolt-wallet',
+'src/revolt-util',
 'src/qt/bitcoin-qt',
 ]
 

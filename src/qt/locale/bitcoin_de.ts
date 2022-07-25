@@ -413,8 +413,8 @@ Das Signieren ist nur mit Adressen vom Typ 'Legacy' möglich.</translation>
         <translation type="unfinished">Die %s-Entwickler</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s korrupt. Versuche mit dem Wallet-Werkzeug bitcoin-wallet zu retten, oder eine Sicherung wiederherzustellen.</translation>
+        <source>%s corrupt. Try using the wallet tool revolt-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s korrupt. Versuche mit dem Wallet-Werkzeug revolt-wallet zu retten, oder eine Sicherung wiederherzustellen.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
@@ -449,8 +449,8 @@ Das Signieren ist nur mit Adressen vom Typ 'Legacy' möglich.</translation>
         <translation type="unfinished">Fehler: Dumpdatei Identifikationseintrag ist ungültig. Habe "%s" bekommen, aber "%s" erwartet.</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
-        <translation type="unfinished">Fehler: Die Version der Speicherauszugsdatei ist %s und wird nicht unterstützt. Diese Version von bitcoin-wallet unterstützt nur Speicherauszugsdateien der Version 1.</translation>
+        <source>Error: Dumpfile version is not supported. This version of revolt-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <translation type="unfinished">Fehler: Die Version der Speicherauszugsdatei ist %s und wird nicht unterstützt. Diese Version von revolt-wallet unterstützt nur Speicherauszugsdateien der Version 1.</translation>
     </message>
     <message>
         <source>Error: Legacy wallets only support the "legacy", "p2sh-segwit", and "bech32" address types</source>
@@ -2131,7 +2131,7 @@ Verifikations-Error: %s</translation>
     </message>
     <message>
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">Automatisch den Bitcoin-Clientport auf dem Router öffnen. Dies funktioniert nur, wenn Ihr Router UPnP unterstützt und dies aktiviert ist.</translation>
+        <translation type="unfinished">Automatisch den Revolt-Clientport auf dem Router öffnen. Dies funktioniert nur, wenn Ihr Router UPnP unterstützt und dies aktiviert ist.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2139,7 +2139,7 @@ Verifikations-Error: %s</translation>
     </message>
     <message>
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
-        <translation type="unfinished">Öffnet automatisch den Bitcoin-Client-Port auf dem Router. Dies funktioniert nur, wenn Ihr Router NAT-PMP unterstützt und es aktiviert ist. Der externe Port kann zufällig sein.</translation>
+        <translation type="unfinished">Öffnet automatisch den Revolt-Client-Port auf dem Router. Dies funktioniert nur, wenn Ihr Router NAT-PMP unterstützt und es aktiviert ist. Der externe Port kann zufällig sein.</translation>
     </message>
     <message>
         <source>Map port using NA&amp;T-PMP</source>

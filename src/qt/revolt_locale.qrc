@@ -1,11 +1,11 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/translations">
-        <file alias="am">locale/bitcoin_am.qm</file>
-        <file alias="ar">locale/bitcoin_ar.qm</file>
-        <file alias="az">locale/bitcoin_az.qm</file>
-        <file alias="be">locale/bitcoin_be.qm</file>
-        <file alias="bg">locale/bitcoin_bg.qm</file>
-        <file alias="bn">locale/bitcoin_bn.qm</file>
+        <file alias="am">locale/revolt_am.qm</file>
+        <file alias="ar">locale/revolt_ar.qm</file>
+        <file alias="az">locale/revolt_az.qm</file>
+        <file alias="be">locale/revolt_be.qm</file>
+        <file alias="bg">locale/revolt_bg.qm</file>
+        <file alias="bn">locale/revolt_bn.qm</file>
         <file alias="bs">locale/bitcoin_bs.qm</file>
         <file alias="ca">locale/bitcoin_ca.qm</file>
         <file alias="cs">locale/bitcoin_cs.qm</file>

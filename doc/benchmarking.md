@@ -8,12 +8,12 @@ thread queue, wallet balance.
 Running
 ---------------------
 
-For benchmarking, you only need to compile `bitcoin_bench`.  The bench runner
+For benchmarking, you only need to compile `revolt_bench`.  The bench runner
 warns if you configure with `--enable-debug`, but consider if building without
 it will impact the benchmark(s) you are interested in by unlatching log printers
 and lock analysis.
 
-    make -C src bitcoin_bench
+    make -C src revolt_bench
 
 After compiling bitcoin-core, the benchmarks can be run with:
 

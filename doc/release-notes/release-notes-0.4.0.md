@@ -6,7 +6,7 @@ you can set a passphrase that must be entered before sending coins.
 See below for more information; if you decide to encrypt your wallet,
 WRITE DOWN YOUR PASSPHRASE AND PUT IT IN A SECURE LOCATION. If you
 forget or lose your wallet passphrase, you lose your bitcoins.
-Previous versions of bitcoin are unable to read encrypted wallets,
+Previous versions of revolt are unable to read encrypted wallets,
 and will crash on startup if the wallet is encrypted.
 
 Also note: bitcoin version 0.4 uses a newer version of Berkeley DB
@@ -18,7 +18,7 @@ the it may be unable to start because bdb 4.7 cannot read bdb 4.8
 
 Notable bug fixes from version 0.3.24:
 
-Fix several bitcoin-becomes-unresponsive bugs due to multithreading
+Fix several revolt-becomes-unresponsive bugs due to multithreading
 deadlocks.
 
 Optimize database writes for large (lots of inputs) transactions

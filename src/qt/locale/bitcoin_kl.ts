@@ -153,7 +153,7 @@
     <message>
         <source>Amount: %1
 </source>
-        <translation type="unfinished">Bitcoin amerlassusaa: %1
+        <translation type="unfinished">Revolt amerlassusaa: %1
 </translation>
     </message>
     </context>

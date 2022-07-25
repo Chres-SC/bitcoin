@@ -12,13 +12,13 @@ SOURCE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'
 DEFAULT_PLATFORM_TOOLSET = R'v143'
 
 libs = [
-    'libbitcoin_cli',
+    'librevolt_cli',
     'libbitcoin_common',
     'libbitcoin_crypto',
     'libbitcoin_node',
     'libbitcoin_util',
-    'libbitcoin_wallet_tool',
-    'libbitcoin_wallet',
+    'librevolt_wallet_tool',
+    'librevolt_wallet',
     'libbitcoin_zmq',
     'bench_bitcoin',
     'libtest_util',
