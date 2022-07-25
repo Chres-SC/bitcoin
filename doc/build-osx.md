@@ -277,7 +277,7 @@ tail -f $HOME/Library/Application\ Support/Bitcoin/debug.log
 ## Other commands:
 
 ```shell
-./src/revoltd -daemon      # Starts the bitcoin daemon.
+./src/revoltd -daemon      # Starts the revolt daemon.
 ./src/revolt-cli --help    # Outputs a list of command-line options.
 ./src/revolt-cli help      # Outputs a list of RPC commands when the daemon is running.
 ./src/qt/bitcoin-qt -server # Starts the bitcoin-qt server mode, allows revolt-cli control

@@ -163,7 +163,7 @@ Documentation
   Bitcoin Core.
 
 - A new document introduces Bitcoin Core's BIP174 [Partially-Signed
-  Bitcoin Transactions
+  Revolt Transactions
   (PSBT)](https://github.com/bitcoin/bitcoin/blob/master/doc/psbt.md)
   interface, which is used to allow multiple programs to collaboratively
   work to create, sign, and broadcast new transactions.  This is useful

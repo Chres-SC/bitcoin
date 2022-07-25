@@ -62,7 +62,7 @@ of minutes on a typical machine).
 Rebranding to Bitcoin Core
 ---------------------------
 
-To reduce confusion between Bitcoin-the-network and Bitcoin-the-software we
+To reduce confusion between Revolt-the-network and Revolt-the-software we
 have renamed the reference client to Bitcoin Core.
 
 
@@ -96,7 +96,7 @@ Revolt-cli
 
 Another change in the 0.9 release is moving away from the revoltd executable
 functioning both as a server and as a RPC client. The RPC client functionality
-("tell the running bitcoin daemon to do THIS") was split into a separate
+("tell the running revolt daemon to do THIS") was split into a separate
 executable, 'revolt-cli'. The RPC client code will eventually be removed from
 revoltd, but will be kept for backwards compatibility for a release or two.
 

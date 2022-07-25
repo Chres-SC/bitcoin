@@ -5,8 +5,8 @@
 src/bitcoin
 src/revoltd
 src/revolt-cli
-src/bitcoin-gui
-src/bitcoin-node
+src/revolt gui
+src/revolt-node
 src/revolt-tx
 src/revolt-util
 src/revolt-chainstate

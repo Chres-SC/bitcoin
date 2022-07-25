@@ -15,7 +15,7 @@ libs = [
     'librevolt_cli',
     'libbitcoin_common',
     'libbitcoin_crypto',
-    'libbitcoin_node',
+    'librevolt_node',
     'libbitcoin_util',
     'librevolt_wallet_tool',
     'librevolt_wallet',
