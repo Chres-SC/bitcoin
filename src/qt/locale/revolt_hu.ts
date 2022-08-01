@@ -66,13 +66,13 @@
         <translation type="unfinished">Fogadási címek</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Ezek az Ön Bitcoin címei kifizetések küldéséhez. Mindig ellenőrizze az összeget és a fogadó címet mielőtt érméket küldene.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Ezek az Ön Revolt címei kifizetések küldéséhez. Mindig ellenőrizze az összeget és a fogadó címet mielőtt érméket küldene.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Ezek a Bitcoin címek amelyeken fogadni tud Bitcoin utalásokat. Az "Új cím létrehozása" gombbal tud új címet létrehozni. Aláírni csak korábbi, egyessel kezdődő címekkel lehet.</translation>
+        <translation type="unfinished">Ezek a Revolt címek amelyeken fogadni tud Revolt utalásokat. Az "Új cím létrehozása" gombbal tud új címet létrehozni. Aláírni csak korábbi, egyessel kezdődő címekkel lehet.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -163,8 +163,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Tárca titkosításának megerősítése</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Figyelem: Ha titkosítja a tárcáját és elveszíti a jelszavát, akkor &lt;b&gt;AZ ÖSSZES BITCOINJA ELVÉSZ&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
+        <translation type="unfinished">Figyelem: Ha titkosítja a tárcáját és elveszíti a jelszavát, akkor &lt;b&gt;AZ ÖSSZES REVOLTJA ELVÉSZ&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -183,7 +183,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Írja be a tárca régi és új jelszavát.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Ne feledje, hogy a tárca titkosítása nem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
     </message>
     <message>
@@ -243,7 +243,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>A fatal error occurred. %1 can no longer continue safely and will quit.</source>
         <translation type="unfinished">Végzetes hiba történt %1 nem tud biztonságban továbblépni így most kilép.</translation>
@@ -294,8 +294,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Összeg</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation type="unfinished">Adjon meg egy Bitcoin címet (pl: %1)</translation>
+        <source>Enter a Revolt address (e.g. %1)</source>
+        <translation type="unfinished">Adjon meg egy Revolt címet (pl: %1)</translation>
     </message>
     <message>
         <source>Unroutable</source>
@@ -406,7 +406,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">Nem sikerült olvasni a beállítások fájlból</translation>
@@ -421,7 +421,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>%s corrupt. Try using the wallet tool revolt-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s sérült. Próbálja meg a bitcoint-wallet tárca mentő eszközt használni, vagy állítsa helyre egy biztonsági mentésből.</translation>
+        <translation type="unfinished">%s sérült. Próbálja meg a revoltt-wallet tárca mentő eszközt használni, vagy állítsa helyre egy biztonsági mentésből.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
@@ -1124,8 +1124,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">A proxy &lt;b&gt;aktív&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Bitcoin küldése megadott címre</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">Revolt küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1168,16 +1168,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Üzenet &amp;aláírása…</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation type="unfinished">Üzenetek aláírása a Bitcoin-címeivel, amivel bizonyíthatja hogy a cím az Öné</translation>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
+        <translation type="unfinished">Üzenetek aláírása a Revolt-címeivel, amivel bizonyíthatja hogy a cím az Öné</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">Üzenet &amp;ellenőrzése…</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Üzenetek ellenőrzése, hogy valóban a megjelölt Bitcoin-címekkel vannak-e aláírva</translation>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
+        <translation type="unfinished">Üzenetek ellenőrzése, hogy valóban a megjelölt Revolt-címekkel vannak-e aláírva</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -1240,8 +1240,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Csatlakozás partnerekhez…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Fizetési kérelem (QR-kódot és "bitcoin:" URI azonosítót hoz létre)</translation>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
+        <translation type="unfinished">Fizetési kérelem (QR-kódot és "revolt:" URI azonosítót hoz létre)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1322,7 +1322,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Fogadó címek</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a revolt: URI</source>
         <translation type="unfinished">Revolt URI megnyitása</translation>
     </message>
     <message>
@@ -1342,8 +1342,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Összes tárca bezárása</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
-        <translation type="unfinished">A %1 súgó megjelenítése a Bitcoin lehetséges parancssori kapcsolóinak listájával</translation>
+        <source>Show the %1 help message to get a list with possible Revolt command-line options</source>
+        <translation type="unfinished">A %1 súgó megjelenítése a Revolt lehetséges parancssori kapcsolóinak listájával</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -1836,8 +1836,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Küldő cím szerkesztése</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation type="unfinished">A megadott "%1" cím nem egy érvényes Bitcoin-cím.</translation>
+        <source>The entered address "%1" is not a valid Revolt address.</source>
+        <translation type="unfinished">A megadott "%1" cím nem egy érvényes Revolt-cím.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1905,8 +1905,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation type="unfinished">%1 fog letöltődni és a Bitcoin blokklánc egy másolatát fogja tárolni.</translation>
+        <source>%1 will download and store a copy of the Revolt block chain.</source>
+        <translation type="unfinished">%1 fog letöltődni és a Revolt blokklánc egy másolatát fogja tárolni.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1999,11 +1999,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the revolt network, as detailed below.</source>
-        <translation type="unfinished">A legutóbbi tranzakciók még lehet, hogy nem láthatók, és így előfordulhat, hogy a tárca egyenlege helytelen. A tárca azon nyomban az aktuális egyenleget fogja mutatni, amint befejezte a bitcoin hálózattal történő szinkronizációt, amely alább van részletezve.</translation>
+        <translation type="unfinished">A legutóbbi tranzakciók még lehet, hogy nem láthatók, és így előfordulhat, hogy a tárca egyenlege helytelen. A tárca azon nyomban az aktuális egyenleget fogja mutatni, amint befejezte a revolt hálózattal történő szinkronizációt, amely alább van részletezve.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">A hálózat nem fogadja el azoknak a bitcoinoknak az elköltését, amelyek érintettek a még nem látszódó tranzakciókban.</translation>
+        <source>Attempting to spend revolts that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">A hálózat nem fogadja el azoknak a revoltoknak az elköltését, amelyek érintettek a még nem látszódó tranzakciókban.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -2205,20 +2205,20 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Külső aláíró szkript elérési útvonala</translation>
     </message>
     <message>
-        <source>Full path to a Bitcoin Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Bitcoin Core kompatibilis szkript teljes elérésí útvonala (pl. C:\Letöltések\hwi.exe vagy /Users/felhasznalo/Letöltések/hwi.py). Vigyázat: rosszindulatú programok ellophatják az érméit!</translation>
+        <source>Full path to a Revolt core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Revolt core kompatibilis szkript teljes elérésí útvonala (pl. C:\Letöltések\hwi.exe vagy /Users/felhasznalo/Letöltések/hwi.py). Vigyázat: rosszindulatú programok ellophatják az érméit!</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">A Bitcoin-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">A Revolt-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="unfinished">&amp;UPnP port-feltérképezés</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
-        <translation type="unfinished">A Bitcoin kliens port automatikus megnyitása a routeren. Ez csak akkor működik ha a router támogatja a NAT-PMP-t és ez engedélyezve is van. A külső port lehet véletlenszerűen választott.</translation>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <translation type="unfinished">A Revolt kliens port automatikus megnyitása a routeren. Ez csak akkor működik ha a router támogatja a NAT-PMP-t és ez engedélyezve is van. A külső port lehet véletlenszerűen választott.</translation>
     </message>
     <message>
         <source>Map port using NA&amp;T-PMP</source>
@@ -2234,7 +2234,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Connect to the Revolt network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Csatlakozás a Bitcoin hálózatához SOCKS5 proxyn keresztül</translation>
+        <translation type="unfinished">Csatlakozás a Revolt hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -2306,7 +2306,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Connect to the Revolt network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">Csatlakozás a Bitcoin hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
+        <translation type="unfinished">Csatlakozás a Revolt hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -2400,7 +2400,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Revolt network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">A kijelzett információ lehet, hogy elavult. A kapcsolat létrehozatalát követően tárcája automatikusan szinkronba kerül a Bitcoin hálózattal, de ez a folyamat még nem fejeződött be.</translation>
+        <translation type="unfinished">A kijelzett információ lehet, hogy elavult. A kapcsolat létrehozatalát követően tárcája automatikusan szinkronba kerül a Revolt hálózattal, de ez a folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -2610,7 +2610,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Hiba történt a fizetési kérelem során</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start revolt: click-to-pay handler</source>
         <translation type="unfinished">A revolt nem tud elindulni: click-to-pay kezelő</translation>
     </message>
     <message>
@@ -2618,8 +2618,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">URI kezelés</translation>
     </message>
     <message>
-        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
-        <translation type="unfinished">'bitcoin://' nem érvényes egységes erőforrás azonosító (URI). Használja helyette a 'bitcoin:'-t.</translation>
+        <source>'revolt://' is not a valid URI. Use 'revolt:' instead.</source>
+        <translation type="unfinished">'revolt://' nem érvényes egységes erőforrás azonosító (URI). Használja helyette a 'revolt:'-t.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2628,8 +2628,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">Ezt a tranzakciót nem lehet feldolgozni, mert a BIP70 nem támogatott. A jól ismert biztonsági hiányosságok miatt a BIP70-re való váltásra történő felhívásokat hagyja figyelmen kívül. Amennyiben ezt az üzenetet látja kérjen egy új, BIP21 kompatibilis URI-t.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation type="unfinished">Nem sikerült az URI értelmezése! Ezt okozhatja érvénytelen Bitcoin cím, vagy rossz URI paraméterezés.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Revolt address or malformed URI parameters.</source>
+        <translation type="unfinished">Nem sikerült az URI értelmezése! Ezt okozhatja érvénytelen Revolt cím, vagy rossz URI paraméterezés.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -3161,7 +3161,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Revolt network.</source>
-        <translation type="unfinished">Egy opcionális üzenet csatolása a fizetési kérelemhez, amely megjelenik a kérelem megnyitásakor. Megjegyzés: Az üzenet nem lesz elküldve a fizetséggel a Bitcoin hálózaton keresztül.</translation>
+        <translation type="unfinished">Egy opcionális üzenet csatolása a fizetési kérelemhez, amely megjelenik a kérelem megnyitásakor. Megjegyzés: Az üzenet nem lesz elküldve a fizetséggel a Revolt hálózaton keresztül.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -3672,8 +3672,8 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">Figyelmeztetés: Érvénytelen Bitcoin cím</translation>
+        <source>Warning: Invalid Revolt address</source>
+        <translation type="unfinished">Figyelmeztetés: Érvénytelen Revolt cím</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3711,8 +3711,8 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         <translation type="unfinished">Válasszon egy korábban már használt címet</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">Erre a Bitcoin címre küldje az összeget</translation>
+        <source>The Revolt address to send the payment to</source>
+        <translation type="unfinished">Erre a Revolt címre küldje az összeget</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -3727,8 +3727,8 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         <translation type="unfinished">A küldendő összeg a választott egységben.</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">A díj le lesz vonva a küldött teljes összegből. A címzett kevesebb bitcoint fog megkapni, mint amennyit az összeg mezőben megadott. Amennyiben több címzett van kiválasztva, az illeték egyenlő mértékben lesz elosztva.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less revolts than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">A díj le lesz vonva a küldött teljes összegből. A címzett kevesebb revoltt fog megkapni, mint amennyit az összeg mezőben megadott. Amennyiben több címzett van kiválasztva, az illeték egyenlő mértékben lesz elosztva.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -3755,8 +3755,8 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         <translation type="unfinished">Adjon egy címkét ehhez a címhez, hogy bekerüljön a használt címek közé</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
-        <translation type="unfinished">Egy üzenet a bitcoin: URI-hoz csatolva, amely a tranzakciócal együtt lesz eltárolva az Ön számára. Megjegyzés: Ez az üzenet nem kerül elküldésre a Bitcoin hálózaton keresztül.</translation>
+        <source>A message that was attached to the revolt: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
+        <translation type="unfinished">Egy üzenet a revolt: URI-hoz csatolva, amely a tranzakciócal együtt lesz eltárolva az Ön számára. Megjegyzés: Ez az üzenet nem kerül elküldésre a Revolt hálózaton keresztül.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -3789,12 +3789,12 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         <translation type="unfinished">Üzenet aláírása...</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">Címeivel aláírhatja az üzeneteket/egyezményeket, amivel bizonyíthatja, hogy át tudja venni az ezekre a címekre küldött bitcoin-t. Vigyázzon, hogy ne írjon alá semmi félreérthetőt, mivel adathalász támadásokkal megpróbálhatják becsapni, hogy az azonosságát átírja másokra. Csak olyan részletes állításokat írjon alá, amivel egyetért.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive revolts sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">Címeivel aláírhatja az üzeneteket/egyezményeket, amivel bizonyíthatja, hogy át tudja venni az ezekre a címekre küldött revolt-t. Vigyázzon, hogy ne írjon alá semmi félreérthetőt, mivel adathalász támadásokkal megpróbálhatják becsapni, hogy az azonosságát átírja másokra. Csak olyan részletes állításokat írjon alá, amivel egyetért.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation type="unfinished">Bitcoin cím, amivel alá kívánja írni az üzenetet</translation>
+        <source>The Revolt address to sign the message with</source>
+        <translation type="unfinished">Revolt cím, amivel alá kívánja írni az üzenetet</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3817,7 +3817,7 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         <translation type="unfinished">A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Revolt address</source>
         <translation type="unfinished">Üzenet</translation>
     </message>
     <message>
@@ -3841,8 +3841,8 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         <translation type="unfinished">Adja meg a fogadó címét, az üzenetet (megbizonyosodva arról, hogy az új-sor, szóköz, tab, stb. karaktereket is pontosan adta meg) és az aláírást az üzenet ellenőrzéséhez. Ügyeljen arra, ne gondoljon bele többet az aláírásba, mint amennyi az aláírt szövegben ténylegesen áll, hogy elkerülje a köztes-ember (man-in-the-middle) támadást. Megjegyzendő, hogy ez csak azt bizonyítja hogy az aláíró fél az adott címen tud fogadni, de azt nem tudja igazolni hogy képes-e akár egyetlen tranzakció feladására is!</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation type="unfinished">Bitcoin cím, amivel aláírta az üzenetet</translation>
+        <source>The Revolt address the message was signed with</source>
+        <translation type="unfinished">Revolt cím, amivel aláírta az üzenetet</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -3853,8 +3853,8 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 satoshi kvB-nk
         <translation type="unfinished">A kapott aláírás amikor az üzenet alá lett írva.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation type="unfinished">Ellenőrizze az üzenetet, hogy valóban a megjelölt Bitcoin címmel van-e aláírva</translation>
+        <source>Verify the message to ensure it was signed with the specified Revolt address</source>
+        <translation type="unfinished">Ellenőrizze az üzenetet, hogy valóban a megjelölt Revolt címmel van-e aláírva</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

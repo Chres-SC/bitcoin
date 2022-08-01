@@ -179,7 +179,7 @@
         <translation type="unfinished">Прикажи информации за Qt</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Revolt address</source>
         <translation type="unfinished">Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -337,7 +337,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Revolt</source>
         <translation type="unfinished">Биткоин</translation>
     </message>
     <message numerus="yes">

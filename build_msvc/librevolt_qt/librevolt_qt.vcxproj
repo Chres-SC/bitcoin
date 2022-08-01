@@ -11,12 +11,12 @@
     <ClCompile Include="..\..\src\qt\addresstablemodel.cpp" />
     <ClCompile Include="..\..\src\qt\askpassphrasedialog.cpp" />
     <ClCompile Include="..\..\src\qt\bantablemodel.cpp" />
-    <ClCompile Include="..\..\src\qt\bitcoin.cpp" />
-    <ClCompile Include="..\..\src\qt\bitcoinaddressvalidator.cpp" />
+    <ClCompile Include="..\..\src\qt\revolt.cpp" />
+    <ClCompile Include="..\..\src\qt\revoltaddressvalidator.cpp" />
     <ClCompile Include="..\..\src\qt\revoltamountfield.cpp" />
     <ClCompile Include="..\..\src\qt\revoltgui.cpp" />
-    <ClCompile Include="..\..\src\qt\bitcoinstrings.cpp" />
-    <ClCompile Include="..\..\src\qt\bitcoinunits.cpp" />
+    <ClCompile Include="..\..\src\qt\revoltstrings.cpp" />
+    <ClCompile Include="..\..\src\qt\revoltunits.cpp" />
     <ClCompile Include="..\..\src\qt\clientmodel.cpp" />
     <ClCompile Include="..\..\src\qt\coincontroldialog.cpp" />
     <ClCompile Include="..\..\src\qt\coincontroltreewidget.cpp" />
@@ -68,11 +68,11 @@
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_addresstablemodel.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_askpassphrasedialog.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bantablemodel.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoin.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoinaddressvalidator.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revolt.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revoltaddressvalidator.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revoltamountfield.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revoltgui.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bitcoinunits.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_revoltunits.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_clientmodel.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_coincontroldialog.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_coincontroltreewidget.cpp" />
@@ -120,8 +120,8 @@
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_walletmodeltransaction.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_walletview.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_winshutdownmonitor.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_bitcoin.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_bitcoin_locale.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_revolt.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_revolt_locale.cpp" />
   </ItemGroup>
 
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />

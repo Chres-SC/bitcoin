@@ -1,10 +1,10 @@
-Bitcoin Core version 0.17.1 is now available from:
+Revolt core version 0.17.1 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.17.1/>
 
 or through BitTorrent:
 
-    magnet:?xt=urn:btih:c56c87ccfaa8e6fbccc90d549121e61efd97cb6f&dn=bitcoin-core-0.17.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fexplodie.org%3A6969    
+    magnet:?xt=urn:btih:c56c87ccfaa8e6fbccc90d549121e61efd97cb6f&dn=revolt-core-0.17.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fexplodie.org%3A6969    
 
 This is a new minor version release, with various bugfixes
 and performance improvements, as well as updated translations.
@@ -50,10 +50,10 @@ processing the entire blockchain.
 Compatibility
 ==============
 
-Bitcoin Core is extensively tested on multiple operating systems using
+Revolt core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.10+, and Windows 7 and newer (Windows XP is not supported).
 
-Bitcoin Core should also work on most other Unix-like systems but is not
+Revolt core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 From 0.17.0 onwards macOS <10.10 is no longer supported. 0.17.0 is built using Qt 5.9.x, which doesn't

@@ -1,7 +1,7 @@
 22.0 Release Notes
 ==================
 
-Bitcoin Core version 22.0 is now available from:
+Revolt core version 22.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-22.0/>
 
@@ -24,33 +24,33 @@ shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
 or `revoltd`/`revolt-qt` (on Linux).
 
-Upgrading directly from a version of Bitcoin Core that has reached its EOL is
+Upgrading directly from a version of Revolt core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Bitcoin Core are generally supported.
+wallet versions of Revolt core are generally supported.
 
 Compatibility
 ==============
 
-Bitcoin Core is supported and extensively tested on operating systems
+Revolt core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.14+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Bitcoin Core on
+frequently tested on them.  It is not recommended to use Revolt core on
 unsupported systems.
 
-From Bitcoin Core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
+From Revolt core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
 
 Notable changes
 ===============
 
 P2P and network changes
 -----------------------
-- Added support for running Bitcoin Core as an
+- Added support for running Revolt core as an
   [I2P (Invisible Internet Project)](https://en.wikipedia.org/wiki/I2P) service
   and connect to such services. See [i2p.md](https://github.com/bitcoin/bitcoin/blob/22.x/doc/i2p.md) for details. (#20685)
 - This release removes support for Tor version 2 hidden services in favor of Tor
   v3 only, as the Tor network [dropped support for Tor
   v2](https://blog.torproject.org/v2-deprecation-timeline) with the release of
-  Tor version 0.4.6.  Henceforth, Bitcoin Core ignores Tor v2 addresses; it
+  Tor version 0.4.6.  Henceforth, Revolt core ignores Tor v2 addresses; it
   neither rumors them over the network to other peers, nor stores them in memory
   or to `peers.dat`.  (#22050)
 
@@ -137,7 +137,7 @@ Files
 - The list of banned hosts and networks (via `setban` RPC) is now saved on disk
   in JSON format in `banlist.json` instead of `banlist.dat`. `banlist.dat` is
   only read on startup if `banlist.json` is not present. Changes are only written to the new
-  `banlist.json`. A future version of Bitcoin Core may completely ignore
+  `banlist.json`. A future version of Revolt core may completely ignore
   `banlist.dat`. (#20966)
 
 New settings
@@ -160,7 +160,7 @@ Tools and Utilities
 - A new CLI `-addrinfo` command returns the number of addresses known to the
   node per network type (including Tor v2 versus v3) and total. This can be
   useful to see if the node knows enough addresses in a network to use options
-  like `-onlynet=<network>` or to upgrade to this release of Bitcoin Core 22.0
+  like `-onlynet=<network>` or to upgrade to this release of Revolt core 22.0
   that supports Tor v3 only.  (#21595)
 
 - A new `-rpcwaittimeout` argument to `revolt-cli` sets the timeout
@@ -455,76 +455,76 @@ A detailed list of changes in this version follows. To keep the list to a manage
 - bitcoin/bitcoin#21836 scripted-diff: Replace three dots with ellipsis in the ui strings (hebasto)
 - bitcoin/bitcoin#21935 Enable external signer support for GUI builds (Sjors)
 - bitcoin/bitcoin#22133 Make QWindowsVistaStylePlugin available again (regression) (hebasto)
-- bitcoin-core/gui#4 UI external signer support (e.g. hardware wallet) (Sjors)
-- bitcoin-core/gui#13 Hide peer detail view if multiple are selected (promag)
-- bitcoin-core/gui#18 Add peertablesortproxy module (hebasto)
-- bitcoin-core/gui#21 Improve pruning tooltip (fluffypony, BitcoinErrorLog)
-- bitcoin-core/gui#72 Log static plugins meta data and used style (hebasto)
-- bitcoin-core/gui#79 Embed monospaced font (hebasto)
-- bitcoin-core/gui#85 Remove unused "What's This" button in dialogs on Windows OS (hebasto)
-- bitcoin-core/gui#115 Replace "Hide tray icon" option with positive "Show tray icon" one (hebasto)
-- bitcoin-core/gui#118 Remove BDB version from the Information tab (hebasto)
-- bitcoin-core/gui#121 Early subscribe core signals in transaction table model (promag)
-- bitcoin-core/gui#123 Do not accept command while executing another one (hebasto)
-- bitcoin-core/gui#125 Enable changing the autoprune block space size in intro dialog (luke-jr)
-- bitcoin-core/gui#138 Unlock encrypted wallet "OK" button bugfix (mjdietzx)
-- bitcoin-core/gui#139 doc: Improve gui/src/qt README.md (jarolrod)
-- bitcoin-core/gui#154 Support macOS Dark mode (goums, Uplab)
-- bitcoin-core/gui#162 Add network to peers window and peer details (jonatack)
-- bitcoin-core/gui#163, bitcoin-core/gui#180 Peer details: replace Direction with Connection Type (jonatack)
-- bitcoin-core/gui#164 Handle peer addition/removal in a right way (hebasto)
-- bitcoin-core/gui#165 Save QSplitter state in QSettings (hebasto)
-- bitcoin-core/gui#173 Follow Qt docs when implementing rowCount and columnCount (hebasto)
-- bitcoin-core/gui#179 Add Type column to peers window, update peer details name/tooltip (jonatack)
-- bitcoin-core/gui#186 Add information to "Confirm fee bump" window (prayank23)
-- bitcoin-core/gui#189 Drop workaround for QTBUG-42503 which was fixed in Qt 5.5.0 (prusnak)
-- bitcoin-core/gui#194 Save/restore RPCConsole geometry only for window (hebasto)
-- bitcoin-core/gui#202 Fix right panel toggle in peers tab (RandyMcMillan)
-- bitcoin-core/gui#203 Display plain "Inbound" in peer details (jonatack)
-- bitcoin-core/gui#204 Drop buggy TableViewLastColumnResizingFixer class (hebasto)
-- bitcoin-core/gui#205, bitcoin-core/gui#229 Save/restore TransactionView and recentRequestsView tables column sizes (hebasto)
-- bitcoin-core/gui#206 Display fRelayTxes and `bip152_highbandwidth_{to, from}` in peer details (jonatack)
-- bitcoin-core/gui#213 Add Copy Address Action to Payment Requests (jarolrod)
-- bitcoin-core/gui#214 Disable requests context menu actions when appropriate (jarolrod)
-- bitcoin-core/gui#217 Make warning label look clickable (jarolrod)
-- bitcoin-core/gui#219 Prevent the main window popup menu (hebasto)
-- bitcoin-core/gui#220 Do not translate file extensions (hebasto)
-- bitcoin-core/gui#221 RPCConsole translatable string fixes and improvements (jonatack)
-- bitcoin-core/gui#226 Add "Last Block" and "Last Tx" rows to peer details area (jonatack)
-- bitcoin-core/gui#233 qt test: Don't bind to regtest port (achow101)
-- bitcoin-core/gui#243 Fix issue when disabling the auto-enabled blank wallet checkbox (jarolrod)
-- bitcoin-core/gui#246 Revert "qt: Use "fusion" style on macOS Big Sur with old Qt" (hebasto)
-- bitcoin-core/gui#248 For values of "Bytes transferred" and "Bytes/s" with 1000-based prefix names use 1000-based divisor instead of 1024-based (wodry)
-- bitcoin-core/gui#251 Improve URI/file handling message (hebasto)
-- bitcoin-core/gui#256 Save/restore column sizes of the tables in the Peers tab (hebasto)
-- bitcoin-core/gui#260 Handle exceptions isntead of crash (hebasto)
-- bitcoin-core/gui#263 Revamp context menus (hebasto)
-- bitcoin-core/gui#271 Don't clear console prompt when font resizing (jarolrod)
-- bitcoin-core/gui#275 Support runtime appearance adjustment on macOS (hebasto)
-- bitcoin-core/gui#276 Elide long strings in their middle in the Peers tab (hebasto)
-- bitcoin-core/gui#281 Set shortcuts for console's resize buttons (jarolrod)
-- bitcoin-core/gui#293 Enable wordWrap for Services (RandyMcMillan)
-- bitcoin-core/gui#296 Do not use QObject::tr plural syntax for numbers with a unit symbol (hebasto)
-- bitcoin-core/gui#297 Avoid unnecessary translations (hebasto)
-- bitcoin-core/gui#298 Peertableview alternating row colors (RandyMcMillan)
-- bitcoin-core/gui#300 Remove progress bar on modal overlay (brunoerg)
-- bitcoin-core/gui#309 Add access to the Peers tab from the network icon (hebasto)
-- bitcoin-core/gui#311 Peers Window rename 'Peer id' to 'Peer' (jarolrod)
-- bitcoin-core/gui#313 Optimize string concatenation by default (hebasto)
-- bitcoin-core/gui#325 Align numbers in the "Peer Id" column to the right (hebasto)
-- bitcoin-core/gui#329 Make console buttons look clickable (jarolrod)
-- bitcoin-core/gui#330 Allow prompt icon to be colorized (jarolrod)
-- bitcoin-core/gui#331 Make RPC console welcome message translation-friendly (hebasto)
-- bitcoin-core/gui#332 Replace disambiguation strings with translator comments (hebasto)
-- bitcoin-core/gui#335 test: Use QSignalSpy instead of QEventLoop (jarolrod)
-- bitcoin-core/gui#343 Improve the GUI responsiveness when progress dialogs are used (hebasto)
-- bitcoin-core/gui#361 Fix GUI segfault caused by bitcoin/bitcoin#22216 (ryanofsky)
-- bitcoin-core/gui#362 Add keyboard shortcuts to context menus (luke-jr)
-- bitcoin-core/gui#366 Dark Mode fixes/portability (luke-jr)
-- bitcoin-core/gui#375 Emit dataChanged signal to dynamically re-sort Peers table (hebasto)
-- bitcoin-core/gui#393 Fix regression in "Encrypt Wallet" menu item (hebasto)
-- bitcoin-core/gui#396 Ensure external signer option remains disabled without signers (achow101)
-- bitcoin-core/gui#406 Handle new added plurals in `revolt_en.ts` (hebasto)
+- revolt-core/gui#4 UI external signer support (e.g. hardware wallet) (Sjors)
+- revolt-core/gui#13 Hide peer detail view if multiple are selected (promag)
+- revolt-core/gui#18 Add peertablesortproxy module (hebasto)
+- revolt-core/gui#21 Improve pruning tooltip (fluffypony, BitcoinErrorLog)
+- revolt-core/gui#72 Log static plugins meta data and used style (hebasto)
+- revolt-core/gui#79 Embed monospaced font (hebasto)
+- revolt-core/gui#85 Remove unused "What's This" button in dialogs on Windows OS (hebasto)
+- revolt-core/gui#115 Replace "Hide tray icon" option with positive "Show tray icon" one (hebasto)
+- revolt-core/gui#118 Remove BDB version from the Information tab (hebasto)
+- revolt-core/gui#121 Early subscribe core signals in transaction table model (promag)
+- revolt-core/gui#123 Do not accept command while executing another one (hebasto)
+- revolt-core/gui#125 Enable changing the autoprune block space size in intro dialog (luke-jr)
+- revolt-core/gui#138 Unlock encrypted wallet "OK" button bugfix (mjdietzx)
+- revolt-core/gui#139 doc: Improve gui/src/qt README.md (jarolrod)
+- revolt-core/gui#154 Support macOS Dark mode (goums, Uplab)
+- revolt-core/gui#162 Add network to peers window and peer details (jonatack)
+- revolt-core/gui#163, revolt-core/gui#180 Peer details: replace Direction with Connection Type (jonatack)
+- revolt-core/gui#164 Handle peer addition/removal in a right way (hebasto)
+- revolt-core/gui#165 Save QSplitter state in QSettings (hebasto)
+- revolt-core/gui#173 Follow Qt docs when implementing rowCount and columnCount (hebasto)
+- revolt-core/gui#179 Add Type column to peers window, update peer details name/tooltip (jonatack)
+- revolt-core/gui#186 Add information to "Confirm fee bump" window (prayank23)
+- revolt-core/gui#189 Drop workaround for QTBUG-42503 which was fixed in Qt 5.5.0 (prusnak)
+- revolt-core/gui#194 Save/restore RPCConsole geometry only for window (hebasto)
+- revolt-core/gui#202 Fix right panel toggle in peers tab (RandyMcMillan)
+- revolt-core/gui#203 Display plain "Inbound" in peer details (jonatack)
+- revolt-core/gui#204 Drop buggy TableViewLastColumnResizingFixer class (hebasto)
+- revolt-core/gui#205, revolt-core/gui#229 Save/restore TransactionView and recentRequestsView tables column sizes (hebasto)
+- revolt-core/gui#206 Display fRelayTxes and `bip152_highbandwidth_{to, from}` in peer details (jonatack)
+- revolt-core/gui#213 Add Copy Address Action to Payment Requests (jarolrod)
+- revolt-core/gui#214 Disable requests context menu actions when appropriate (jarolrod)
+- revolt-core/gui#217 Make warning label look clickable (jarolrod)
+- revolt-core/gui#219 Prevent the main window popup menu (hebasto)
+- revolt-core/gui#220 Do not translate file extensions (hebasto)
+- revolt-core/gui#221 RPCConsole translatable string fixes and improvements (jonatack)
+- revolt-core/gui#226 Add "Last Block" and "Last Tx" rows to peer details area (jonatack)
+- revolt-core/gui#233 qt test: Don't bind to regtest port (achow101)
+- revolt-core/gui#243 Fix issue when disabling the auto-enabled blank wallet checkbox (jarolrod)
+- revolt-core/gui#246 Revert "qt: Use "fusion" style on macOS Big Sur with old Qt" (hebasto)
+- revolt-core/gui#248 For values of "Bytes transferred" and "Bytes/s" with 1000-based prefix names use 1000-based divisor instead of 1024-based (wodry)
+- revolt-core/gui#251 Improve URI/file handling message (hebasto)
+- revolt-core/gui#256 Save/restore column sizes of the tables in the Peers tab (hebasto)
+- revolt-core/gui#260 Handle exceptions isntead of crash (hebasto)
+- revolt-core/gui#263 Revamp context menus (hebasto)
+- revolt-core/gui#271 Don't clear console prompt when font resizing (jarolrod)
+- revolt-core/gui#275 Support runtime appearance adjustment on macOS (hebasto)
+- revolt-core/gui#276 Elide long strings in their middle in the Peers tab (hebasto)
+- revolt-core/gui#281 Set shortcuts for console's resize buttons (jarolrod)
+- revolt-core/gui#293 Enable wordWrap for Services (RandyMcMillan)
+- revolt-core/gui#296 Do not use QObject::tr plural syntax for numbers with a unit symbol (hebasto)
+- revolt-core/gui#297 Avoid unnecessary translations (hebasto)
+- revolt-core/gui#298 Peertableview alternating row colors (RandyMcMillan)
+- revolt-core/gui#300 Remove progress bar on modal overlay (brunoerg)
+- revolt-core/gui#309 Add access to the Peers tab from the network icon (hebasto)
+- revolt-core/gui#311 Peers Window rename 'Peer id' to 'Peer' (jarolrod)
+- revolt-core/gui#313 Optimize string concatenation by default (hebasto)
+- revolt-core/gui#325 Align numbers in the "Peer Id" column to the right (hebasto)
+- revolt-core/gui#329 Make console buttons look clickable (jarolrod)
+- revolt-core/gui#330 Allow prompt icon to be colorized (jarolrod)
+- revolt-core/gui#331 Make RPC console welcome message translation-friendly (hebasto)
+- revolt-core/gui#332 Replace disambiguation strings with translator comments (hebasto)
+- revolt-core/gui#335 test: Use QSignalSpy instead of QEventLoop (jarolrod)
+- revolt-core/gui#343 Improve the GUI responsiveness when progress dialogs are used (hebasto)
+- revolt-core/gui#361 Fix GUI segfault caused by bitcoin/bitcoin#22216 (ryanofsky)
+- revolt-core/gui#362 Add keyboard shortcuts to context menus (luke-jr)
+- revolt-core/gui#366 Dark Mode fixes/portability (luke-jr)
+- revolt-core/gui#375 Emit dataChanged signal to dynamically re-sort Peers table (hebasto)
+- revolt-core/gui#393 Fix regression in "Encrypt Wallet" menu item (hebasto)
+- revolt-core/gui#396 Ensure external signer option remains disabled without signers (achow101)
+- revolt-core/gui#406 Handle new added plurals in `revolt_en.ts` (hebasto)
 
 ### Build system
 - bitcoin/bitcoin#17227 Add Android packaging support (icota)

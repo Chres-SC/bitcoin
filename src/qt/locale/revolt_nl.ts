@@ -66,13 +66,13 @@
         <translation type="unfinished">Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Dit zijn uw Bitcoin adressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw bitcoins verzendt.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Dit zijn uw Revolt adressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw revolts verzendt.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Dit zijn uw Bitcoin adressen voor het ontvangen van betalingen. Gebruik de 'Nieuw ontvangstadres maken' knop in de ontvangst tab om nieuwe adressen te maken.
+        <translation type="unfinished">Dit zijn uw Revolt adressen voor het ontvangen van betalingen. Gebruik de 'Nieuw ontvangstadres maken' knop in de ontvangst tab om nieuwe adressen te maken.
 Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         <translation type="unfinished">Bevestig de versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW BITCOINS VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
+        <translation type="unfinished">Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW REVOLTS VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +180,8 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         <translation type="unfinished">Voer de oude wachtwoordzin en de nieuwe wachtwoordzin in voor de portemonnee.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Onthoud dat het versleutelen van uw portemonnee uw bitcoins niet volledig kan beschermen tegen diefstal, bijvoorbeeld door malware die uw computer infecteert.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Onthoud dat het versleutelen van uw portemonnee uw revolts niet volledig kan beschermen tegen diefstal, bijvoorbeeld door malware die uw computer infecteert.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -240,7 +240,7 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">Ongecontroleerde uitzondering</translation>
@@ -295,8 +295,8 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         <translation type="unfinished">Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation type="unfinished">Voer een Bitcoin adres in (bijv. %1)</translation>
+        <source>Enter a Revolt address (e.g. %1)</source>
+        <translation type="unfinished">Voer een Revolt adres in (bijv. %1)</translation>
     </message>
     <message>
         <source>Unroutable</source>
@@ -405,7 +405,7 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">Instellingen bestand kon niet worden gelezen</translation>
@@ -1124,8 +1124,8 @@ Indien dit het geval is, gelieve de software te gebruiken waarmee deze portefeui
         <translation type="unfinished">Proxy is &lt;b&gt;ingeschakeld&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Verstuur munten naar een Bitcoin adres</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">Verstuur munten naar een Revolt adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1168,16 +1168,16 @@ Indien dit het geval is, gelieve de software te gebruiken waarmee deze portefeui
         <translation type="unfinished">Onderteken &amp;bericht</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation type="unfinished">Onderteken berichten met uw Bitcoin adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
+        <translation type="unfinished">Onderteken berichten met uw Revolt adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Verifiëer Bericht...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Bitcoin adressen</translation>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
+        <translation type="unfinished">Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Revolt adressen</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -1240,8 +1240,8 @@ Indien dit het geval is, gelieve de software te gebruiken waarmee deze portefeui
         <translation type="unfinished">Verbinden met peers...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Vraag betaling aan (genereert QR-codes en bitcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
+        <translation type="unfinished">Vraag betaling aan (genereert QR-codes en revolt: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1323,8 +1323,8 @@ Indien dit het geval is, gelieve de software te gebruiken waarmee deze portefeui
         <translation type="unfinished">Ontvangstadressen</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Open een bitcoin: URI</translation>
+        <source>Open a revolt: URI</source>
+        <translation type="unfinished">Open een revolt: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1343,8 +1343,8 @@ Indien dit het geval is, gelieve de software te gebruiken waarmee deze portefeui
         <translation type="unfinished">Sluit alle portemonnees</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
-        <translation type="unfinished">Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Bitcoin commandoregelopties</translation>
+        <source>Show the %1 help message to get a list with possible Revolt command-line options</source>
+        <translation type="unfinished">Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Revolt commandoregelopties</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -1811,8 +1811,8 @@ Dit is ideaal voor alleen-lezen portommonees.</translation>
         <translation type="unfinished">Bewerk verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation type="unfinished">Het opgegeven adres "%1" is een ongeldig Bitcoin adres.</translation>
+        <source>The entered address "%1" is not a valid Revolt address.</source>
+        <translation type="unfinished">Het opgegeven adres "%1" is een ongeldig Revolt adres.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1881,8 +1881,8 @@ Dit is ideaal voor alleen-lezen portommonees.</translation>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation type="unfinished">%1 zal een kopie van de blokketen van Bitcoin downloaden en opslaan.</translation>
+        <source>%1 will download and store a copy of the Revolt block chain.</source>
+        <translation type="unfinished">%1 zal een kopie van de blokketen van Revolt downloaden en opslaan.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1978,8 +1978,8 @@ Dit is ideaal voor alleen-lezen portommonees.</translation>
         <translation type="unfinished">Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de portemonnee is daarom mogelijk niet correct. Deze informatie is correct zodra de portemonnee gelijk loopt met het Revolt netwerk, zoals onderaan beschreven.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Poging om bitcoins te besteden die door "nog niet weergegeven" transacties worden beïnvloed, worden niet door het netwerk geaccepteerd.</translation>
+        <source>Attempting to spend revolts that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">Poging om revolts te besteden die door "nog niet weergegeven" transacties worden beïnvloed, worden niet door het netwerk geaccepteerd.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -2168,20 +2168,20 @@ Ongebruikte mempool geheugen is gedeeld voor deze cache.</translation>
         <translation type="unfinished">&amp;Extern ondertekenscript directory</translation>
     </message>
     <message>
-        <source>Full path to a Bitcoin Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Volledige pad naar een Bitcoin Core compatibel script (b.v. C:\Downloads\hwi.exe of /Users/you/Downloads/hwi.py). Let op: Malware kan je coins stelen!</translation>
+        <source>Full path to a Revolt core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Volledige pad naar een Revolt core compatibel script (b.v. C:\Downloads\hwi.exe of /Users/you/Downloads/hwi.py). Let op: Malware kan je coins stelen!</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">Open de Bitcoin poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Open de Revolt poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="unfinished">Portmapping via &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
-        <translation type="unfinished">Automatisch openen van de Bitcoin client poort op de router. Dit werkt alleen als de router NAT-PMP ondersteunt en het is ingeschakeld. De externe poort kan willekeurig zijn.</translation>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <translation type="unfinished">Automatisch openen van de Revolt client poort op de router. Dit werkt alleen als de router NAT-PMP ondersteunt en het is ingeschakeld. De externe poort kan willekeurig zijn.</translation>
     </message>
     <message>
         <source>Map port using NA&amp;T-PMP</source>
@@ -2581,16 +2581,16 @@ Ongebruikte mempool geheugen is gedeeld voor deze cache.</translation>
         <translation type="unfinished">Fout bij betalingsverzoek</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation type="unfinished">Kan bitcoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start revolt: click-to-pay handler</source>
+        <translation type="unfinished">Kan revolt niet starten: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">URI-behandeling</translation>
     </message>
     <message>
-        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
-        <translation type="unfinished">'bitcoin://' is niet een geldige URI. Gebruik 'bitcoin:' in plaats daarvan.</translation>
+        <source>'revolt://' is not a valid URI. Use 'revolt:' instead.</source>
+        <translation type="unfinished">'revolt://' is niet een geldige URI. Gebruik 'revolt:' in plaats daarvan.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2601,8 +2601,8 @@ Gezien de wijdverspreide beveiligingsproblemen in BIP70 is het sterk aanbevolen 
 Als je deze fout ziet zou je de aanbieder moeten verzoeken om een BIP21 compatibele URI te verstrekken.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation type="unfinished">URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Bitcoin adres of misvormde URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Revolt address or malformed URI parameters.</source>
+        <translation type="unfinished">URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Revolt adres of misvormde URI parameters.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -3581,8 +3581,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">Waarschuwing: Ongeldig Bitcoin adres</translation>
+        <source>Warning: Invalid Revolt address</source>
+        <translation type="unfinished">Waarschuwing: Ongeldig Revolt adres</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3616,8 +3616,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation type="unfinished">Kies een eerder gebruikt adres</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">Het Bitcoinadres om betaling aan te versturen</translation>
+        <source>The Revolt address to send the payment to</source>
+        <translation type="unfinished">Het Revoltadres om betaling aan te versturen</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -3632,8 +3632,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation type="unfinished">Het te sturen bedrag in de geselecteerde eenheid</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder bitcoins ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less revolts than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder revolts ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -3660,8 +3660,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation type="unfinished">Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
-        <translation type="unfinished">Een bericht dat werd toegevoegd aan de bitcoin: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Revolt netwerk.</translation>
+        <source>A message that was attached to the revolt: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
+        <translation type="unfinished">Een bericht dat werd toegevoegd aan de revolt: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Revolt netwerk.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -3690,12 +3690,12 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation type="unfinished">&amp;Onderteken bericht</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Bitcoins kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive revolts sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Revolts kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation type="unfinished">Het Bitcoin adres om bericht mee te ondertekenen</translation>
+        <source>The Revolt address to sign the message with</source>
+        <translation type="unfinished">Het Revolt adres om bericht mee te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3718,8 +3718,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation type="unfinished">Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation type="unfinished">Onderteken een bericht om te bewijzen dat u een bepaald Bitcoin adres bezit</translation>
+        <source>Sign the message to prove you own this Revolt address</source>
+        <translation type="unfinished">Onderteken een bericht om te bewijzen dat u een bepaald Revolt adres bezit</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3742,8 +3742,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation type="unfinished">Voer het adres van de ontvanger in, bericht (zorg ervoor dat de regeleinden, spaties, tabs etc. precies kloppen) en onderteken onderaan om het bericht te verifiëren. Wees voorzicht om niet meer in de ondertekening te lezen dan in het getekende bericht zelf, om te voorkomen dat je wordt aangevallen met een man-in-the-middle attack. Houd er mee rekening dat dit alleen de ondertekende partij bewijst met het ontvangen adres, er kan niet bewezen worden dat er een transactie heeft plaatsgevonden!</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation type="unfinished">Het Bitcoin adres waarmee het bericht ondertekend is</translation>
+        <source>The Revolt address the message was signed with</source>
+        <translation type="unfinished">Het Revolt adres waarmee het bericht ondertekend is</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -3754,8 +3754,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation type="unfinished">De handtekening waarmee het bericht ondertekend werd</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation type="unfinished">Controleer een bericht om te verifiëren dat het gespecificeerde Bitcoin adres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified Revolt address</source>
+        <translation type="unfinished">Controleer een bericht om te verifiëren dat het gespecificeerde Revolt adres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

@@ -6,8 +6,8 @@ define(_CLIENT_VERSION_RC, 0)
 define(_CLIENT_VERSION_IS_RELEASE, false)
 define(_COPYRIGHT_YEAR, 2022)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Bitcoin Core]])
-AC_INIT([Bitcoin Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_BUILD)m4_if(_CLIENT_VERSION_RC, [0], [], [rc]_CLIENT_VERSION_RC),[https://github.com/bitcoin/bitcoin/issues],[bitcoin],[https://bitcoincore.org/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Revolt core]])
+AC_INIT([Revolt core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_BUILD)m4_if(_CLIENT_VERSION_RC, [0], [], [rc]_CLIENT_VERSION_RC),[https://github.com/bitcoin/bitcoin/issues],[bitcoin],[https://bitcoincore.org/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/revolt-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -23,12 +23,12 @@ REVOLT_DAEMON_NAME=revoltd
 REVOLT_GUI_NAME=revolt-qt
 REVOLT_CLI_NAME=revolt-cli
 REVOLT_TX_NAME=revolt-tx
-BITCOIN_UTIL_NAME=revolt-util
+REVOLT_UTIL_NAME=revolt-util
 REVOLT_CHAINSTATE_NAME=revolt-chainstate
 REVOLT_WALLET_TOOL_NAME=revolt-wallet
 dnl Multi Process
-BITCOIN_MP_NODE_NAME=revolt-node
-BITCOIN_MP_GUI_NAME=revolt-gui
+REVOLT_MP_NODE_NAME=revolt-node
+REVOLT_MP_GUI_NAME=revolt-gui
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 dnl This is also the default as-of libtool 2.4.7
@@ -231,7 +231,7 @@ AC_ARG_ENABLE([ccache],
 
 dnl Suppress warnings from external headers (e.g. Boost, Qt).
 dnl May be useful if warnings from external headers clutter the build output
-dnl too much, so that it becomes difficult to spot Bitcoin Core warnings
+dnl too much, so that it becomes difficult to spot Revolt core warnings
 dnl or if they cause a build failure with --enable-werror.
 AC_ARG_ENABLE([suppress-external-warnings],
   [AS_HELP_STRING([--enable-suppress-external-warnings],
@@ -663,8 +663,8 @@ AC_ARG_ENABLE([experimental-util-chainstate],
 AC_ARG_WITH([libs],
   [AS_HELP_STRING([--with-libs],
   [build libraries (default=yes)])],
-  [build_bitcoin_libs=$withval],
-  [build_bitcoin_libs=yes])
+  [build_revolt_libs=$withval],
+  [build_revolt_libs=yes])
 
 AC_ARG_WITH([experimental-kernel-lib],
   [AS_HELP_STRING([--with-experimental-kernel-lib],
@@ -1298,7 +1298,7 @@ if test "$enable_fuzz" = "yes"; then
   build_revolt_chainstate=no
   build_revolt_wallet=no
   build_revoltd=no
-  build_bitcoin_libs=no
+  build_revolt_libs=no
   revolt_enable_qt=no
   revolt_enable_qt_test=no
   revolt_enable_qt_dbus=no
@@ -1692,16 +1692,16 @@ fi
 AC_MSG_RESULT($build_revolt_chainstate)
 
 AC_MSG_CHECKING([whether to build libraries])
-AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test $build_bitcoin_libs = "yes"])
+AM_CONDITIONAL([BUILD_REVOLT_LIBS], [test $build_revolt_libs = "yes"])
 
-if test "$build_bitcoin_libs" = "yes"; then
+if test "$build_revolt_libs" = "yes"; then
   AC_DEFINE([HAVE_CONSENSUS_LIB], [1], [Define this symbol if the consensus lib has been built])
   AC_CONFIG_FILES([librevoltconsensus.pc:librevoltconsensus.pc.in])
 fi
 
 AM_CONDITIONAL([BUILD_BITCOIN_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_revolt_chainstate" = "yes" )])
 
-AC_MSG_RESULT($build_bitcoin_libs)
+AC_MSG_RESULT($build_revolt_libs)
 
 AC_LANG_POP
 
@@ -1852,7 +1852,7 @@ else
   AC_MSG_RESULT([no])
 fi
 
-if test "$build_revolt_wallet$build_revolt_cli$build_revolt_tx$build_bitcoin_libs$build_revoltd$revolt_enable_qt$enable_fuzz_binary$use_bench$use_tests" = "nonononononononono"; then
+if test "$build_revolt_wallet$build_revolt_cli$build_revolt_tx$build_revolt_libs$build_revoltd$revolt_enable_qt$enable_fuzz_binary$use_bench$use_tests" = "nonononononononono"; then
   AC_MSG_ERROR([No targets! Please specify at least one of: --with-utils --with-libs --with-daemon --with-gui --enable-fuzz(-binary) --enable-bench or --enable-tests])
 fi
 
@@ -1909,11 +1909,11 @@ AC_SUBST(REVOLT_DAEMON_NAME)
 AC_SUBST(REVOLT_GUI_NAME)
 AC_SUBST(REVOLT_CLI_NAME)
 AC_SUBST(REVOLT_TX_NAME)
-AC_SUBST(BITCOIN_UTIL_NAME)
+AC_SUBST(REVOLT_UTIL_NAME)
 AC_SUBST(REVOLT_CHAINSTATE_NAME)
 AC_SUBST(REVOLT_WALLET_TOOL_NAME)
-AC_SUBST(BITCOIN_MP_NODE_NAME)
-AC_SUBST(BITCOIN_MP_GUI_NAME)
+AC_SUBST(REVOLT_MP_NODE_NAME)
+AC_SUBST(REVOLT_MP_GUI_NAME)
 
 AC_SUBST(RELDFLAGS)
 AC_SUBST(CORE_LDFLAGS)
@@ -2012,7 +2012,7 @@ echo "Options used to compile and link:"
 echo "  external signer = $use_external_signer"
 echo "  multiprocess    = $build_multiprocess"
 echo "  with experimental syscall sandbox support = $use_syscall_sandbox"
-echo "  with libs       = $build_bitcoin_libs"
+echo "  with libs       = $build_revolt_libs"
 echo "  with wallet     = $enable_wallet"
 if test "$enable_wallet" != "no"; then
     echo "    with sqlite   = $use_sqlite"

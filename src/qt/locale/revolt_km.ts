@@ -66,8 +66,8 @@
         <translation type="unfinished">អាសយដ្ឋានសម្រាប់ទទួល</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">ទាំងនេះ​គឺជាអាសយដ្ឋាន Bitcoin របស់អ្នកសម្រាប់ធ្វើការផ្ញើការបង់ប្រាក់។ តែងតែពិនិត្យមើលចំនួនប្រាក់ និងអាសយដ្ឋានដែលទទួល មុនពេលផ្ញើប្រាក់។</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">ទាំងនេះ​គឺជាអាសយដ្ឋាន Revolt របស់អ្នកសម្រាប់ធ្វើការផ្ញើការបង់ប្រាក់។ តែងតែពិនិត្យមើលចំនួនប្រាក់ និងអាសយដ្ឋានដែលទទួល មុនពេលផ្ញើប្រាក់។</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -148,8 +148,8 @@
         <translation type="unfinished">បញ្ជាក់ការអ៊ិនគ្រីបកាបូបចល័ត</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">ការព្រមាន៖ ប្រសិនបើអ្នកអ៊ិនគ្រីបកាបូបចល័តរបស់អ្នក ហើយអ្នកភ្លេចបាត់ឃ្លាសម្ងាត់ នោះអ្នកនិង &lt;b&gt;បាត់បង់ BITCOINS របស់អ្នកទាំងអស់&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
+        <translation type="unfinished">ការព្រមាន៖ ប្រសិនបើអ្នកអ៊ិនគ្រីបកាបូបចល័តរបស់អ្នក ហើយអ្នកភ្លេចបាត់ឃ្លាសម្ងាត់ នោះអ្នកនិង &lt;b&gt;បាត់បង់ REVOLTS របស់អ្នកទាំងអស់&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -273,7 +273,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation type="unfinished">-maxtxfee មានតំម្លៃខ្ពស់ពេក។​ តំម្លៃនេះ អាចគួរត្រូវបានបង់សម្រាប់មួយប្រត្តិបត្តិការ។</translation>
@@ -443,8 +443,8 @@
         <translation type="unfinished">ប្រូកស៊ី ត្រូវបាន &lt;b&gt;អនុញ្ញាត&lt;/b&gt;៖ %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន Bitcoin មួយ</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន Revolt មួយ</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -467,11 +467,11 @@
         <translation type="unfinished">បំលែងលេខសំម្ងាត់សម្រាប់កាបូបអេឡិចត្រូនិច របស់អ្នកឲ្យទៅជាភាសាកុំព្យូទ័រ </translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
         <translation type="unfinished">ចុះហត្ថលេខាលើសារ អាសយដ្ឋានប៊ីតខញរបស់អ្នក ដើម្បីបញ្ចាក់ថាអ្នកជាម្ចាស់</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
         <translation type="unfinished">ធ្វើការបញ្ចាក់សារ ដើម្បីធានាថាសារទាំំងនោះបានចុះហត្ថលេខា ជាមួយអាសយដ្ខានប៊ីតខញ</translation>
     </message>
     <message>
@@ -491,7 +491,7 @@
         <translation type="unfinished">ធូបារថេប</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
         <translation type="unfinished">សំណើរទូរទាត់​(បង្កើតកូដ QR និង ប៊ីតខញ: URLs)</translation>
     </message>
     <message>
@@ -546,7 +546,7 @@
         <translation type="unfinished">&amp;អាសយដ្ឋានទទួល</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a revolt: URI</source>
         <translation type="unfinished">បើកប៊ីតខញមួយៈ URl</translation>
     </message>
     <message>
@@ -808,7 +808,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Revolt</source>
         <translation type="unfinished">ប៊ីតខញ</translation>
     </message>
     <message numerus="yes">
@@ -861,7 +861,7 @@
         <translation type="unfinished">ប្រត្តិបត្តិការថ្មីៗនេះប្រហែលជាមិនអាចមើលឃើញ ហេតុដូច្នេះសមតុល្យនៅក្នងកាបូបអេឡិចត្រូនិចរបស់អ្នកប្រហែលជាមិនត្រឹមត្រូវ។ ព័ត៌មានត្រឹមត្រូវនៅពេលដែលកាបូបអេឡិចត្រូនិចរបស់អ្នកបានធ្វើសមកាលកម្មជាមួយបណ្តាញប៊ឺតខញ  សូមពិនិត្យព័ត៌មានលំម្អិតខាងក្រោម។</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend revolts that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">ព្យាយាមក្នុងការចំណាយប៊ីតខញដែលទទួលរងឥទ្ឋិពលពីប្រត្តិបត្តិការមិនទាន់ធ្វើការបង្ហាញ នឹងមិនត្រូវទទួលស្គាល់ពីបណ្តាញ។</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation type="unfinished">ជ្រើសរើសអាសយដ្ឋានដែលបានប្រើពីមុន</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
+        <source>The Revolt address to send the payment to</source>
         <translation type="unfinished">អាសយដ្ឋានប៊ីតខញក្នុងការបញ្ចូនការទូរទាត់ប្រាក់ទៅកាន់</translation>
     </message>
     <message>
@@ -1687,7 +1687,7 @@
         <translation type="unfinished">&amp;ចុះហត្ថលេខា សារ</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
+        <source>The Revolt address to sign the message with</source>
         <translation type="unfinished">អាសយដ្ឋានប៊ីតខញនេះ ចុះហត្ថលេខានៅលើសារ</translation>
     </message>
     <message>
@@ -1711,7 +1711,7 @@
         <translation type="unfinished">ចម្លងហត្ថលេខដែលមានបច្ចុប្បន្នទៅកាន់ប្រព័ន្ធក្តារតមៀប</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Revolt address</source>
         <translation type="unfinished">ចុះហត្ថលេខាលើសារនេះដើម្បីបង្ហាញថាលោកអ្នកជាម្ចាស់អាសយដ្ឋានប៊ីតខញ</translation>
     </message>
     <message>
@@ -1739,7 +1739,7 @@
         <translation type="unfinished">ហត្ថលេខាត្រូវបានផ្តល់នៅពេលដែលសារត្រូវបានចុះហត្ថលេខា</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Revolt address</source>
         <translation type="unfinished">ផ្ទៀងផ្ទាត់សារដើម្បីធានាថាវាត្រូវបានចុះហត្ថលេខាជាមួយនឹងអាសយដ្ឋានប៊ីតខញជាក់លាក់។</translation>
     </message>
     <message>

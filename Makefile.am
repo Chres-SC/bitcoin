@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2020 The Bitcoin Core developers
+# Copyright (c) 2013-2020 The Revolt Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,20 +16,20 @@ endif
 
 export PYTHONPATH
 
-if BUILD_BITCOIN_LIBS
+if BUILD_REVOLT_LIBS
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = librevoltconsensus.pc
 endif
 
 REVOLTD_BIN=$(top_builddir)/src/$(REVOLT_DAEMON_NAME)$(EXEEXT)
-BITCOIN_QT_BIN=$(top_builddir)/src/qt/$(REVOLT_GUI_NAME)$(EXEEXT)
+REVOLT_QT_BIN=$(top_builddir)/src/qt/$(REVOLT_GUI_NAME)$(EXEEXT)
 REVOLT_CLI_BIN=$(top_builddir)/src/$(REVOLT_CLI_NAME)$(EXEEXT)
 REVOLT_TX_BIN=$(top_builddir)/src/$(REVOLT_TX_NAME)$(EXEEXT)
-BITCOIN_UTIL_BIN=$(top_builddir)/src/$(BITCOIN_UTIL_NAME)$(EXEEXT)
+REVOLT_UTIL_BIN=$(top_builddir)/src/$(REVOLT_UTIL_NAME)$(EXEEXT)
 REVOLT_WALLET_BIN=$(top_builddir)/src/$(REVOLT_WALLET_TOOL_NAME)$(EXEEXT)
-REVOLT_NODE_BIN=$(top_builddir)/src/$(BITCOIN_MP_NODE_NAME)$(EXEEXT)
-REVOLT_GUI_BIN=$(top_builddir)/src/$(BITCOIN_MP_GUI_NAME)$(EXEEXT)
-BITCOIN_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win64-setup$(EXEEXT)
+REVOLT_NODE_BIN=$(top_builddir)/src/$(REVOLT_MP_NODE_NAME)$(EXEEXT)
+REVOLT_GUI_BIN=$(top_builddir)/src/$(REVOLT_MP_GUI_NAME)$(EXEEXT)
+REVOLT_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win64-setup$(EXEEXT)
 
 empty :=
 space := $(empty) $(empty)
@@ -38,7 +38,7 @@ OSX_APP=Revolt-Qt.app
 OSX_VOLNAME = $(subst $(space),-,$(PACKAGE_NAME))
 OSX_DMG = $(OSX_VOLNAME).dmg
 OSX_DEPLOY_SCRIPT=$(top_srcdir)/contrib/macdeploy/macdeployqtplus
-OSX_INSTALLER_ICONS=$(top_srcdir)/src/qt/res/icons/bitcoin.icns
+OSX_INSTALLER_ICONS=$(top_srcdir)/src/qt/res/icons/revolt.icns
 OSX_PLIST=$(top_builddir)/share/qt/Info.plist #not installed
 
 DIST_CONTRIB = \
@@ -57,7 +57,7 @@ BIN_CHECKS=$(top_srcdir)/contrib/devtools/symbol-check.py \
            $(top_srcdir)/contrib/devtools/security-check.py \
            $(top_srcdir)/contrib/devtools/utils.py
 
-WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/bitcoin.ico \
+WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/revolt.ico \
   $(top_srcdir)/share/pixmaps/nsis-header.bmp \
   $(top_srcdir)/share/pixmaps/nsis-wizard.bmp \
   $(top_srcdir)/doc/README_windows.txt
@@ -74,19 +74,19 @@ dist-hook:
 	-$(GIT) archive --format=tar HEAD -- src/clientversion.cpp | $(AMTAR) -C $(top_distdir) -xf -
 
 if TARGET_WINDOWS
-$(BITCOIN_WIN_INSTALLER): all-recursive
+$(REVOLT_WIN_INSTALLER): all-recursive
 	$(MKDIR_P) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(REVOLTD_BIN) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(BITCOIN_QT_BIN) $(top_builddir)/release
+	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(REVOLT_QT_BIN) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(REVOLT_CLI_BIN) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(REVOLT_TX_BIN) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(REVOLT_WALLET_BIN) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(BITCOIN_UTIL_BIN) $(top_builddir)/release
+	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(REVOLT_UTIL_BIN) $(top_builddir)/release
 	@test -f $(MAKENSIS) && echo 'OutFile "$@"' | cat $(top_builddir)/share/setup.nsi - | $(MAKENSIS) -V2 - || \
 	  echo error: could not build $@
 	@echo built $@
 
-deploy: $(BITCOIN_WIN_INSTALLER)
+deploy: $(REVOLT_WIN_INSTALLER)
 endif
 
 if TARGET_DARWIN
@@ -102,20 +102,20 @@ $(OSX_APP)/Contents/Info.plist: $(OSX_PLIST)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/Resources/bitcoin.icns: $(OSX_INSTALLER_ICONS)
+$(OSX_APP)/Contents/Resources/revolt.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
 $(OSX_APP)/Contents/MacOS/Revolt-Qt: all-recursive
 	$(MKDIR_P) $(@D)
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $(BITCOIN_QT_BIN) $@
+	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $(REVOLT_QT_BIN) $@
 
 $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings:
 	$(MKDIR_P) $(@D)
 	echo '{	CFBundleDisplayName = "$(PACKAGE_NAME)"; CFBundleName = "$(PACKAGE_NAME)"; }' > $@
 
 OSX_APP_BUILT=$(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
-  $(OSX_APP)/Contents/Resources/bitcoin.icns $(OSX_APP)/Contents/Info.plist \
+  $(OSX_APP)/Contents/Resources/revolt.icns $(OSX_APP)/Contents/Info.plist \
   $(OSX_APP)/Contents/MacOS/Revolt-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
 
 osx_volname:
@@ -141,7 +141,7 @@ endif !BUILD_DARWIN
 deploy: $(OSX_DMG)
 endif
 
-$(BITCOIN_QT_BIN): FORCE
+$(REVOLT_QT_BIN): FORCE
 	$(MAKE) -C src qt/$(@F)
 
 $(REVOLTD_BIN): FORCE
@@ -153,7 +153,7 @@ $(REVOLT_CLI_BIN): FORCE
 $(REVOLT_TX_BIN): FORCE
 	$(MAKE) -C src $(@F)
 
-$(BITCOIN_UTIL_BIN): FORCE
+$(REVOLT_UTIL_BIN): FORCE
 	$(MAKE) -C src $(@F)
 
 $(REVOLT_WALLET_BIN): FORCE
@@ -311,7 +311,7 @@ EXTRA_DIST += \
     test/util/data/txcreatesignv2.hex \
     test/util/rpcauth-test.py
 
-CLEANFILES = $(OSX_DMG) $(BITCOIN_WIN_INSTALLER)
+CLEANFILES = $(OSX_DMG) $(REVOLT_WIN_INSTALLER)
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-man
 

@@ -154,8 +154,8 @@
         <translation type="unfinished">Confirmar la encriptación de cartera</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Advertencia: Si encripta su cartera y pierde su contraseña, &lt;b&gt;PERDERÁ TODOS SUS BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
+        <translation type="unfinished">Advertencia: Si encripta su cartera y pierde su contraseña, &lt;b&gt;PERDERÁ TODOS SUS REVOLTS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -174,8 +174,8 @@
         <translation type="unfinished">Ingresa la antigua frase de contraseña y la nueva frase de contraseña para la billetera.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Recuerda que encriptar tu billetera no protege completamente tus bitcoins contra robo por malware que haya infectado tu computadora.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Recuerda que encriptar tu billetera no protege completamente tus revolts contra robo por malware que haya infectado tu computadora.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -234,7 +234,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">Excepción fuera de control</translation>
@@ -348,7 +348,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Cannot downgrade wallet from version %i to version %i. Wallet version unchanged.</source>
         <translation type="unfinished">No se pudo cambiar la versión %i a la versión anterior %i.  Versión del monedero sin cambios.</translation>
@@ -602,8 +602,8 @@
         <translation type="unfinished">El proxy está &lt;b&gt;habilitado&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Enviar monedas a una dirección Bitcoin</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">Enviar monedas a una dirección Revolt</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -646,16 +646,16 @@
         <translation type="unfinished">Firmar &amp;mensaje...</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation type="unfinished">Firme mensajes con sus direcciones de Bitcoin para demostrar que los posee</translation>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
+        <translation type="unfinished">Firme mensajes con sus direcciones de Revolt para demostrar que los posee</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Verifique los mensajes para asegurarse de que se firmaron con direcciones de Bitcoin especificadas.</translation>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
+        <translation type="unfinished">Verifique los mensajes para asegurarse de que se firmaron con direcciones de Revolt especificadas.</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -718,9 +718,9 @@
         <translation type="unfinished">Conectando a pares...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
         <translation type="unfinished"> 
-Solicitar pagos (genera códigos QR y bitcoin: URI)
+Solicitar pagos (genera códigos QR y revolt: URI)
  </translation>
     </message>
     <message>
@@ -1262,11 +1262,11 @@ Solicitar pagos (genera códigos QR y bitcoin: URI)
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the revolt network, as detailed below.</source>
-        <translation type="unfinished">Las transacciones recientes pueden no ser visibles todavía, y por lo tanto el saldo de su cartera podría ser incorrecto. Esta información será correcta una vez que su cartera haya terminado de sincronizarse con la red de bitcoin, como se detalla abajo.</translation>
+        <translation type="unfinished">Las transacciones recientes pueden no ser visibles todavía, y por lo tanto el saldo de su cartera podría ser incorrecto. Esta información será correcta una vez que su cartera haya terminado de sincronizarse con la red de revolt, como se detalla abajo.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Los intentos de gastar bitcoins que se vean afectados por transacciones aún no mostradas no serán aceptados por la red.</translation>
+        <source>Attempting to spend revolts that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">Los intentos de gastar revolts que se vean afectados por transacciones aún no mostradas no serán aceptados por la red.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1305,7 +1305,7 @@ Solicitar pagos (genera códigos QR y bitcoin: URI)
     <name>OpenURIDialog</name>
     <message>
         <source>Open revolt URI</source>
-        <translation type="unfinished">Abrir la URI de bitcoin</translation>
+        <translation type="unfinished">Abrir la URI de revolt</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -1348,11 +1348,11 @@ Solicitar pagos (genera códigos QR y bitcoin: URI)
         <translation type="unfinished">Dispositivo Externo de Firma (ej. billetera de hardware)</translation>
     </message>
     <message>
-        <source>Full path to a Bitcoin Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Ruta completa al script compatible con Bitcoin Core (ej. C:\Descargas\hwi.exe o /Usuarios/SuUsuario/Descargas/hwi.py). Cuidado: código malicioso podría robarle sus monedas!</translation>
+        <source>Full path to a Revolt core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Ruta completa al script compatible con Revolt core (ej. C:\Descargas\hwi.exe o /Usuarios/SuUsuario/Descargas/hwi.py). Cuidado: código malicioso podría robarle sus monedas!</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation type="unfinished">Abre el puerto del cliente de Revolt en el router automáticamente. Esto solo funciona cuando el router soporta NAT-PMP y está habilitado. El puerto externo podría ser elegido al azar.</translation>
     </message>
     <message>
@@ -1739,7 +1739,7 @@ Para obtener más información, escriba %6.
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Revolt network.</source>
-        <translation type="unfinished">Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Bitcoin.</translation>
+        <translation type="unfinished">Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Revolt.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2056,8 +2056,8 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">Advertencia: Dirección de Bitcoin invalida</translation>
+        <source>Warning: Invalid Revolt address</source>
+        <translation type="unfinished">Advertencia: Dirección de Revolt invalida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2091,8 +2091,8 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
         <translation type="unfinished">Elegir la dirección utilizada anteriormente</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">La dirección de Bitcoin para enviar el pago a</translation>
+        <source>The Revolt address to send the payment to</source>
+        <translation type="unfinished">La dirección de Revolt para enviar el pago a</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>

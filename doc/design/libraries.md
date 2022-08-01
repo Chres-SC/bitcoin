@@ -100,5 +100,5 @@ class revolt-qt,revoltd,revolt-cli,revolt-wallet bold
 
 ## Work in progress
 
-- Validation code is moving from *librevolt_node* to *libbitcoin_kernel* as part of [The libbitcoinkernel Project #24303](https://github.com/bitcoin/bitcoin/issues/24303)
+- Validation code is moving from *librevolt_node* to *libbitcoin_kernel* as part of [The librevoltkernel Project #24303](https://github.com/bitcoin/bitcoin/issues/24303)
 - Source code organization is discussed in general in [Library source code organization #15732](https://github.com/bitcoin/bitcoin/issues/15732)

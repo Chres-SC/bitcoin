@@ -66,8 +66,8 @@
         <translation type="unfinished">Қабылдаушы мекенжайлар</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Бұл сіздің төлем жіберетін Bitcoin мекенжайларыңыз. Тиын жібермес бұрын, әрқашан сома мен алушы мекенжайды тексеріңіз.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Бұл сіздің төлем жіберетін Revolt мекенжайларыңыз. Тиын жібермес бұрын, әрқашан сома мен алушы мекенжайды тексеріңіз.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -158,8 +158,8 @@
         <translation type="unfinished">Әмиян шифрлауды растау</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Ескерту: әмияныңызды шифрлап, құпиясөйлеміңізден айырылып қалсаңыз, &lt;b&gt;БАРЛЫҚ BITCOIN-ІҢІЗДЕН ДЕ АЙЫРЫЛАСЫЗ&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
+        <translation type="unfinished">Ескерту: әмияныңызды шифрлап, құпиясөйлеміңізден айырылып қалсаңыз, &lt;b&gt;БАРЛЫҚ REVOLT-ІҢІЗДЕН ДЕ АЙЫРЫЛАСЫЗ&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -178,7 +178,7 @@
         <translation type="unfinished">Әмияныңыздың ескі құпиясөйлемі мен жаңа құпиясөйлемін енгізіңіз.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Шифрлау биткоиніңізді компьютер жұқтырған зиянды БЖ-дан толығымен қорғай алмайтынын есіңізде сақтаңыз.</translation>
     </message>
     <message>
@@ -234,7 +234,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Internal error</source>
         <translation type="unfinished">Ішкі қате</translation>
@@ -310,7 +310,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Invalid amount for -fallbackfee=&lt;amount&gt;: '%s'</source>
         <translation type="unfinished">-fallbackfee=&lt;amount&gt; үшін қате сан: "%s"</translation>
@@ -392,8 +392,8 @@
         <translation type="unfinished">Прокси &lt;b&gt;қосулы&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Bitcoin мекенжайына тиын жіберу</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">Revolt мекенжайына тиын жіберу</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -436,16 +436,16 @@
         <translation type="unfinished">Хатқа &amp;қол қою…</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation type="unfinished">Хатқа Bitcoin мекенжайларын қосып, олар сізге тиесілі екенін дәлелдеу</translation>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
+        <translation type="unfinished">Хатқа Revolt мекенжайларын қосып, олар сізге тиесілі екенін дәлелдеу</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Хат тексеру…</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Хат тексеріп, берілген Bitcoin мекенжайлары қосылғанына көз жеткізу</translation>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
+        <translation type="unfinished">Хат тексеріп, берілген Revolt мекенжайлары қосылғанына көз жеткізу</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -500,7 +500,7 @@
         <translation type="unfinished">Дискідегі блоктар қайта индекстелуде…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
         <translation type="unfinished">Төлем талап ету (QR кодтары мен биткоин құрады: URI)</translation>
     </message>
     <message>
@@ -642,7 +642,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Revolt</source>
         <translation type="unfinished">Биткоин</translation>
     </message>
     <message numerus="yes">
@@ -654,8 +654,8 @@
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation type="unfinished">%1 Bitcoin блокчейнінің көшірмесін жүктеп сақтайды.</translation>
+        <source>%1 will download and store a copy of the Revolt block chain.</source>
+        <translation type="unfinished">%1 Revolt блокчейнінің көшірмесін жүктеп сақтайды.</translation>
     </message>
     <message>
         <source>Error</source>

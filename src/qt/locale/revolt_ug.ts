@@ -66,13 +66,13 @@
         <translation type="unfinished">تاپشۇرۇۋېلىش ئادرېسى</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">بۇلار سىز Bitcoin چىقىم قىلىدىغان ئادرېس. تەڭگە چىقىم قىلىشتىن ئىلگىرى، سومما ۋە تاپشۇرۇۋېلىش ئادرېسىنىڭ توغرا ئىكەنلىكىنى تەكشۈرۈشنى ئۇنۇتماڭ.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">بۇلار سىز Revolt چىقىم قىلىدىغان ئادرېس. تەڭگە چىقىم قىلىشتىن ئىلگىرى، سومما ۋە تاپشۇرۇۋېلىش ئادرېسىنىڭ توغرا ئىكەنلىكىنى تەكشۈرۈشنى ئۇنۇتماڭ.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">بۇ Bitcoin تاپشۇرۇۋېلىشقا ئىشلىتىدىغان ئادرېسىڭىز. «قوبۇللاش» بەتكۈچتىكى «يېڭى تاپشۇرۇۋېلىش ئادرېسى قۇر» توپچىنى چېكىپ يېڭى ئادرېس قۇرالايسىز.
+        <translation type="unfinished">بۇ Revolt تاپشۇرۇۋېلىشقا ئىشلىتىدىغان ئادرېسىڭىز. «قوبۇللاش» بەتكۈچتىكى «يېڭى تاپشۇرۇۋېلىش ئادرېسى قۇر» توپچىنى چېكىپ يېڭى ئادرېس قۇرالايسىز.
 پەقەت «ئەنئەنىۋى(legacy)» تىپتىكى ئادرېسلا ئىمزانى قوللايدۇ.</translation>
     </message>
     <message>

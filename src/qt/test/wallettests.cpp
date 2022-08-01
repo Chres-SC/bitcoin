@@ -1,4 +1,4 @@
-// Copyright (c) 2015-2021 The Bitcoin Core developers
+// Copyright (c) 2015-2021 The Revolt core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@
 #include <interfaces/node.h>
 #include <key_io.h>
 #include <qt/revoltamountfield.h>
-#include <qt/bitcoinunits.h>
+#include <qt/revoltunits.h>
 #include <qt/clientmodel.h>
 #include <qt/optionsmodel.h>
 #include <qt/overviewpage.h>
@@ -199,9 +199,9 @@ void TestGUI(interfaces::Node& node)
         // Check balance in send dialog
         QLabel* balanceLabel = sendCoinsDialog.findChild<QLabel*>("labelBalance");
         QString balanceText = balanceLabel->text();
-        BitcoinUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
+        RevoltUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
         CAmount balance = walletModel.wallet().getBalance();
-        QString balanceComparison = BitcoinUnits::formatWithUnit(unit, balance, false, BitcoinUnits::SeparatorStyle::ALWAYS);
+        QString balanceComparison = RevoltUnits::formatWithUnit(unit, balance, false, RevoltUnits::SeparatorStyle::ALWAYS);
         QCOMPARE(balanceText, balanceComparison);
     }
 
@@ -225,9 +225,9 @@ void TestGUI(interfaces::Node& node)
     overviewPage.setWalletModel(&walletModel);
     QLabel* balanceLabel = overviewPage.findChild<QLabel*>("labelBalance");
     QString balanceText = balanceLabel->text().trimmed();
-    BitcoinUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
+    RevoltUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
     CAmount balance = walletModel.wallet().getBalance();
-    QString balanceComparison = BitcoinUnits::formatWithUnit(unit, balance, false, BitcoinUnits::SeparatorStyle::ALWAYS);
+    QString balanceComparison = RevoltUnits::formatWithUnit(unit, balance, false, RevoltUnits::SeparatorStyle::ALWAYS);
     QCOMPARE(balanceText, balanceComparison);
 
     // Check Request Payment button
@@ -256,7 +256,7 @@ void TestGUI(interfaces::Node& node)
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("payment_header")->text(), QString("Payment information"));
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("uri_tag")->text(), QString("URI:"));
             QString uri = receiveRequestDialog->QObject::findChild<QLabel*>("uri_content")->text();
-            QCOMPARE(uri.count("bitcoin:"), 2);
+            QCOMPARE(uri.count("revolt:"), 2);
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("address_tag")->text(), QString("Address:"));
             QVERIFY(address.isEmpty());
             address = receiveRequestDialog->QObject::findChild<QLabel*>("address_content")->text();

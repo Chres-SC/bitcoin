@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Revolt core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -154,12 +154,12 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
         QApplication::installTranslator(&qtTranslator);
     }
 
-    // Load e.g. revolt_de.qm (shortcut "de" needs to be defined in bitcoin.qrc)
+    // Load e.g. revolt_de.qm (shortcut "de" needs to be defined in revolt.qrc)
     if (translatorBase.load(lang, ":/translations/")) {
         QApplication::installTranslator(&translatorBase);
     }
 
-    // Load e.g. revolt_de_DE.qm (shortcut "de_DE" needs to be defined in bitcoin.qrc)
+    // Load e.g. revolt_de_DE.qm (shortcut "de_DE" needs to be defined in revolt.qrc)
     if (translator.load(lang_territory, ":/translations/")) {
         QApplication::installTranslator(&translator);
     }
