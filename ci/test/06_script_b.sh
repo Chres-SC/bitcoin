@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2021 The Bitcoin Core developers
+# Copyright (c) 2018-2021 The Revolt Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,9 +35,9 @@ if [ "$RUN_FUNCTIONAL_TESTS" = "true" ]; then
 fi
 
 if [ "${RUN_TIDY}" = "true" ]; then
-  export P_CI_DIR="${BASE_BUILD_DIR}/bitcoin-$HOST/src/"
+  export P_CI_DIR="${BASE_BUILD_DIR}/revolt-$HOST/src/"
   CI_EXEC run-clang-tidy "${MAKEJOBS}"
-  export P_CI_DIR="${BASE_BUILD_DIR}/bitcoin-$HOST/"
+  export P_CI_DIR="${BASE_BUILD_DIR}/revolt-$HOST/"
   CI_EXEC "python3 ${DIR_IWYU}/include-what-you-use/iwyu_tool.py"\
           " src/compat"\
           " src/init"\
@@ -59,7 +59,7 @@ if [ "${RUN_TIDY}" = "true" ]; then
           " src/util/strencodings.cpp"\
           " src/util/syserror.cpp"\
           " src/util/url.cpp"\
-          " -p . ${MAKEJOBS} -- -Xiwyu --cxx17ns -Xiwyu --mapping_file=${BASE_BUILD_DIR}/bitcoin-$HOST/contrib/devtools/iwyu/bitcoin.core.imp"
+          " -p . ${MAKEJOBS} -- -Xiwyu --cxx17ns -Xiwyu --mapping_file=${BASE_BUILD_DIR}/revolt-$HOST/contrib/devtools/iwyu/revolt.core.imp"
 fi
 
 if [ "$RUN_SECURITY_TESTS" = "true" ]; then
