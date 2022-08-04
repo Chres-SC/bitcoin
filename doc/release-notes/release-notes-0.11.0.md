@@ -67,7 +67,7 @@ free transactions (with enough priority) will be accepted. It defaults to 15.
 Reducing this number reduces the speed at which the mempool can grow due
 to free transactions.
 
-For example, add the following to `bitcoin.conf`:
+For example, add the following to `revolt.conf`:
 
     minrelaytxfee=0.00005 
     limitfreerelay=5
@@ -82,7 +82,7 @@ Block file pruning
 
 This release supports running a fully validating node without maintaining a copy 
 of the raw block and undo data on disk. To recap, there are four types of data 
-related to the blockchain in the bitcoin system: the raw blocks as received over 
+related to the blockchain in the revolt system: the raw blocks as received over 
 the network (blk???.dat), the undo data (rev???.dat), the block index and the 
 UTXO set (both LevelDB databases). The databases are built from the raw data.
 
@@ -309,7 +309,7 @@ git merge commit are mentioned.
 - #5149 `c7abfa5` Add script to verify all merge commits are signed
 - #6082 `7abbb7e` qt: disable qt tests when one of the checks for the gui fails
 - #6244 `0401aa2` configure: Detect (and reject) LibreSSL
-- #6269 `95aca44` gitian: Use the new bitcoin-detached-sigs git repo for OSX signatures
+- #6269 `95aca44` gitian: Use the new revolt-detached-sigs git repo for OSX signatures
 - #6285 `ef1d506` Fix scheduler build with some boost versions.
 - #6280 `25c2216` depends: fix Boost 1.55 build on GCC 5
 - #6303 `b711599` gitian: add a gitian-win-signer descriptor
@@ -347,7 +347,7 @@ git merge commit are mentioned.
 - #5683 `c7b22aa` add new osx dmg background picture
 - #5620 `7823598` Payment request expiration bug fix
 - #5729 `9c4a5a5` Allow unit changes for read-only RevoltAmountField
-- #5753 `0f44672` Add bitcoin logo to about screen
+- #5753 `0f44672` Add revolt logo to about screen
 - #5629 `a956586` Prevent amount overflow problem with payment requests
 - #5830 `215475a` Don't save geometry for options and about/help window
 - #5793 `d26f0b2` Honor current network when creating autostart link

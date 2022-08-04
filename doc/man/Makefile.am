@@ -16,7 +16,7 @@ if BUILD_REVOLT_TX
   dist_man1_MANS+=revolt-tx.1
 endif
 
-if BUILD_BITCOIN_UTIL
+if BUILD_REVOLT_UTIL
   dist_man1_MANS+=revolt-util.1
 endif
 

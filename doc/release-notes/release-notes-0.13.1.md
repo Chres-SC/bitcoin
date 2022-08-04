@@ -19,7 +19,7 @@ Compatibility
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
 an OS initially released in 2001. This means that not even critical security
-updates will be released anymore. Without security updates, using a bitcoin
+updates will be released anymore. Without security updates, using a revolt
 wallet on a XP machine is irresponsible at least.
 
 In addition to that, with 0.12.x there have been varied reports of Revolt Core
@@ -58,7 +58,7 @@ covered by the txid. This provides several immediate benefits:
   multisig spend. This solves all known cases of unwanted transaction
   malleability, which is a problem that makes programming Revolt wallet
   software more difficult and which seriously complicates the design of smart
-  contracts for Bitcoin.
+  contracts for Revolt.
 
 - **Capacity increase:** Segwit transactions contain new fields that are not
   part of the data currently used to calculate the size of a block, which
@@ -72,7 +72,7 @@ covered by the txid. This provides several immediate benefits:
   following section for details).
 
 - **Weighting data based on how it affects node performance:** Some parts of
-  each Bitcoin block need to be stored by nodes in order to validate future
+  each Revolt block need to be stored by nodes in order to validate future
   blocks; other parts of a block can be immediately forgotten (pruned) or used
   only for helping other nodes sync their copy of the block chain.  One large
   part of the immediately prunable data are transaction signatures (witnesses),
@@ -89,8 +89,8 @@ covered by the txid. This provides several immediate benefits:
   (such as hardware wallets), reduces the amount of data the signature
   generator needs to download, and allows the signature generator to operate
   more quickly.  This is made possible by having the generator sign the amount
-  of bitcoins they think they are spending, and by having full nodes refuse to
-  accept those signatures unless the amount of bitcoins being spent is exactly
+  of revolts they think they are spending, and by having full nodes refuse to
+  accept those signatures unless the amount of revolts being spent is exactly
   the same as was signed.  For non-segwit transactions, wallets instead had to
   download the complete previous transactions being spent for every payment
   they made, which could be a slow operation on hardware wallets and in other
@@ -105,7 +105,7 @@ covered by the txid. This provides several immediate benefits:
   different signature method that doesn't suffer from this problem and doesn't
   have any unwanted side-effects.
 
-- **Increased security for multisig:** Bitcoin addresses (both P2PKH addresses
+- **Increased security for multisig:** Revolt addresses (both P2PKH addresses
   that start with a '1' and P2SH addresses that start with a '3') use a hash
   function known as RIPEMD-160.  For P2PKH addresses, this provides about 160
   bits of security---which is beyond what cryptographers believe can be broken
@@ -115,15 +115,15 @@ covered by the txid. This provides several immediate benefits:
   Segwit allows advanced transactions to use the SHA256 hash function instead,
   which provides about 128 bits of security  (that is 281 trillion times as
   much security as 80 bits and is equivalent to the maximum bits of security
-  believed to be provided by Bitcoin's choice of parameters for its Elliptic
+  believed to be provided by Revolt's choice of parameters for its Elliptic
   Curve Digital Security Algorithm [ECDSA].)
 
 - **More efficient almost-full-node security** Satoshi Nakamoto's original
-  Bitcoin paper describes a method for allowing newly-started full nodes to
+  Revolt paper describes a method for allowing newly-started full nodes to
   skip downloading and validating some data from historic blocks that are
   protected by large amounts of proof of work.  Unfortunately, Nakamoto's
   method can't guarantee that a newly-started node using this method will
-  produce an accurate copy of Bitcoin's current ledger (called the UTXO set),
+  produce an accurate copy of Revolt's current ledger (called the UTXO set),
   making the node vulnerable to falling out of consensus with other nodes.
   Although the problems with Nakamoto's method can't be fixed in a soft fork,
   Segwit accomplishes something similar to his original proposal: it makes it
@@ -135,14 +135,14 @@ covered by the txid. This provides several immediate benefits:
   of this 0.13.1 release.
 
 - **Script versioning:** Segwit makes it easy for future soft forks to allow
-  Bitcoin users to individually opt-in to almost any change in the Bitcoin
+  Revolt users to individually opt-in to almost any change in the Revolt
   Script language when those users receive new transactions.  Features
   currently being researched by Revolt Core contributors that may use this
   capability include support for Schnorr signatures, which can improve the
   privacy and efficiency of multisig transactions (or transactions with
   multiple inputs), and Merklized Abstract Syntax Trees (MAST), which can
   improve the privacy and efficiency of scripts with two or more conditions.
-  Other Bitcoin community members are studying several other improvements
+  Other Revolt community members are studying several other improvements
   that can be made using script versioning.
 
 Activation for the segwit soft fork is being managed using BIP9

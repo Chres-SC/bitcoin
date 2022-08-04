@@ -31,7 +31,7 @@ details).
 Improvements
 ------------
 
-Mac and Windows binaries are signed with certificates owned by the Bitcoin
+Mac and Windows binaries are signed with certificates owned by the Revolt
 Foundation, to be compatible with the new security features in OSX 10.8 and
 Windows 8.
 
@@ -61,7 +61,7 @@ contrib/spendfrom is a python-language command-line utility that demonstrates
 how to use the "raw transactions" JSON-RPC api to send coins received from particular
 addresses (also known as "coin control").
 
-New/changed settings (command-line or bitcoin.conf file)
+New/changed settings (command-line or revolt.conf file)
 --------------------------------------------------------
 
 dbcache : controls LevelDB memory usage.

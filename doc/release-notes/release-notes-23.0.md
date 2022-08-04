@@ -32,7 +32,7 @@ Compatibility
 ==============
 
 Revolt Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.15+, and Windows 7 and newer.  Bitcoin
+using the Linux kernel, macOS 10.15+, and Windows 7 and newer.  Revolt
 Core should also work on most other Unix-like systems but is not as
 frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.

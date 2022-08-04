@@ -32,7 +32,7 @@ Compatibility
 ==============
 
 Revolt Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
+using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Revolt
 Core should also work on most other Unix-like systems but is not as
 frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.
@@ -327,7 +327,7 @@ Wallet
 
 Revolt Core will no longer automatically create new wallets on startup. It will
 load existing wallets specified by `-wallet` options on the command line or in
-`bitcoin.conf` or `settings.json` files. And by default it will also load a
+`revolt.conf` or `settings.json` files. And by default it will also load a
 top-level unnamed ("") wallet. However, if specified wallets don't exist,
 Revolt Core will now just log warnings instead of creating new wallets with
 new keys and addresses like previous releases did.
@@ -494,7 +494,7 @@ GUI changes
 - Wallets created or loaded in the GUI will now be automatically loaded on
   startup, so they don't need to be manually reloaded next time Revolt Core is
   started. The list of wallets to load on startup is stored in
-  `\<datadir\>/settings.json` and augments any command line or `bitcoin.conf`
+  `\<datadir\>/settings.json` and augments any command line or `revolt.conf`
   `-wallet=` settings that specify more wallets to load. Wallets that are
   unloaded in the GUI get removed from the settings list so they won't load
   again automatically next startup. (#19754)
@@ -599,7 +599,7 @@ Tests
 - #19044 Add support for getcfilters (jnewbery)
 - #19084 improve code documentation for dns seed behaviour (ajtowns)
 - #19260 disconnect peers that send filterclear + update existing filter msg disconnect logic (gzhao408)
-- #19284 Add seed.bitcoin.wiz.biz to DNS seeds (wiz)
+- #19284 Add seed.revolt.wiz.biz to DNS seeds (wiz)
 - #19322 split PushInventory() (jnewbery)
 - #19204 Reduce inv traffic during IBD (MarcoFalke)
 - #19470 banlist: log post-swept banlist size at startup (fanquake)
@@ -843,7 +843,7 @@ Tests
 - #19094 Only allow ASCII identifiers (laanwj)
 - #18820 Propagate well-known vars into depends (dongcarl)
 - #19173 turn on --enable-c++17 by --enable-fuzz (vasild)
-- #18297 Use pkg-config in BITCOIN_QT_CONFIGURE for all hosts including Windows (hebasto)
+- #18297 Use pkg-config in REVOLT_QT_CONFIGURE for all hosts including Windows (hebasto)
 - #19301 don't warn when doxygen isn't found (fanquake)
 - #19240 macOS toolchain simplification and bump (dongcarl)
 - #19356 Fix search for brew-installed BDB 4 on OS X (gwillen)
@@ -1139,7 +1139,7 @@ Tests
 - #18939 Add c++17-enable flag to fuzzing instructions (mzumsande)
 - #18957 Add a link from ZMQ doc to ZMQ example in contrib/ (meeDamian)
 - #19058 Drop protobuf stuff (hebasto)
-- #19061 Add link to Visual Studio build readme (maitrebitcoin)
+- #19061 Add link to Visual Studio build readme (maitrerevolt)
 - #19072 Expand section on Getting Started (MarcoFalke)
 - #18968 noban precludes maxuploadtarget disconnects (MarcoFalke)
 - #19005 Add documentation for 'checklevel' argument in 'verifychain' RPC… (kcalvinalvin)

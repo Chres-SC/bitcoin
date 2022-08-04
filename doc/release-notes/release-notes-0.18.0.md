@@ -54,7 +54,7 @@ platform.
 If you are using the `systemd` unit configuration file located at
 `contrib/init/revoltd.service`, it has been changed to use
 `/var/lib/revoltd` as the data directory instead of
-`~bitcoin/.bitcoin`. When switching over to the new configuration file,
+`~revolt/.revolt`. When switching over to the new configuration file,
 please make sure that the filesystem on which `/var/lib/revoltd` will
 exist has enough space (check using `df -h /var/lib/revoltd`), and
 optionally copy over your existing data directory. See the [systemd init
@@ -128,7 +128,7 @@ systemd init file
 
 The systemd init file (`contrib/init/revoltd.service`) has been changed
 to use `/var/lib/revoltd` as the data directory instead of
-`~bitcoin/.bitcoin`. This change makes Revolt Core more consistent with
+`~revolt/.revolt`. This change makes Revolt Core more consistent with
 other services, and makes the systemd init config more consistent with
 existing Upstart and OpenRC configs.
 
@@ -138,10 +138,10 @@ See [`systemd.exec(5)`](https://www.freedesktop.org/software/systemd/man/systemd
 for more details.
 
 When using the provided init files under `contrib/init`, overriding the
-`datadir` option in `/etc/bitcoin/bitcoin.conf` will have no effect.
+`datadir` option in `/etc/revolt/revolt.conf` will have no effect.
 This is because the command line arguments specified in the init files
 take precedence over the options specified in
-`/etc/bitcoin/bitcoin.conf`.
+`/etc/revolt/revolt.conf`.
 
 
 Documentation
@@ -159,7 +159,7 @@ Documentation
   about how to secure this interface.
 
 - A new [document](https://github.com/bitcoin/bitcoin/blob/master/doc/revolt-conf.md)
-  about the `bitcoin.conf` file describes how to use it to configure
+  about the `revolt.conf` file describes how to use it to configure
   Revolt Core.
 
 - A new document introduces Revolt Core's BIP174 [Partially-Signed
@@ -406,7 +406,7 @@ Graphical User Interface (GUI)
 Tools
 -----
 
-- A new `revolt-wallet` tool is now distributed alongside Bitcoin
+- A new `revolt-wallet` tool is now distributed alongside Revolt
   Core's other executables.  Without needing to use any RPCs, this tool
   can currently create a new wallet file or display some basic
   information about an existing wallet, such as whether the wallet is
@@ -417,7 +417,7 @@ Planned changes
 ===============
 
 This section describes planned changes to Revolt Core that may affect
-other Bitcoin software and services.
+other Revolt software and services.
 
 - Since version 0.16.0, Revolt Core’s built-in wallet has defaulted to
   generating P2SH-wrapped segwit addresses when users want to receive
@@ -589,9 +589,9 @@ Changes for particular platforms
 - #14023 Remove accounts RPCs (jnewbery)
 - #13825 Kill accounts (jnewbery)
 - #10605 Add AssertLockHeld assertions in CWallet::ListCoins (ryanofsky)
-- #12490 Remove deprecated wallet rpc features from `bitcoin_server` (jnewbery)
+- #12490 Remove deprecated wallet rpc features from `revolt_server` (jnewbery)
 - #14138 Set `encrypted_batch` to nullptr after delete. Avoid double free in the case of NDEBUG (practicalswift)
-- #14168 Remove `ENABLE_WALLET` from `libbitcoin_server.a` (jnewbery)
+- #14168 Remove `ENABLE_WALLET` from `librevolt_server.a` (jnewbery)
 - #12493 Reopen CDBEnv after encryption instead of shutting down (achow101)
 - #14282 Remove `-usehd` option (jnewbery)
 - #14146 Remove trailing separators from `-walletdir` arg (PierreRochard)
@@ -766,7 +766,7 @@ Changes for particular platforms
 - #14183 Remove unused Qt 4 dependencies (ken2812221)
 - #14127 Avoid getifaddrs when unavailable (greenaddress)
 - #14184 Scripts and tools: increased timeout downloading (cisba)
-- #14204 Move `interfaces/*` to `libbitcoin_server` (laanwj)
+- #14204 Move `interfaces/*` to `librevolt_server` (laanwj)
 - #14208 Actually remove `ENABLE_WALLET` (jnewbery)
 - #14212 Remove libssl from LDADD unless GUI (MarcoFalke)
 - #13578 Upgrade zeromq to 4.2.5 and avoid deprecated zeromq API functions (mruddy)
@@ -798,7 +798,7 @@ Changes for particular platforms
 - #15549 gitian: Improve error handling (laanwj)
 - #15548 use full version string in setup.exe (MarcoFalke)
 - #11526 Visual Studio build configuration for Revolt Core (sipsorcery)
-- #15110 build\_msvc: Fix the build problem in `libbitcoin_server` (Mr-Leshiy)
+- #15110 build\_msvc: Fix the build problem in `librevolt_server` (Mr-Leshiy)
 - #14372 msvc: build secp256k1 and leveldb locally (ken2812221)
 - #15325 msvc: Fix silent merge conflict between #13926 and #14372 (ken2812221)
 - #15391 Add compile time verification of assumptions we're currently making implicitly/tacitly (practicalswift)
@@ -859,7 +859,7 @@ Changes for particular platforms
 - #14631 Move deterministic address import to `setup_nodes` (jnewbery)
 - #14630 test: Remove travis specific code (MarcoFalke)
 - #14528 travis: Compile once on xenial (MarcoFalke)
-- #14092 Dry run `revolt_bitcoin` as part `make check` to allow for quick identification of assertion/sanitizer failures in benchmarking code (practicalswift)
+- #14092 Dry run `revolt_revolt` as part `make check` to allow for quick identification of assertion/sanitizer failures in benchmarking code (practicalswift)
 - #14664 `example_test.py`: fixup coinbase height argument, derive number clearly (instagibbs)
 - #14522 Add invalid P2P message tests (jamesob)
 - #14619 Fix value display name in `test_runner` help text (merland)
@@ -981,7 +981,7 @@ Changes for particular platforms
 - #13724 contrib: Support ARM and RISC-V symbol check (ken2812221)
 - #13159 Don't close old debug log file handle prematurely when trying to re-open (on SIGHUP) (practicalswift)
 - #14186 revolt-cli: don't translate command line options (HashUnlimited)
-- #14057 logging: Only log `using config file path_to_bitcoin.conf` message on startup if conf file exists (leishman)
+- #14057 logging: Only log `using config file path_to_revolt.conf` message on startup if conf file exists (leishman)
 - #14164 Update univalue subtree (MarcoFalke)
 - #14272 init: Remove deprecated args from hidden args (MarcoFalke)
 - #14494 Error if # is used in rpcpassword in conf (MeshCollider)
@@ -1001,7 +1001,7 @@ Changes for particular platforms
 - #14839 threads: Fix unitialized members in `sched_param` (fanquake)
 - #14955 Switch all RNG code to the built-in PRNG (sipa)
 - #15258 Scripts and tools: Fix `devtools/copyright_header.py` to always honor exclusions (Empact)
-- #12255 Update bitcoin.service to conform to init.md (dongcarl)
+- #12255 Update revolt.service to conform to init.md (dongcarl)
 - #15266 memory: Construct globals on first use (MarcoFalke)
 - #15347 Fix build after pr 15266 merged (hebasto)
 - #15351 Update linearize-hashes.py (OverlordQ)
@@ -1091,9 +1091,9 @@ Changes for particular platforms
 - #15754 getrpcinfo docs (benthecarman)
 - #15763 Update bips.md for 0.18.0 (sipa)
 - #15757 List new RPCs in psbt.md and descriptors.md (sipa)
-- #15765 correct bitcoinconsensus_version in shared-libraries.md (fanquake)
+- #15765 correct revoltconsensus_version in shared-libraries.md (fanquake)
 - #15792 describe onlynet option in doc/tor.md (jonatack)
-- #15802 mention creating application support bitcoin folder on OSX (JimmyMow)
+- #15802 mention creating application support revolt folder on OSX (JimmyMow)
 - #15799 Clarify RPC versioning (MarcoFalke)
 
 Credits

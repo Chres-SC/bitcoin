@@ -1,4 +1,4 @@
-Bitcoin version 0.7.1 is now available from:
+Revolt version 0.7.1 is now available from:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.1/
 
 This is a bug-fix minor release.
@@ -14,7 +14,7 @@ source-only tarballs/zipballs directly from there:
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
 up-to-date.  Just type:
-  sudo apt-add-repository ppa:bitcoin/bitcoin
+  sudo apt-add-repository ppa:revolt/revolt
   sudo apt-get update
 in your terminal, then install the revolt-qt package:
   sudo apt-get install revolt-qt
@@ -75,7 +75,7 @@ Dependency changes
 Bug fixes
 ---------
 
-* Clicking on a bitcoin: URI on Windows should now launch Revolt-Qt properly.
+* Clicking on a revolt: URI on Windows should now launch Revolt-Qt properly.
 
 * When running -testnet, use RPC port 18332 by default.
 

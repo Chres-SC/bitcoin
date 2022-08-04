@@ -1,4 +1,4 @@
-Bitcoin version 0.7.0 is now available for download at:
+Revolt version 0.7.0 is now available for download at:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.0/
 
 We recommend that everybody running prior versions of revoltd/Revolt-Qt
@@ -14,8 +14,8 @@ source-only tarballs/zipballs directly from there:
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
-bitcoin up-to-date.  Just type
-  sudo apt-add-repository ppa:bitcoin/bitcoin
+revolt up-to-date.  Just type
+  sudo apt-add-repository ppa:revolt/revolt
   sudo apt-get update
 in your terminal, then install the revolt-qt package:
   sudo apt-get install revolt-qt
@@ -45,14 +45,14 @@ Incompatible Changes
   and 'getrawmempool' commands.
 * Remove deprecated RPC 'getblocknumber'
 
-Bitcoin Improvement Proposals implemented
+Revolt Improvement Proposals implemented
 
 BIP 22 - 'getblocktemplate', 'submitblock' RPCs
 BIP 34 - block version 2, height in coinbase
 BIP 35 - 'mempool' message, extended 'getdata' message behavior
 
 
-Core bitcoin handling and blockchain database
+Core revolt handling and blockchain database
 
 * Reduced CPU usage, by eliminating some redundant hash calculations
 * Cache signature verifications, to eliminate redundant signature checks

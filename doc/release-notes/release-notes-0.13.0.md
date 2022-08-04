@@ -18,7 +18,7 @@ Compatibility
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
 an OS initially released in 2001. This means that not even critical security
-updates will be released anymore. Without security updates, using a bitcoin
+updates will be released anymore. Without security updates, using a revolt
 wallet on a XP machine is irresponsible at least.
 
 In addition to that, with 0.12.x there have been varied reports of Revolt Core
@@ -48,7 +48,7 @@ For this reason the default was changed to 300 MiB in this release.
 For nodes on low-memory systems, the database cache can be changed back to
 100 MiB (or to another value) by either:
 
-- Adding `dbcache=100` in bitcoin.conf
+- Adding `dbcache=100` in revolt.conf
 - Changing it in the GUI under `Options → Size of database cache`
 
 Note that the database cache setting has the most performance impact
@@ -557,7 +557,7 @@ git merge commit are mentioned.
 - #8014 `77b49ac` Sort transactions by date (Tyler-Hardin)
 - #8073 `eb2f6f7` askpassphrasedialog: Clear pass fields on accept (rat4)
 - #8129 `ee1533e` Fix RPC console auto completer (UdjinM6)
-- #7636 `fb0ac48` Add bitcoin address label to request payment QR code (makevoid)
+- #7636 `fb0ac48` Add revolt address label to request payment QR code (makevoid)
 - #8231 `760a6c7` Fix a bug where the SplashScreen will not be hidden during startup (jonasschnelli)
 - #8256 `af2421c` BUG: revolt-qt crash (fsb4000)
 - #8257 `ff03c50` Do not ask a UI question from revoltd (sipa)

@@ -144,7 +144,7 @@ Multi-wallet support
 
 Revolt Core now supports loading multiple, separate wallets (See [PR 8694](https://github.com/bitcoin/bitcoin/pull/8694), [PR 10849](https://github.com/bitcoin/bitcoin/pull/10849)). The wallets are completely separated, with individual balances, keys and received transactions.
 
-Multi-wallet is enabled by using more than one `-wallet` argument when starting Bitcoin, either on the command line or in the Bitcoin config file.
+Multi-wallet is enabled by using more than one `-wallet` argument when starting Revolt, either on the command line or in the Revolt config file.
 
 **In Revolt-Qt, only the first wallet will be displayed and accessible for creating and signing transactions.** GUI selectable multiple wallets will be supported in a future version. However, even in 0.15 other loaded wallets will remain synchronized to the node's current tip in the background. This can be useful if running a pruned node, since loading a wallet where the most recent sync is beyond the pruned height results in having to download and revalidate the whole blockchain. Continuing to synchronize all wallets in the background avoids this problem.
 
@@ -634,7 +634,7 @@ Low-level RPC changes
 - #10415 `217b416` [tests] Speed up fuzzing by ~200x when using afl-fuzz (practicalswift)
 - #10445 `b4b057a` Add test for empty chain and reorg consistency for gettxoutsetinfo (gmaxwell)
 - #10423 `1aefc94` [tests] skipped tests should clean up after themselves (jnewbery)
-- #10359 `329fc1d` [tests] functional tests should call BitcoinTestFramework start/stop node methods (jnewbery)
+- #10359 `329fc1d` [tests] functional tests should call RevoltTestFramework start/stop node methods (jnewbery)
 - #10514 `e103b3f` Bugfix: missing == 0 after randrange (sipa)
 - #10515 `c871f32` [test] Add test for getchaintxstats (jimmysong)
 - #10509 `bea5b00` Remove xvfb configuration from travis (ryanofsky)
@@ -653,7 +653,7 @@ Low-level RPC changes
 - #10612 `7c87a9c` The young person's guide to the test_framework (jnewbery)
 - #10659 `acb1153` [qa] blockchain: Pass on closed connection during generate call (MarcoFalke)
 - #10690 `416af3e` [qa] Bugfix: allow overriding extra_args in ComparisonTestFramework (sdaftuar)
-- #10556 `65cc7aa` Move stop/start functions from utils.py into BitcoinTestFramework (jnewbery)
+- #10556 `65cc7aa` Move stop/start functions from utils.py into RevoltTestFramework (jnewbery)
 - #10704 `dd07f47` [tests] nits in dbcrash.py (jnewbery)
 - #10743 `be82498` [test] don't run dbcrash.py on Travis (jnewbery)
 - #10761 `d3b5870` [tests] fix replace_by_fee.py (jnewbery)
@@ -694,7 +694,7 @@ Low-level RPC changes
 - #9734 `0c17afc` Add updating of chainTxData to release process (sipa)
 - #10063 `530fcbd` add missing spaces so that markdown recognizes headline (flack)
 - #10085 `db1ae54` Docs: remove 'noconnect' option (jlopp)
-- #10090 `8e4f7e7` Update bitcoin.conf with example for pruning (coinables)
+- #10090 `8e4f7e7` Update revolt.conf with example for pruning (coinables)
 - #9424 `1a5aaab` Change LogAcceptCategory to use uint32_t rather than sets of strings (gmaxwell)
 - #10036 `fbf36ca` Fix init README format to render correctly on github (jlopp)
 - #10058 `a2cd0b0` No need to use OpenSSL malloc/free (tjps)
@@ -740,7 +740,7 @@ Low-level RPC changes
 - #10728 `7397af9` fix typo in help text for removeprunedfunds (AkioNak)
 - #10193 `6dbcc74` scripted-diff: Remove #include <boost/foreach.hpp> (jtimon)
 - #10676 `379aed0` document script-based return fields for validateaddress (instagibbs)
-- #10651 `cef4b5c` Verify binaries from bitcoincore.org and bitcoin.org (TheBlueMatt)
+- #10651 `cef4b5c` Verify binaries from revoltcore.org and revolt.org (TheBlueMatt)
 - #10786 `ca4c545` Add PR description to merge commit in github-merge.py (sipa)
 - #10812 `c5904e8` [utils] Allow revolt-cli's -rpcconnect option to be used with square brackets (jnewbery)
 - #10842 `3895e25` Fix incorrect Doxygen tag (@ince → @since). Doxygen parameter name matching (practicalswift)
@@ -759,7 +759,7 @@ Low-level RPC changes
 - #9792 `342b9bc` FastRandomContext improvements and switch to ChaCha20 (sipa)
 - #9505 `67ed40e` Prevector Quick Destruct (JeremyRubin)
 - #10820 `ef37f20` Use cpuid intrinsics instead of asm code (sipa)
-- #9999 `a328904` [LevelDB] Plug leveldb logs to bitcoin logs (NicolasDorier)
+- #9999 `a328904` [LevelDB] Plug leveldb logs to revolt logs (NicolasDorier)
 - #9693 `c5e9e42` Prevent integer overflow in ReadVarInt (gmaxwell)
 - #10129 `351d0ad` scheduler: fix sub-second precision with boost < 1.50 (theuni)
 - #10153 `fade788` logging: Fix off-by-one for shrinkdebugfile default (MarcoFalke)
