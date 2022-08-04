@@ -58,11 +58,11 @@
         <translation type="unfinished">آدرس‌های گیرنده</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">اینها آدرس‌های شما برای ارسال وجوه هستند. همیشه قبل از ارسال، مقدار و آدرس گیرنده را بررسی کنید.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">این‌ها نشانی‌های بیت‌کوین شما برای دریافت پرداخت‌ها هستند. از دکمهٔ «ساختن نشانی دریافت جدید» در زبانهٔ دریافت برای ساخت نشانی‌های جدید استفاده کنید.
 
@@ -159,7 +159,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">تایید رمزگذاری کیف پول</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
         <translation type="unfinished">هشدار: اگر کیف پول خود را رمزگذاری کنید و عبارت خود را گام کنید ، این کار را انجام می دهید &lt;b&gt;تمام کویت های خود را از دست &lt;/b&gt;استفاده کنید!
 </translation>
     </message>
@@ -181,7 +181,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">رمز عبور قدیمی و رمز عبور جدید کیف پول خود را وارد کنید.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">به یاد داشته باشید که رمزگذاری کیف پول شما نمی تواند به طور کامل از سرقت بیت کوین شما در اثر آلوده شدن رایانه به بدافزار محافظت کند.
  </translation>
     </message>
@@ -249,7 +249,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">استثناء فراری (این استثناء نشان دهنده این است که هسته بیتکوین نتوانست چیزی را در کیف(والت) بنویسد.)</translation>
@@ -300,7 +300,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">میزان وجه:</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a Revolt address (e.g. %1)</source>
         <translation type="unfinished">آدرس بیت کوین را وارد کنید (به طور مثال %1)</translation>
     </message>
     <message>
@@ -422,7 +422,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">فایل تنظیمات خوانده نشد</translation>
@@ -880,7 +880,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پراکسی &lt;br&gt;فعال شده است: %1&lt;/br&gt;</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Revolt address</source>
         <translation type="unfinished">ارسال کوین به آدرس بیت کوین</translation>
     </message>
     <message>
@@ -926,7 +926,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ثبت &amp;پیام</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
         <translation type="unfinished">پیام‌ها را با آدرس بیت‌کوین خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
     </message>
     <message>
@@ -994,7 +994,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">در حال اتصال به همتاهای شبکه(پیِر ها)...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
         <translation type="unfinished">درخواست پرداخت (ساخت کد QR و بیت‌کوین: URIs)</translation>
     </message>
     <message>
@@ -1068,7 +1068,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ادرس درسافت</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a revolt: URI</source>
         <translation type="unfinished">بارک کردن یک بیت‌کوین: URI</translation>
     </message>
     <message>
@@ -1551,7 +1551,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ویرایش آدرس ارسالی</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
+        <source>The entered address "%1" is not a valid Revolt address.</source>
         <translation type="unfinished">آدرس وارد شده "%1" آدرس معتبر بیت کوین نیست.</translation>
     </message>
     <message>
@@ -1590,7 +1590,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Revolt</source>
         <translation type="unfinished">بیت کوین</translation>
     </message>
     <message>
@@ -1861,12 +1861,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">مسیر اسکریپت امضاکنندهٔ جانبی</translation>
     </message>
     <message>
-        <source>Full path to a Bitcoin Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <source>Full path to a Revolt Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
         <translation type="unfinished">نشانی کامل اسکریپ تطابق پذیر هسته بیتکوین
  (مثال: C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). آگاه باش: بدافزار میتواند سکه های شما را بدزد!</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished">باز کردن خودکار درگاه شبکهٔ بیت‌کوین روی روترها. تنها زمانی کار می‌کند که روتر از پروتکل UPnP پشتیبانی کند و این پروتکل فعال باشد.</translation>
     </message>
     <message>
@@ -1874,7 +1874,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">نگاشت درگاه شبکه با استفاده از پروتکل &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation type="unfinished">باز کردن خودکار درگاه شبکهٔ بیت‌کوین روی روتر. این پروسه تنها زمانی کار می‌کند که روتر از پروتکل NAT-PMP  پشتیبانی کند و این پروتکل فعال باشد. پورت خارجی میتواند تصادفی باشد </translation>
     </message>
     <message>
@@ -2060,7 +2060,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Revolt network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">اطلاعات نمایش داده شده ممکن است قدیمی باشد. کیف پول شما پس از برقراری اتصال به طور خودکار با شبکه Bitcoin همگام سازی می شود ، اما این روند هنوز کامل نشده است.
+        <translation type="unfinished">اطلاعات نمایش داده شده ممکن است قدیمی باشد. کیف پول شما پس از برقراری اتصال به طور خودکار با شبکه Revolt همگام سازی می شود ، اما این روند هنوز کامل نشده است.
  </translation>
     </message>
     <message>
@@ -2192,7 +2192,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">درخواست پرداخت با خطا مواجه شد</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start revolt: click-to-pay handler</source>
         <translation type="unfinished">نمی توان بیت کوین را شروع کرد: کنترل کننده کلیک برای پرداخت
  </translation>
     </message>
@@ -3178,7 +3178,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
+        <source>Warning: Invalid Revolt address</source>
         <translation type="unfinished">هشدار: آدرس بیت کوین نامعتبر</translation>
     </message>
     <message>
@@ -3218,8 +3218,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">آدرس استفاده شده قبلی را انتخاب کنید</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">آدرس Bitcoin برای ارسال پرداخت به
+        <source>The Revolt address to send the payment to</source>
+        <translation type="unfinished">آدرس Revolt برای ارسال پرداخت به
  </translation>
     </message>
     <message>
@@ -3275,7 +3275,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">&amp;ثبت پیام</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
+        <source>The Revolt address to sign the message with</source>
         <translation type="unfinished">نشانی بیت‌کوین برای امضاء پیغام با آن</translation>
     </message>
     <message>
@@ -3299,7 +3299,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">جریان را کپی کنید امضا به سیستم کلیپ بورد</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Revolt address</source>
         <translation type="unfinished">پیام را امضا کنید تا ثابت کنید این آدرس بیت‌کوین متعلق به شماست</translation>
     </message>
     <message>
@@ -3319,7 +3319,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">&amp; تأیید پیام</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
+        <source>The Revolt address the message was signed with</source>
         <translation type="unfinished">نشانی بیت‌کوین که پیغام با آن امضاء شده</translation>
     </message>
     <message>
@@ -3328,8 +3328,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
  </translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation type="unfinished">پیام را تأیید کنید تا مطمئن شوید با آدرس Bitcoin مشخص شده امضا شده است
+        <source>Verify the message to ensure it was signed with the specified Revolt address</source>
+        <translation type="unfinished">پیام را تأیید کنید تا مطمئن شوید با آدرس Revolt مشخص شده امضا شده است
  </translation>
     </message>
     <message>

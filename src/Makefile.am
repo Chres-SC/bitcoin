@@ -37,11 +37,11 @@ LIBSECP256K1=secp256k1/libsecp256k1.la
 if ENABLE_ZMQ
 LIBREVOLT_ZMQ=librevolt_zmq.a
 endif
-if BUILD_BITCOIN_LIBS
+if BUILD_REVOLT_LIBS
 LIBREVOLTCONSENSUS=librevoltconsensus.la
 endif
 if BUILD_BITCOIN_KERNEL_LIB
-LIBBITCOINKERNEL=libbitcoinkernel.la
+LIBREVOLTKERNEL=librevoltkernel.la
 endif
 if ENABLE_WALLET
 LIBREVOLT_WALLET=librevolt_wallet.a
@@ -114,8 +114,8 @@ if BUILD_REVOLT_CHAINSTATE
 endif
 
 .PHONY: FORCE check-symbols check-security
-# bitcoin core #
-BITCOIN_CORE_H = \
+# revolt core #
+REVOLT_CORE_H = \
   addrdb.h \
   addrman.h \
   addrman_impl.h \
@@ -416,7 +416,7 @@ librevolt_node_a_SOURCES = \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(BITCOIN_CORE_H)
+  $(REVOLT_CORE_H)
 
 if ENABLE_WALLET
 librevolt_node_a_SOURCES += wallet/init.cpp
@@ -470,7 +470,7 @@ librevolt_wallet_a_SOURCES = \
   wallet/walletdb.cpp \
   wallet/walletutil.cpp \
   wallet/coinselection.cpp \
-  $(BITCOIN_CORE_H)
+  $(REVOLT_CORE_H)
 
 if USE_SQLITE
 librevolt_wallet_a_SOURCES += wallet/sqlite.cpp
@@ -483,7 +483,7 @@ librevolt_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 librevolt_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 librevolt_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
-  $(BITCOIN_CORE_H)
+  $(REVOLT_CORE_H)
 
 # crypto primitives library
 crypto_librevolt_crypto_base_la_CPPFLAGS = $(AM_CPPFLAGS)
@@ -640,7 +640,7 @@ librevolt_common_a_SOURCES = \
   script/signingprovider.cpp \
   script/standard.cpp \
   warnings.cpp \
-  $(BITCOIN_CORE_H)
+  $(REVOLT_CORE_H)
 
 # util: shared between all executables.
 librevolt_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
@@ -685,7 +685,7 @@ librevolt_util_a_SOURCES = \
   util/syscall_sandbox.cpp \
   util/time.cpp \
   util/tokenpipe.cpp \
-  $(BITCOIN_CORE_H)
+  $(REVOLT_CORE_H)
 
 if USE_LIBEVENT
 librevolt_util_a_SOURCES += util/url.cpp
@@ -698,7 +698,7 @@ librevolt_cli_a_SOURCES = \
   compat/stdin.h \
   compat/stdin.cpp \
   rpc/client.cpp \
-  $(BITCOIN_CORE_H)
+  $(REVOLT_CORE_H)
 
 nodist_librevolt_util_a_SOURCES = $(srcdir)/obj/build.h
 #
@@ -825,41 +825,41 @@ revolt_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 revolt_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 # $(LIBTOOL_APP_LDFLAGS) deliberately omitted here so that we can test linking
-# revolt-chainstate against libbitcoinkernel as a shared or static library by
+# revolt-chainstate against librevoltkernel as a shared or static library by
 # setting --{en,dis}able-shared.
 revolt_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS)
-revolt_chainstate_LDADD = $(LIBBITCOINKERNEL)
+revolt_chainstate_LDADD = $(LIBREVOLTKERNEL)
 #
 
 # bitcoinkernel library #
 if BUILD_BITCOIN_KERNEL_LIB
-lib_LTLIBRARIES += $(LIBBITCOINKERNEL)
+lib_LTLIBRARIES += $(LIBREVOLTKERNEL)
 
-libbitcoinkernel_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(PTHREAD_FLAGS)
-libbitcoinkernel_la_LIBADD = $(LIBREVOLT_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
-libbitcoinkernel_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
+librevoltkernel_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(PTHREAD_FLAGS)
+librevoltkernel_la_LIBADD = $(LIBREVOLT_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
+librevoltkernel_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
 
-# libbitcoinkernel requires default symbol visibility, explicitly specify that
+# librevoltkernel requires default symbol visibility, explicitly specify that
 # here so that things still work even when user configures with
 #   --enable-reduce-exports
 #
 # Note this is a quick hack that will be removed as we incrementally define what
 # to export from the library.
-libbitcoinkernel_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -fvisibility=default
+librevoltkernel_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -fvisibility=default
 
 # TODO: For now, Specify -static in both CXXFLAGS and LDFLAGS when building for
 #       windows targets so libtool will only build a static version of this
 #       library. There are unresolved problems when building dll's for mingw-w64
 #       and attempting to statically embed libstdc++, libpthread, etc.
 if TARGET_WINDOWS
-libbitcoinkernel_la_LDFLAGS += -static
-libbitcoinkernel_la_CXXFLAGS += -static
+librevoltkernel_la_LDFLAGS += -static
+librevoltkernel_la_CXXFLAGS += -static
 endif
 
-# TODO: libbitcoinkernel is a work in progress consensus engine library, as more
+# TODO: librevoltkernel is a work in progress consensus engine library, as more
 #       and more modules are decoupled from the consensus engine, this list will
 #       shrink to only those which are absolutely necessary.
-libbitcoinkernel_la_SOURCES = \
+librevoltkernel_la_SOURCES = \
   kernel/bitcoinkernel.cpp \
   arith_uint256.cpp \
   chain.cpp \
@@ -937,12 +937,12 @@ libbitcoinkernel_la_SOURCES = \
 
 # Required for obj/build.h to be generated first.
 # More details: https://www.gnu.org/software/automake/manual/html_node/Built-Sources-Example.html
-libbitcoinkernel_la-clientversion.l$(OBJEXT): obj/build.h
+librevoltkernel_la-clientversion.l$(OBJEXT): obj/build.h
 endif # BUILD_BITCOIN_KERNEL_LIB
 #
 
 # bitcoinconsensus library #
-if BUILD_BITCOIN_LIBS
+if BUILD_REVOLT_LIBS
 lib_LTLIBRARIES += $(LIBREVOLTCONSENSUS)
 
 include_HEADERS = script/bitcoinconsensus.h

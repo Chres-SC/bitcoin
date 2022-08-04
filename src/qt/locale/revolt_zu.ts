@@ -8,7 +8,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Internal error</source>
         <translation type="unfinished">Iphutha langaphakathi.</translation>

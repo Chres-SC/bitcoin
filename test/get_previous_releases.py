@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Copyright (c) 2018-2021 The Bitcoin Core developers
+# Copyright (c) 2018-2021 The Revolt Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -100,10 +100,10 @@ def download_binary(tag, args) -> int:
             return 0
         shutil.rmtree(tag)
     Path(tag).mkdir()
-    bin_path = 'bin/bitcoin-core-{}'.format(tag[1:])
+    bin_path = 'bin/revolt-core-{}'.format(tag[1:])
     match = re.compile('v(.*)(rc[0-9]+)$').search(tag)
     if match:
-        bin_path = 'bin/bitcoin-core-{}/test.{}'.format(
+        bin_path = 'bin/revolt-core-{}/test.{}'.format(
             match.group(1), match.group(2))
     platform = args.platform
     if tag < "v23" and platform in ["x86_64-apple-darwin", "arm64-apple-darwin"]:

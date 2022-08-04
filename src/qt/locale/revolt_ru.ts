@@ -58,7 +58,7 @@
         <translation type="unfinished">Адреса получения</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Это ваши биткойн-адреса для приема платежей. Используйте кнопку 'Создать новый адрес получения' на вкладке получения, чтобы создать новые адреса.
 Подпись возможна только с адресами типа 'устаревший'.</translation>
@@ -152,7 +152,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
         <translation type="unfinished">Предупреждение: если вы зашифруете кошелёк и потеряете парольную фразу, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ БИТКОИНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -172,7 +172,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Введите старый и новый пароли для кошелька</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Помните, что шифрование кошелька не может полностью защитить ваши биткойны от кражи вредоносными программами, заразившими ваш компьютер.</translation>
     </message>
     <message>
@@ -232,7 +232,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">Неизвестная ошибка</translation>
@@ -277,7 +277,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Сумма</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a Revolt address (e.g. %1)</source>
         <translation type="unfinished">Введите биткоин-адрес (напр. %1)</translation>
     </message>
     <message>
@@ -421,7 +421,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">Разработчики %s</translation>
@@ -1071,7 +1071,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Прокси &lt;b&gt;включён&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Revolt address</source>
         <translation type="unfinished">Отправить средства на Биткоин адрес</translation>
     </message>
     <message>
@@ -1115,7 +1115,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подписать &amp;сообщение...</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
         <translation type="unfinished">Подписать сообщения своими Биткоин кошельками, что-бы доказать, что вы ими владеете</translation>
     </message>
     <message>
@@ -1123,7 +1123,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Проверить сообщение</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
         <translation type="unfinished">Проверяйте сообщения, чтобы убедиться, что они подписаны конкретными биткоин-адресами</translation>
     </message>
     <message>
@@ -1187,8 +1187,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подключение к узлам...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Запросить платёж (генерирует QR-коды и URI протокола bitcoin:)</translation>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
+        <translation type="unfinished">Запросить платёж (генерирует QR-коды и URI протокола revolt:)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1267,8 +1267,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Адреса для получения</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Открыть URI протокола bitcoin:</translation>
+        <source>Open a revolt: URI</source>
+        <translation type="unfinished">Открыть URI протокола revolt:</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1287,7 +1287,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Закрыть все кошельки</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Revolt command-line options</source>
         <translation type="unfinished">Показать помощь по %1, чтобы получить список доступных параметров командной строки</translation>
     </message>
     <message>
@@ -1729,7 +1729,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Изменить адрес для отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
+        <source>The entered address "%1" is not a valid Revolt address.</source>
         <translation type="unfinished">Введенный адрес "%1" не является действительным биткоин-адресом.</translation>
     </message>
     <message>
@@ -1775,7 +1775,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Revolt</source>
         <translation type="unfinished">биткоин</translation>
     </message>
     <message>
@@ -1804,7 +1804,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
+        <source>%1 will download and store a copy of the Revolt block chain.</source>
         <translation type="unfinished">%1 скачает и сохранит копию цепочки блоков биткоина.</translation>
     </message>
     <message>
@@ -1901,7 +1901,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Недавние транзакции могут быть пока не видны, и поэтому отображаемый баланс вашего кошелька может быть неверным. Информация станет верной после завершения синхронизации с сетью биткоина, прогресс которой вы можете видеть ниже.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend revolts that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">Попытка потратить средства, затронутые не видными пока транзакциями, будет отклонена сетью.</translation>
     </message>
     <message>
@@ -2074,7 +2074,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Тратить неподтверждённую сдачу</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished">Автоматически открыть порт биткоин-клиента на маршрутизаторе. Работает, если ваш маршрутизатор поддерживает UPnP, и данная функция на нём включена.</translation>
     </message>
     <message>
@@ -2082,7 +2082,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation type="unfinished">Автоматически открыть порт биткоин-клиента на роутере. Работает? если ваш роутер поддерживает NAT-PMP, и данная функция на нём включена. Внешний порт может быть случайным.</translation>
     </message>
     <message>
@@ -2470,16 +2470,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ошибка запроса платежа</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation type="unfinished">Не удаётся запустить обработчик click-to-pay для протокола bitcoin:</translation>
+        <source>Cannot start revolt: click-to-pay handler</source>
+        <translation type="unfinished">Не удаётся запустить обработчик click-to-pay для протокола revolt:</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">Обработка URI</translation>
     </message>
     <message>
-        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
-        <translation type="unfinished">«bitcoin://» — это неверный URI. Используйте вместо него «bitcoin:».</translation>
+        <source>'revolt://' is not a valid URI. Use 'revolt:' instead.</source>
+        <translation type="unfinished">«revolt://» — это неверный URI. Используйте вместо него «revolt:».</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2490,7 +2490,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
 Если вы получили эту ошибку, вам следует попросить у продавца URI, совместимый с BIP21.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Revolt address or malformed URI parameters.</source>
         <translation type="unfinished">Не удалось обработать URI! Это может быть вызвано тем, что биткоин-адрес неверен или параметры URI неправильно сформированы.</translation>
     </message>
     <message>
@@ -3451,7 +3451,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
+        <source>Warning: Invalid Revolt address</source>
         <translation type="unfinished">Предупреждение: неверный биткоин-адрес</translation>
     </message>
     <message>
@@ -3490,7 +3490,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Выбрать ранее использованный адрес</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
+        <source>The Revolt address to send the payment to</source>
         <translation type="unfinished">Биткоин-адрес, на который нужно отправить платёж</translation>
     </message>
     <message>
@@ -3506,7 +3506,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Сумма к отправке в выбранных единицах</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less revolts than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished">Комиссия будет вычтена из отправляемой суммы. Получателю придёт меньше биткоинов, чем вы ввели в поле «Сумма». Если выбрано несколько получателей, комиссия распределяется поровну.</translation>
     </message>
     <message>
@@ -3534,7 +3534,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите метку для этого адреса, чтобы добавить его в список использованных адресов</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
+        <source>A message that was attached to the revolt: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
         <translation type="unfinished">Сообщение, которое было прикреплено к URI и которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть биткоина.</translation>
     </message>
     <message>
@@ -3568,11 +3568,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">&amp;Подписать сообщение</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive revolts sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">Вы можете подписывать сообщения/соглашения своими адресами, чтобы доказать, что вы можете получать биткоины на них. Будьте осторожны и не подписывайте непонятные или случайные сообщения, так как мошенники могут таким образом пытаться присвоить вашу личность. Подписывайте только такие сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
+        <source>The Revolt address to sign the message with</source>
         <translation type="unfinished">Биткоин-адрес, которым подписать сообщение</translation>
     </message>
     <message>
@@ -3596,7 +3596,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Скопировать текущую подпись в буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Revolt address</source>
         <translation type="unfinished">Подписать сообщение, чтобы доказать владение биткоин-адресом</translation>
     </message>
     <message>
@@ -3620,7 +3620,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите ниже адрес получателя, сообщение (убедитесь, что переводы строк, пробелы, знаки табуляции и т. п. скопированы в точности) и подпись, чтобы проверить сообщение. Убедитесь, что вы не придаёте сообщению большего смысла, чем оно на самом деле несёт, чтобы не стать жертвой атаки "человек посередине". Обратите внимание, что подпись доказывает лишь то, что подписавший может получать биткоины на этот адрес, но никак не то, что он отправил какую-либо транзакцию!</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
+        <source>The Revolt address the message was signed with</source>
         <translation type="unfinished">Биткоин-адрес, которым было подписано сообщение</translation>
     </message>
     <message>
@@ -3632,7 +3632,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Подпись, созданная при подписании сообщения</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Revolt address</source>
         <translation type="unfinished">Проверить сообщение, чтобы убедиться, что оно действительно подписано указанным биткоин-адресом</translation>
     </message>
     <message>

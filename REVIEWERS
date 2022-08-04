@@ -1,8 +1,8 @@
 # ==============================================================================
-#                          Bitcoin Core REVIEWERS
+#                          Revolt Core REVIEWERS
 # ==============================================================================
 
-# Configuration of automated review requests for the bitcoin/bitcoin repo
+# Configuration of automated review requests for the revolt/revolt repo
 # via DrahtBot.
 
 # Order is not important; if a modified file or directory matches a fnmatch,
@@ -30,7 +30,7 @@
 /doc/Doxyfile.in                            @fanquake
 /doc/REST-interface.md                      @jonasschnelli
 /doc/benchmarking.md                        @ariard
-/doc/bitcoin-conf.md                        @hebasto
+/doc/revolt-conf.md                        @hebasto
 /doc/build-freebsd.md                       @fanquake
 /doc/build-netbsd.md                        @fanquake
 /doc/build-openbsd.md                       @laanwj

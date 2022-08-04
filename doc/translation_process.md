@@ -1,7 +1,7 @@
 Translations
 ============
 
-The Bitcoin-Core project has been designed to support multiple localisations. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations, Bitcoin-Core makes use of the Transifex online translation management tool.
+The Revolt-Core project has been designed to support multiple localisations. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations, Revolt-Core makes use of the Transifex online translation management tool.
 
 ### Helping to translate (using Transifex)
 Transifex is setup to monitor the GitHub repo for updates, and when code containing new translations is found, Transifex will process any changes. It may take several hours after a pull-request has been merged, to appear in the Transifex web interface.
@@ -34,7 +34,7 @@ When an updated source file is merged into the GitHub repo, Transifex will autom
 
 To create the pull-request, use the following commands:
 ```
-git add src/qt/bitcoinstrings.cpp src/qt/locale/revolt_en.ts
+git add src/qt/revoltstrings.cpp src/qt/locale/revolt_en.ts
 git commit
 ```
 
@@ -85,7 +85,7 @@ When new plurals are added to the source file, it's important to do the followin
 7. Save the source file
 
 ### Translating a new language
-To create a new language template, you will need to edit the languages manifest file `src/qt/bitcoin_locale.qrc` and add a new entry. Below is an example of the English language entry.
+To create a new language template, you will need to edit the languages manifest file `src/qt/revolt_locale.qrc` and add a new entry. Below is an example of the English language entry.
 
 ```xml
 <qresource prefix="/translations">

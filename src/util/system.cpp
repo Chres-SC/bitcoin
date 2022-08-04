@@ -856,7 +856,7 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows: C:\Users\Username\AppData\Roaming\Bitcoin
+    // Windows: C:\Users\Username\AppData\Roaming\Revolt
     // macOS: ~/Library/Application Support/Bitcoin
     // Unix-like: ~/.bitcoin
 #ifdef WIN32

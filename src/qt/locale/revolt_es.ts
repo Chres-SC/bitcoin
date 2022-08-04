@@ -66,13 +66,13 @@
         <translation type="unfinished">Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Estas son tus direcciones Bitcoin para enviar pagos. Comprueba siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Estas son tus direcciones Revolt para enviar pagos. Comprueba siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Estas son tus direcciones Bitcoin para la recepción de pagos. Usa el botón 'Crear una nueva dirección para recepción' en la pestaña Recibir para crear nuevas direcciones.
+        <translation type="unfinished">Estas son tus direcciones Revolt para la recepción de pagos. Usa el botón 'Crear una nueva dirección para recepción' en la pestaña Recibir para crear nuevas direcciones.
 Firmar solo es posible con direcciones del tipo Legacy.</translation>
     </message>
     <message>
@@ -159,8 +159,8 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
         <translation type="unfinished">Confirma el cifrado de este monedero</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Atención: Si cifras tu monedero y pierdes la contraseña, perderás ¡&lt;b&gt;TODOS TUS BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
+        <translation type="unfinished">Atención: Si cifras tu monedero y pierdes la contraseña, perderás ¡&lt;b&gt;TODOS TUS REVOLTS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -179,8 +179,8 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
         <translation type="unfinished">Introduce la contraseña antigua y la nueva para el monedero.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Recuerda que cifrar tu monedero no garantiza la protección de tus bitcoins si tu ordenador es infectado con malware.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Recuerda que cifrar tu monedero no garantiza la protección de tus revolts si tu ordenador es infectado con malware.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -239,7 +239,7 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">Excepción fuera de control</translation>
@@ -286,8 +286,8 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
         <translation type="unfinished">Cantidad</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation type="unfinished">Ingresa una dirección de Bitcoin (Ejemplo: %1)</translation>
+        <source>Enter a Revolt address (e.g. %1)</source>
+        <translation type="unfinished">Ingresa una dirección de Revolt (Ejemplo: %1)</translation>
     </message>
     <message>
         <source>Unroutable</source>
@@ -369,7 +369,7 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">El archivo de configuración no puede leerse</translation>
@@ -380,7 +380,7 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
     </message>
     <message>
         <source>%s corrupt. Try using the wallet tool revolt-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s corrupto. Intenta utilizar la herramienta del monedero bitcoin-monedero para salvar o restaurar una copia de seguridad.</translation>
+        <translation type="unfinished">%s corrupto. Intenta utilizar la herramienta del monedero revolt-monedero para salvar o restaurar una copia de seguridad.</translation>
     </message>
     <message>
         <source>Cannot downgrade wallet from version %i to version %i. Wallet version unchanged.</source>
@@ -728,8 +728,8 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
         <translation type="unfinished">Proxy está &lt;b&gt;habilitado&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Enviar monedas a una dirección Bitcoin</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">Enviar monedas a una dirección Revolt</translation>
     </message>
     <message>
         <source>&amp;Options…</source>
@@ -824,7 +824,7 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
     </message>
     <message>
         <source>Load Partially Signed Revolt Transaction</source>
-        <translation type="unfinished">Cargar una transacción de Bitcoin parcialmente firmada</translation>
+        <translation type="unfinished">Cargar una transacción de Revolt parcialmente firmada</translation>
     </message>
     <message>
         <source>Load PSBT from &amp;clipboard…</source>
@@ -832,7 +832,7 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
     </message>
     <message>
         <source>Load Partially Signed Revolt Transaction from clipboard</source>
-        <translation type="unfinished">Cargar una transacción de Bitcoin parcialmente firmada desde el Portapapeles</translation>
+        <translation type="unfinished">Cargar una transacción de Revolt parcialmente firmada desde el Portapapeles</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1395,15 +1395,15 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
         <translation type="unfinished">&amp;Ruta de script de firma externo</translation>
     </message>
     <message>
-        <source>Full path to a Bitcoin Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Ruta completa al script compatible con Bitcoin Core (ej. C:\Descargas\hwi.exe o /Usuarios/SuUsuario/Descargas/hwi.py). Cuidado: código malicioso podría robarle sus monedas!</translation>
+        <source>Full path to a Revolt Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Ruta completa al script compatible con Revolt Core (ej. C:\Descargas\hwi.exe o /Usuarios/SuUsuario/Descargas/hwi.py). Cuidado: código malicioso podría robarle sus monedas!</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="unfinished">Mapear el puerto usando &amp;UPnp</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation type="unfinished">Abre el puerto del cliente de Revolt en el router automáticamente. Esto solo funciona cuando el router soporta NAT-PMP y está activo. El puerto externo podría ser elegido al azar.</translation>
     </message>
     <message>
@@ -1448,7 +1448,7 @@ Firmar solo es posible con direcciones del tipo Legacy.</translation>
     </message>
     <message>
         <source>Connect to the Revolt network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">Conectar a la red de Bitcoin a través de un proxy SOCKS5 diferente para los servicios anónimos de Tor.</translation>
+        <translation type="unfinished">Conectar a la red de Revolt a través de un proxy SOCKS5 diferente para los servicios anónimos de Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -2295,7 +2295,7 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
     <message>
         <source>Please, review your transaction proposal. This will produce a Partially Signed Revolt Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Por favor, revisa tu propuesta de transacción. Esto producirá una Transacción de Bitcoin Parcialmente Firmada (TBPF) que puedes guardar o copiar y después firmar p.ej. un monedero fuera de línea %1, o un monedero de hardware compatible con TBPF.</translation>
+        <translation type="unfinished">Por favor, revisa tu propuesta de transacción. Esto producirá una Transacción de Revolt Parcialmente Firmada (TBPF) que puedes guardar o copiar y después firmar p.ej. un monedero fuera de línea %1, o un monedero de hardware compatible con TBPF.</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -2305,7 +2305,7 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
     <message>
         <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Revolt Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Por favor, revisa tu transacción. Puedes crear y enviar esta transacción o crear una Transacción Bitcoin Parcialmente Firmada (PSBT), que puedes guardar o copiar y luego firmar con, por ejemplo, un monedero %1 offline o un monedero hardware compatible con PSBT.</translation>
+        <translation type="unfinished">Por favor, revisa tu transacción. Puedes crear y enviar esta transacción o crear una Transacción Revolt Parcialmente Firmada (PSBT), que puedes guardar o copiar y luego firmar con, por ejemplo, un monedero %1 offline o un monedero hardware compatible con PSBT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2347,8 +2347,8 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
         <translation type="unfinished">El monto a enviar en la unidad seleccionada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">La comisión será deducida de la cantidad enviada. El destinatario recibirá menos bitcoins que la cantidad introducida en el campo Cantidad. Si hay varios destinatarios seleccionados, la comisión será distribuida a partes iguales.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less revolts than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">La comisión será deducida de la cantidad enviada. El destinatario recibirá menos revolts que la cantidad introducida en el campo Cantidad. Si hay varios destinatarios seleccionados, la comisión será distribuida a partes iguales.</translation>
     </message>
     <message>
         <source>Use available balance</source>
@@ -2371,8 +2371,8 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
         <translation type="unfinished">Introduce una etiqueta para esta dirección para añadirla a la lista de direcciones utilizadas</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
-        <translation type="unfinished">Mensaje que se agrgará al URI de Bitcoin, el cuál será almacenado con la transacción para su referencia. Nota: Este mensaje no será mandado a través de la red de Bitcoin.</translation>
+        <source>A message that was attached to the revolt: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Revolt network.</source>
+        <translation type="unfinished">Mensaje que se agrgará al URI de Revolt, el cuál será almacenado con la transacción para su referencia. Nota: Este mensaje no será mandado a través de la red de Revolt.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2397,7 +2397,7 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
         <translation type="unfinished">&amp;Firmar Mensaje</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive revolts sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">Puedes firmar los mensajes con tus direcciones para demostrar que las posees. Ten cuidado de no firmar cualquier cosa vaga, ya que los ataques de phishing pueden tratar de engañarte firmando tu identidad a través de ellos. Firma solo declaraciones totalmente detalladas con las que estés de acuerdo.</translation>
     </message>
     <message>

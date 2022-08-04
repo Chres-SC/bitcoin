@@ -109,7 +109,7 @@ Qt GUI
 * Add 2 labels to the overviewpage that display Wallet and Transaction status (obsolete or current)
 * Extend the optionsdialog (e.g. language selection) and re-work it to a tabbed UI
 * Merge sign/verify message into a single window with tabbed UI
-* Ensure a changed bitcoin unit immediately updates all GUI elements that use units
+* Ensure a changed revolt unit immediately updates all GUI elements that use units
 * Update QR Code dialog
 * Improve error reporting at startup
 * Fine-grained UI updates for a much smoother UI during block downloads

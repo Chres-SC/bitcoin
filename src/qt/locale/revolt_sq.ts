@@ -66,13 +66,13 @@
         <translation type="unfinished">Duke marr adresen</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Këto janë Bitcoin adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Këto janë Revolt adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Këto janë adresat tuaja të Bitcoin për të marrë pagesa. Përdorni butonin 'Krijo adresë të re marrëse' në skedën e marrjes për të krijuar adresa të reja. Nënshkrimi është i mundur vetëm me adresa të tipit 'trashëgimi'.</translation>
+        <translation type="unfinished">Këto janë adresat tuaja të Revolt për të marrë pagesa. Përdorni butonin 'Krijo adresë të re marrëse' në skedën e marrjes për të krijuar adresa të reja. Nënshkrimi është i mundur vetëm me adresa të tipit 'trashëgimi'.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -264,7 +264,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation type="unfinished">Fonde te pamjaftueshme</translation>

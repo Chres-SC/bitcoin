@@ -1,4 +1,4 @@
-Bitcoin Core version 0.18.0 is now available from:
+Revolt Core version 0.18.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.18.0/>
 
@@ -35,16 +35,16 @@ wallet versions are still supported.
 Compatibility
 ==============
 
-Bitcoin Core is supported and extensively tested on operating systems
+Revolt Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not
-recommended to use Bitcoin Core on unsupported systems.
+recommended to use Revolt Core on unsupported systems.
 
-Bitcoin Core should also work on most other Unix-like systems but is not
+Revolt Core should also work on most other Unix-like systems but is not
 as frequently tested on them.
 
 From 0.17.0 onwards, macOS <10.10 is no longer supported. 0.17.0 is
 built using Qt 5.9.x, which doesn't support versions of macOS older than
-10.10. Additionally, Bitcoin Core does not yet change appearance when
+10.10. Additionally, Revolt Core does not yet change appearance when
 macOS "dark mode" is activated.
 
 In addition to previously-supported CPU platforms, this release's
@@ -119,7 +119,7 @@ Configuration option changes
   disconnect/ban behavior will not cause a node that is whitelisting
   another to be dropped by peers.  Users can still explicitly enable
   this behavior with the command line option (and may want to consider
-  [contacting](https://bitcoincore.org/en/contact/) the Bitcoin Core
+  [contacting](https://bitcoincore.org/en/contact/) the Revolt Core
   project to let us know about their use-case, as this feature could be
   deprecated in the future).
 
@@ -128,7 +128,7 @@ systemd init file
 
 The systemd init file (`contrib/init/revoltd.service`) has been changed
 to use `/var/lib/revoltd` as the data directory instead of
-`~bitcoin/.bitcoin`. This change makes Bitcoin Core more consistent with
+`~bitcoin/.bitcoin`. This change makes Revolt Core more consistent with
 other services, and makes the systemd init config more consistent with
 existing Upstart and OpenRC configs.
 
@@ -158,11 +158,11 @@ Documentation
   documentation](https://github.com/bitcoin/bitcoin/blob/master/doc/JSON-RPC-interface.md)
   about how to secure this interface.
 
-- A new [document](https://github.com/bitcoin/bitcoin/blob/master/doc/bitcoin-conf.md)
+- A new [document](https://github.com/bitcoin/bitcoin/blob/master/doc/revolt-conf.md)
   about the `bitcoin.conf` file describes how to use it to configure
-  Bitcoin Core.
+  Revolt Core.
 
-- A new document introduces Bitcoin Core's BIP174 [Partially-Signed
+- A new document introduces Revolt Core's BIP174 [Partially-Signed
   Revolt Transactions
   (PSBT)](https://github.com/bitcoin/bitcoin/blob/master/doc/psbt.md)
   interface, which is used to allow multiple programs to collaboratively
@@ -187,7 +187,7 @@ Build system changes
 - A new `--disable-bip70` option may be passed to `./configure` to
   prevent Revolt-Qt from being built with support for the BIP70 payment
   protocol or from linking libssl.  As the payment protocol has exposed
-  Bitcoin Core to libssl vulnerabilities in the past, builders who don't
+  Revolt Core to libssl vulnerabilities in the past, builders who don't
   need BIP70 support are encouraged to use this option to reduce their
   exposure to future vulnerabilities.
 
@@ -278,7 +278,7 @@ in the Low-level Changes section below.
   ignored or are inconsistent, if there are any.
 
 - `getaddressinfo` now returns an additional `solvable` boolean field
-  when Bitcoin Core knows enough about the address's scriptPubKey,
+  when Revolt Core knows enough about the address's scriptPubKey,
   optional redeemScript, and optional witnessScript in order for the
   wallet to be able to generate an unsigned input spending funds sent to
   that address.
@@ -292,7 +292,7 @@ in the Low-level Changes section below.
 - `importprivkey` will preserve previously-set labels for addresses or
   public keys corresponding to the private key being imported.  For
   example, if you imported a watch-only address with the label "cold
-  wallet" in earlier releases of Bitcoin Core, subsequently importing
+  wallet" in earlier releases of Revolt Core, subsequently importing
   the private key would default to resetting the address's label to the
   default empty-string label ("").  In this release, the previous label
   of "cold wallet" will be retained.  If you optionally specify any
@@ -416,24 +416,24 @@ Tools
 Planned changes
 ===============
 
-This section describes planned changes to Bitcoin Core that may affect
+This section describes planned changes to Revolt Core that may affect
 other Bitcoin software and services.
 
-- Since version 0.16.0, Bitcoin Core’s built-in wallet has defaulted to
+- Since version 0.16.0, Revolt Core’s built-in wallet has defaulted to
   generating P2SH-wrapped segwit addresses when users want to receive
   payments. These addresses are backwards compatible with all
-  widely-used software.  Starting with Bitcoin Core 0.20 (expected about
-  a year after 0.18), Bitcoin Core will default to native segwit
+  widely-used software.  Starting with Revolt Core 0.20 (expected about
+  a year after 0.18), Revolt Core will default to native segwit
   addresses (bech32) that provide additional fee savings and other
   benefits. Currently, many wallets and services already support sending
-  to bech32 addresses, and if the Bitcoin Core project sees enough
+  to bech32 addresses, and if the Revolt Core project sees enough
   additional adoption, it will instead default to bech32 receiving
-  addresses in Bitcoin Core 0.19 (approximately November 2019).
+  addresses in Revolt Core 0.19 (approximately November 2019).
   P2SH-wrapped segwit addresses will continue to be provided if the user
   requests them in the GUI or by RPC, and anyone who doesn’t want the
   update will be able to configure their default address type.
   (Similarly, pioneering users who want to change their default now may
-  set the `addresstype=bech32` configuration option in any Bitcoin Core
+  set the `addresstype=bech32` configuration option in any Revolt Core
   release from 0.16.0 up.)
 
 Deprecated P2P messages
@@ -495,7 +495,7 @@ Network
   a misbehaving node will be disconnected to make room for nodes without
   a history of problems (unless the misbehaving node helps your node in
   some other way, such as by connecting to a part of the Internet from
-  which you don't have many other peers).  Previously, Bitcoin Core
+  which you don't have many other peers).  Previously, Revolt Core
   banned the IP addresses of misbehaving peers for a period of time
   (default of 1 day); this was easily circumvented by attackers with
   multiple IP addresses. If you manually ban a peer, such as by using
@@ -514,18 +514,18 @@ Wallet
   software. Instead such wallets will be completely unloaded and
   reloaded to achieve the same effect.
 
-- A sub-project of Bitcoin Core now provides Hardware Wallet Interaction
+- A sub-project of Revolt Core now provides Hardware Wallet Interaction
   (HWI) scripts that allow command-line users to use several popular
-  hardware key management devices with Bitcoin Core.  See their [project
+  hardware key management devices with Revolt Core.  See their [project
   page](https://github.com/bitcoin-core/HWI#readme) for details.
 
 Security
 --------
 
 - This release changes the Random Number Generator (RNG) used from
-  OpenSSL to Bitcoin Core's own implementation, although entropy
-  gathered by Bitcoin Core is fed out to OpenSSL and then read back in
-  when the program needs strong randomness. This moves Bitcoin Core a
+  OpenSSL to Revolt Core's own implementation, although entropy
+  gathered by Revolt Core is fed out to OpenSSL and then read back in
+  when the program needs strong randomness. This moves Revolt Core a
   little closer to no longer needing to depend on OpenSSL, a dependency
   that has caused security issues in the past.  The new implementation
   gathers entropy from multiple sources, including from hardware
@@ -534,7 +534,7 @@ Security
 Changes for particular platforms
 --------------------------------
 
-- On macOS, Bitcoin Core now opts out of application CPU throttling
+- On macOS, Revolt Core now opts out of application CPU throttling
   ("app nap") during initial blockchain download, when catching up from
   over 100 blocks behind the current chain tip, or when reindexing chain
   data. This helps prevent these operations from taking an excessively
@@ -730,7 +730,7 @@ Changes for particular platforms
 - #14375 Correct misleading "overridden options" label (hebasto)
 - #15007 Notificator class refactoring (hebasto)
 - #14784 Use `WalletModel*` instead of the wallet name as map key (promag)
-- #11625 Add BitcoinApplication & RPCConsole tests (ryanofsky)
+- #11625 Add RevoltApplication & RPCConsole tests (ryanofsky)
 - #14517 Fix start with the `-min` option (hebasto)
 - #13216 implements concept for different disk sizes on intro (marcoagner)
 - #15114 Replace remaining 0 with nullptr (Empact)
@@ -797,7 +797,7 @@ Changes for particular platforms
 - #15431 msvc: scripted-diff: Remove NDEBUG pre-define in project file (ken2812221)
 - #15549 gitian: Improve error handling (laanwj)
 - #15548 use full version string in setup.exe (MarcoFalke)
-- #11526 Visual Studio build configuration for Bitcoin Core (sipsorcery)
+- #11526 Visual Studio build configuration for Revolt Core (sipsorcery)
 - #15110 build\_msvc: Fix the build problem in `libbitcoin_server` (Mr-Leshiy)
 - #14372 msvc: build secp256k1 and leveldb locally (ken2812221)
 - #15325 msvc: Fix silent merge conflict between #13926 and #14372 (ken2812221)
@@ -824,7 +824,7 @@ Changes for particular platforms
 - #14088 Don't assert(…) with side effects (practicalswift)
 - #14086 appveyor: Use clcache to speed up build (ken2812221)
 - #13954 Warn (don't fail!) on spelling errors. Fix typos reported by codespell (practicalswift)
-- #12775 Integration of property based testing into Bitcoin Core (Christewart)
+- #12775 Integration of property based testing into Revolt Core (Christewart)
 - #14119 Read reject reasons from debug log, not P2P messages (MarcoFalke)
 - #14189 Fix silent merge conflict in `wallet_importmulti` (MarcoFalke)
 - #13419 Speed up `knapsack_solver_test` by not recreating wallet 100 times (lucash-dev)
@@ -1037,7 +1037,7 @@ Changes for particular platforms
 - #14428 Fix macOS files description in qt/README.md (hebasto)
 - #14390 release process: RPC documentation (karel-3d)
 - #14472 getblocktemplate: use SegWit in example (Sjors)
-- #14497 Add doc/bitcoin-conf.md (hebasto)
+- #14497 Add doc/revolt-conf.md (hebasto)
 - #14526 Document lint tests (fanquake)
 - #14511 Remove explicit storage requirement from README.md (merland)
 - #14600 Clarify commit message guidelines (merland)

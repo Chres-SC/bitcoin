@@ -7,9 +7,9 @@
 // now.
 //
 // DEVELOPER NOTE: Since this is a "demo-only", experimental, etc. executable,
-//                 it may diverge from REVOLT Core's coding style.
+//                 it may diverge from Revolt Core's coding style.
 //
-// It is part of the libbitcoinkernel project.
+// It is part of the librevoltkernel project.
 
 #include <kernel/checks.h>
 #include <kernel/context.h>

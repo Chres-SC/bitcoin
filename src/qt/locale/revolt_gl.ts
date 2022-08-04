@@ -66,13 +66,13 @@
         <translation type="unfinished">Recibindo enderezos</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Estas son as túas direccións Bitcoin para enviar pagos. Revisa sempre a cantidade e a dirección receptora antes de enviar moedas.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Estas son as túas direccións Revolt para enviar pagos. Revisa sempre a cantidade e a dirección receptora antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Estes son os teus enderezos de Bitcoin para recibir pagamentos. Emprega o botón 'Crear novo enderezo para recibir pagamentos' na solapa de recibir para crear novos enderezos.
+        <translation type="unfinished">Estes son os teus enderezos de Revolt para recibir pagamentos. Emprega o botón 'Crear novo enderezo para recibir pagamentos' na solapa de recibir para crear novos enderezos.
 Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
     </message>
     <message>
@@ -150,8 +150,8 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">Confirmar encriptación de moedeiro</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Precaución: Se encriptas o teu moedeiro e perdes o teu contrasinal, ti &lt;b&gt;PERDERÁS TÓDOLOS TEUS BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
+        <translation type="unfinished">Precaución: Se encriptas o teu moedeiro e perdes o teu contrasinal, ti &lt;b&gt;PERDERÁS TÓDOLOS TEUS REVOLTS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -252,7 +252,7 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation type="unfinished">Esta é unha build de test pre-lanzamento - emprégaa baixo o teu propio risco - non empregar para minado ou aplicacións de comerciantes</translation>
@@ -361,8 +361,8 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">Moedeiro:</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Enviar moedas a unha dirección Bitcoin</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">Enviar moedas a unha dirección Revolt</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -385,12 +385,12 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">Encriptar as claves privadas que pertencen ao teu moedeiro</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation type="unfinished">Asina mensaxes cos teus enderezos Bitcoin para probar que che pertencen</translation>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
+        <translation type="unfinished">Asina mensaxes cos teus enderezos Revolt para probar que che pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Verifica mensaxes para asegurar que foron asinados con enderezos Bitcoin específicos.</translation>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
+        <translation type="unfinished">Verifica mensaxes para asegurar que foron asinados con enderezos Revolt específicos.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -409,8 +409,8 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Solicitar pagamentos (xera códigos QR e bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and revolt: URIs)</source>
+        <translation type="unfinished">Solicitar pagamentos (xera códigos QR e revolt: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -668,8 +668,8 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">Modificar dirección para enviar</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation type="unfinished">A dirección introducida '%1' non é unha dirección Bitcoin válida.</translation>
+        <source>The entered address "%1" is not a valid Revolt address.</source>
+        <translation type="unfinished">A dirección introducida '%1' non é unha dirección Revolt válida.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -795,7 +795,7 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">Experto</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Revolt client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished">Abrir automáticamente o porto do cliente Revolt no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
@@ -1233,7 +1233,7 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
+        <source>Warning: Invalid Revolt address</source>
         <translation type="unfinished">Atención:  Enderezo Revolt non válido</translation>
     </message>
     <message>
@@ -1315,8 +1315,8 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">Copiar a sinatura actual ao portapapeis do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation type="unfinished">Asina a mensaxe para probar que posúes este enderezo Bitcoin</translation>
+        <source>Sign the message to prove you own this Revolt address</source>
+        <translation type="unfinished">Asina a mensaxe para probar que posúes este enderezo Revolt</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1335,8 +1335,8 @@ Firmar é posible unicamente con enderezos de tipo 'legacy'.</translation>
         <translation type="unfinished">&amp;Verificar Mensaxe</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation type="unfinished">Verificar a mensaxe para asegurar que foi asinada coa dirección Bitcoin especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified Revolt address</source>
+        <translation type="unfinished">Verificar a mensaxe para asegurar que foi asinada coa dirección Revolt especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

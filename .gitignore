@@ -2,7 +2,7 @@
 
 *.exe
 *.pdb
-src/bitcoin
+src/revolt
 src/revoltd
 src/revolt-cli
 src/revolt-gui
@@ -100,7 +100,7 @@ Makefile.am.user
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+revolt-qt_test
 
 # Resources cpp
 qrc_*.cpp

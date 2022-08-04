@@ -66,8 +66,8 @@
         <translation type="unfinished">Helbideak jasotzen</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Hauek dira zuk dirua jaso dezaketen Bitcoin helbideak. Egiaztatu beti diru-kopurua eta dirua jasoko duen helbidea zuzen egon daitezen, txanponak bidali baino lehen.</translation>
+        <source>These are your Revolt addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Hauek dira zuk dirua jaso dezaketen Revolt helbideak. Egiaztatu beti diru-kopurua eta dirua jasoko duen helbidea zuzen egon daitezen, txanponak bidali baino lehen.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -153,7 +153,7 @@
         <translation type="unfinished">Diruorroaren enkriptazioa berretsi</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REVOLTS&lt;/b&gt;!</source>
         <translation type="unfinished">Abisua: Diruzorroa enkriptatzen baduzu eta zure pasahitza galtzen baduzu, &lt;b&gt;REVOLT GUZTIAK GALDUKO DITUZU&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -173,8 +173,8 @@
         <translation type="unfinished">Diruzorroaren pasahitz zahar zein berria sartu.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Gogoan izan diruzorroaren enkripzioak ezin dituela zure bitcoinak zure ordenagailuan izan dezakezun malware batengandik lapurtuak izatetik guztiz babestu .</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your revolts from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Gogoan izan diruzorroaren enkripzioak ezin dituela zure revoltak zure ordenagailuan izan dezakezun malware batengandik lapurtuak izatetik guztiz babestu .</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -290,7 +290,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Zamaketa amaitua</translation>
@@ -360,8 +360,8 @@
         <translation type="unfinished">Proxya &lt;b&gt;gaituta&lt;/b&gt; dago : %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Bidali txanponak Bitcoin helbide batera</translation>
+        <source>Send coins to a Revolt address</source>
+        <translation type="unfinished">Bidali txanponak Revolt helbide batera</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -384,12 +384,12 @@
         <translation type="unfinished">Zure diru-zorroari dagozkion giltza pribatuak enkriptatu.</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Revolt addresses to prove you own them</source>
         <translation type="unfinished">Sinatu mezuak Revolten helbideekin, jabetza frogatzeko.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Egiaztatu mesua Bitcoin helbide espezifikoarekin erregistratu direla ziurtatzeko</translation>
+        <source>Verify messages to ensure they were signed with specified Revolt addresses</source>
+        <translation type="unfinished">Egiaztatu mesua Revolt helbide espezifikoarekin erregistratu direla ziurtatzeko</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -475,8 +475,8 @@
         <translation type="unfinished">&amp;Helbideak jasotzen</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Ireki bitcoin bat: URI</translation>
+        <source>Open a revolt: URI</source>
+        <translation type="unfinished">Ireki revolt bat: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>

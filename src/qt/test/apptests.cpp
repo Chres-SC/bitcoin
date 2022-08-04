@@ -1,4 +1,4 @@
-// Copyright (c) 2018-2021 The Bitcoin Core developers
+// Copyright (c) 2018-2021 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 
 #include <chainparams.h>
 #include <key.h>
-#include <qt/bitcoin.h>
+#include <qt/revolt.h>
 #include <qt/revoltgui.h>
 #include <qt/networkstyle.h>
 #include <qt/rpcconsole.h>
@@ -55,7 +55,7 @@ void TestRpcCommand(RPCConsole* console)
 }
 } // namespace
 
-//! Entry point for BitcoinApplication tests.
+//! Entry point for RevoltApplication tests.
 void AppTests::appTests()
 {
 #ifdef Q_OS_MACOS
@@ -76,7 +76,7 @@ void AppTests::appTests()
     QScopedPointer<const NetworkStyle> style(NetworkStyle::instantiate(Params().NetworkIDString()));
     m_app.setupPlatformStyle();
     m_app.createWindow(style.data());
-    connect(&m_app, &BitcoinApplication::windowShown, this, &AppTests::guiTests);
+    connect(&m_app, &RevoltApplication::windowShown, this, &AppTests::guiTests);
     expectCallback("guiTests");
     m_app.baseInitialize();
     m_app.requestInitialize();

@@ -82,7 +82,7 @@ std::string CopyrightHolders(const std::string& strPrefix)
     const auto copyright_devs = strprintf(_(COPYRIGHT_HOLDERS).translated, COPYRIGHT_HOLDERS_SUBSTITUTION);
     std::string strCopyrightHolders = strPrefix + copyright_devs;
 
-    // Make sure REVOLT Core copyright is not removed by accident
+    // Make sure Revolt Core copyright is not removed by accident
     if (copyright_devs.find("Revolt Core") == std::string::npos) {
         strCopyrightHolders += "\n" + strPrefix + "The Revolt Core developers";
     }

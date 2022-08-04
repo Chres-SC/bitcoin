@@ -42,7 +42,7 @@
         <translation type="unfinished">কয়েন পাঠানোর ঠিকানা বাছাই করুন</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Revolt addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">পেমেন্ট পাওয়ার জন্য এটি আপনার বিটকয়েন ঠিকানা। নতুন ঠিকানা তৈরী করতে "নতুন গ্রহণের ঠিকানা তৈরী করুন" বোতাম ব্যবহার করুন। সাইন ইন করা শুধুমাত্র "উত্তরাধিকার" ঠিকানার মাধ্যমেই সম্ভব।</translation>
     </message>
@@ -53,7 +53,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>RevoltApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">পলাতক ব্যতিক্রম</translation>
@@ -131,7 +131,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>revolt-core</name>
     <message>
         <source>SQLiteDatabase: Unexpected application id. Expected %u, got %u</source>
         <translation type="unfinished">এস. কিয়ু. লাইট ডাটাবেস : অপ্রত্যাশিত এপ্লিকেশন আই.ডি. প্রত্যাশিত %u, পাওয়া গেলো %u </translation>
