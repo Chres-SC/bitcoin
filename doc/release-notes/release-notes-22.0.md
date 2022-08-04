@@ -46,7 +46,7 @@ P2P and network changes
 -----------------------
 - Added support for running Revolt Core as an
   [I2P (Invisible Internet Project)](https://en.wikipedia.org/wiki/I2P) service
-  and connect to such services. See [i2p.md](https://github.com/revolt/revolt/blob/22.x/doc/i2p.md) for details. (#20685)
+  and connect to such services. See [i2p.md](https://github.com/bitcoin/bitcoin/blob/22.x/doc/i2p.md) for details. (#20685)
 - This release removes support for Tor version 2 hidden services in favor of Tor
   v3 only, as the Tor network [dropped support for Tor
   v2](https://blog.torproject.org/v2-deprecation-timeline) with the release of
@@ -170,7 +170,7 @@ Tools and Utilities
 Wallet
 ------
 
-- External signers such as hardware wallets can now be used through the new RPC methods `enumeratesigners` and `displayaddress`. Support is also added to the `send` RPC call. This feature is experimental. See [external-signer.md](https://github.com/revolt/revolt/blob/22.x/doc/external-signer.md) for details. (#16546)
+- External signers such as hardware wallets can now be used through the new RPC methods `enumeratesigners` and `displayaddress`. Support is also added to the `send` RPC call. This feature is experimental. See [external-signer.md](https://github.com/bitcoin/bitcoin/blob/22.x/doc/external-signer.md) for details. (#16546)
 
 - A new `listdescriptors` RPC is available to inspect the contents of descriptor-enabled wallets.
   The RPC returns public versions of all imported descriptors, including their timestamp and flags.
@@ -187,7 +187,7 @@ Wallet
 - We now support up to 20 keys in `multi()` and `sortedmulti()` descriptors
   under `wsh()`. (#20867)
 
-- Taproot descriptors can be imported into the wallet only after activation has occurred on the network (e.g. mainnet, testnet, signet) in use. See [descriptors.md](https://github.com/revolt/revolt/blob/22.x/doc/descriptors.md) for supported descriptors.
+- Taproot descriptors can be imported into the wallet only after activation has occurred on the network (e.g. mainnet, testnet, signet) in use. See [descriptors.md](https://github.com/bitcoin/bitcoin/blob/22.x/doc/descriptors.md) for supported descriptors.
 
 GUI changes
 -----------
@@ -222,7 +222,7 @@ Tests
 A detailed list of changes in this version follows. To keep the list to a manageable length, small refactors and typo fixes are not included, and similar changes are sometimes condensed into one line.
 
 ### Consensus
-- revolt/revolt#19438 Introduce deploymentstatus (ajtowns)
+- bitcoin/bitcoin#19438 Introduce deploymentstatus (ajtowns)
 - revolt/revolt#20207 Follow-up extra comments on taproot code and tests (sipa)
 - revolt/revolt#21330 Deal with missing data in signature hashes more consistently (sipa)
 
