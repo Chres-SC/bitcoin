@@ -108,7 +108,7 @@ def download_binary(tag, args) -> int:
     platform = args.platform
     if tag < "v23" and platform in ["x86_64-apple-darwin", "arm64-apple-darwin"]:
         platform = "osx64"
-    tarball = 'bitcoin-{tag}-{platform}.tar.gz'.format(
+    tarball = 'revolt-{tag}-{platform}.tar.gz'.format(
         tag=tag[1:], platform=platform)
     tarballUrl = 'https://bitcoincore.org/{bin_path}/{tarball}'.format(
         bin_path=bin_path, tarball=tarball)
@@ -147,7 +147,7 @@ def download_binary(tag, args) -> int:
     # Extract tarball
     ret = subprocess.run(['tar', '-zxf', tarball, '-C', tag,
                           '--strip-components=1',
-                          'bitcoin-{tag}'.format(tag=tag[1:])]).returncode
+                          'revolt-{tag}'.format(tag=tag[1:])]).returncode
     if ret:
         return ret
 
