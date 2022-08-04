@@ -250,11 +250,7 @@ class RevoltTestFramework(metaclass=RevoltTestMetaClass):
             "revolt-util" + config["environment"]["EXEEXT"],
         )
         self.options.revoltd = os.getenv("REVOLTD", default=fname_revoltd)
-<<<<<<< HEAD
         self.options.revoltcli = os.getenv("REVOLTCLI", default=fname_revoltcli)
-=======
-        self.options.bitcoincli = os.getenv("BITCOINCLI", default=fname_bitcoincli)
->>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
         self.options.revoltutil = os.getenv("REVOLTUTIL", default=fname_revoltutil)
 
         os.environ['PATH'] = os.pathsep.join([
@@ -494,11 +490,7 @@ class RevoltTestFramework(metaclass=RevoltTestMetaClass):
         if binary is None:
             binary = [get_bin_from_version(v, 'revoltd', self.options.revoltd) for v in versions]
         if binary_cli is None:
-<<<<<<< HEAD
             binary_cli = [get_bin_from_version(v, 'revolt-cli', self.options.revoltcli) for v in versions]
-=======
-            binary_cli = [get_bin_from_version(v, 'revolt-cli', self.options.bitcoincli) for v in versions]
->>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
         assert_equal(len(extra_confs), num_nodes)
         assert_equal(len(extra_args), num_nodes)
         assert_equal(len(versions), num_nodes)
@@ -779,11 +771,7 @@ class RevoltTestFramework(metaclass=RevoltTestMetaClass):
                     timewait=self.rpc_timeout,
                     timeout_factor=self.options.timeout_factor,
                     revoltd=self.options.revoltd,
-<<<<<<< HEAD
                     revolt_cli=self.options.revoltcli,
-=======
-                    revolt_cli=self.options.bitcoincli,
->>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
                     coverage_dir=None,
                     cwd=self.options.tmpdir,
                     descriptors=self.options.descriptors,
@@ -900,15 +888,9 @@ class RevoltTestFramework(metaclass=RevoltTestMetaClass):
         if not self.is_wallet_tool_compiled():
             raise SkipTest("revolt-wallet has not been compiled")
 
-<<<<<<< HEAD
     def skip_if_no_revolt_util(self):
         """Skip the running test if revolt-util has not been compiled."""
         if not self.is_revolt_util_compiled():
-=======
-    def skip_if_no_bitcoin_util(self):
-        """Skip the running test if revolt-util has not been compiled."""
-        if not self.is_bitcoin_util_compiled():
->>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
             raise SkipTest("revolt-util has not been compiled")
 
     def skip_if_no_cli(self):
@@ -958,15 +940,9 @@ class RevoltTestFramework(metaclass=RevoltTestMetaClass):
         """Checks whether revolt-wallet was compiled."""
         return self.config["components"].getboolean("ENABLE_WALLET_TOOL")
 
-<<<<<<< HEAD
     def is_revolt_util_compiled(self):
         """Checks whether revolt-util was compiled."""
         return self.config["components"].getboolean("ENABLE_REVOLT_UTIL")
-=======
-    def is_bitcoin_util_compiled(self):
-        """Checks whether revolt-util was compiled."""
-        return self.config["components"].getboolean("ENABLE_BITCOIN_UTIL")
->>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 
     def is_zmq_compiled(self):
         """Checks whether the zmq module was compiled."""
