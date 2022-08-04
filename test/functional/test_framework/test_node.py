@@ -92,11 +92,7 @@ class TestNode():
         # Note that common args are set in the config file (see initialize_datadir)
         self.extra_args = extra_args
         self.version = version
-<<<<<<< HEAD
         # Configuration for logging is set as command-line args rather than in the revolt.conf file.
-=======
-        # Configuration for logging is set as command-line args rather than in the bitcoin.conf file.
->>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
         # This means that starting a revoltd using the temp dir to debug a failed test won't
         # spam debug.log.
         self.args = [
