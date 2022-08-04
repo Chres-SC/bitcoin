@@ -507,7 +507,7 @@ void CoinControlDialog::updateLabels(CCoinControl& m_coin_control, WalletModel *
     }
 
     // actually update labels
-    RevoltUnit nDisplayUnit = RevoltUnit::BTC;
+    RevoltUnit nDisplayUnit = RevoltUnit::RVT;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 
