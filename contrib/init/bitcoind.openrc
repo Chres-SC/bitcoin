@@ -18,7 +18,7 @@ REVOLTD_BIN=${REVOLTD_BIN:-/usr/bin/revoltd}
 REVOLTD_NICE=${REVOLTD_NICE:-${NICELEVEL:-0}}
 REVOLTD_OPTS="${REVOLTD_OPTS:-${BITCOIN_OPTS}}"
 
-name="Bitcoin Core Daemon"
+name="Revolt Core Daemon"
 description="Bitcoin cryptocurrency P2P network daemon"
 
 command="/usr/bin/revoltd"
