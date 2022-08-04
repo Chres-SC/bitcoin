@@ -176,7 +176,7 @@ bool parseRevoltURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if (!RevoltUnits::parse(RevoltUnit::BTC, i->second, &rv.amount)) {
+                if (!RevoltUnits::parse(RevoltUnit::RVT, i->second, &rv.amount)) {
                     return false;
                 }
             }
@@ -208,7 +208,7 @@ QString formatRevoltURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(RevoltUnits::format(RevoltUnit::BTC, info.amount, false, RevoltUnits::SeparatorStyle::NEVER));
+        ret += QString("?amount=%1").arg(RevoltUnits::format(RevoltUnit::RVT, info.amount, false, RevoltUnits::SeparatorStyle::NEVER));
         paramCount++;
     }
 

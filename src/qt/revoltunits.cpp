@@ -10,7 +10,7 @@
 
 #include <cassert>
 
-static constexpr auto MAX_DIGITS_BTC = 16;
+static constexpr auto MAX_DIGITS_RVT = 16;
 
 RevoltUnits::RevoltUnits(QObject *parent):
         QAbstractListModel(parent),
@@ -21,9 +21,9 @@ RevoltUnits::RevoltUnits(QObject *parent):
 QList<RevoltUnit> RevoltUnits::availableUnits()
 {
     QList<RevoltUnit> unitlist;
-    unitlist.append(Unit::BTC);
-    unitlist.append(Unit::mBTC);
-    unitlist.append(Unit::uBTC);
+    unitlist.append(Unit::RVT);
+    unitlist.append(Unit::mRVT);
+    unitlist.append(Unit::uRVT);
     unitlist.append(Unit::SAT);
     return unitlist;
 }
@@ -31,9 +31,9 @@ QList<RevoltUnit> RevoltUnits::availableUnits()
 QString RevoltUnits::longName(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return QString("BTC");
-    case Unit::mBTC: return QString("mBTC");
-    case Unit::uBTC: return QString::fromUtf8("µBTC (bits)");
+    case Unit::RVT: return QString("RVT");
+    case Unit::mRVT: return QString("mRVT");
+    case Unit::uRVT: return QString::fromUtf8("µRVT (bits)");
     case Unit::SAT: return QString("Satoshi (sat)");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -42,9 +42,9 @@ QString RevoltUnits::longName(Unit unit)
 QString RevoltUnits::shortName(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return longName(unit);
-    case Unit::mBTC: return longName(unit);
-    case Unit::uBTC: return QString("bits");
+    case Unit::RVT: return longName(unit);
+    case Unit::mRVT: return longName(unit);
+    case Unit::uRVT: return QString("bits");
     case Unit::SAT: return QString("sat");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -53,9 +53,9 @@ QString RevoltUnits::shortName(Unit unit)
 QString RevoltUnits::description(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return QString("Revolts");
-    case Unit::mBTC: return QString("Milli-Revolts (1 / 1" THIN_SP_UTF8 "000)");
-    case Unit::uBTC: return QString("Micro-Revolts (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case Unit::RVT: return QString("Revolts");
+    case Unit::mRVT: return QString("Milli-Revolts (1 / 1" THIN_SP_UTF8 "000)");
+    case Unit::uRVT: return QString("Micro-Revolts (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case Unit::SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -64,9 +64,9 @@ QString RevoltUnits::description(Unit unit)
 qint64 RevoltUnits::factor(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return 100'000'000;
-    case Unit::mBTC: return 100'000;
-    case Unit::uBTC: return 100;
+    case Unit::RVT: return 100'000'000;
+    case Unit::mRVT: return 100'000;
+    case Unit::uRVT: return 100;
     case Unit::SAT: return 1;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -75,9 +75,9 @@ qint64 RevoltUnits::factor(Unit unit)
 int RevoltUnits::decimals(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return 8;
-    case Unit::mBTC: return 5;
-    case Unit::uBTC: return 2;
+    case Unit::RVT: return 8;
+    case Unit::mRVT: return 5;
+    case Unit::uRVT: return 2;
     case Unit::SAT: return 0;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -94,7 +94,7 @@ QString RevoltUnits::format(Unit unit, const CAmount& nIn, bool fPlus, Separator
     qint64 quotient = n_abs / coin;
     QString quotient_str = QString::number(quotient);
     if (justify) {
-        quotient_str = quotient_str.rightJustified(MAX_DIGITS_BTC - num_decimals, ' ');
+        quotient_str = quotient_str.rightJustified(MAX_DIGITS_RVT - num_decimals, ' ');
     }
 
     // Use SI-style thin space separators as these are locale independent and can't be
@@ -232,9 +232,9 @@ namespace {
 qint8 ToQint8(RevoltUnit unit)
 {
     switch (unit) {
-    case RevoltUnit::BTC: return 0;
-    case RevoltUnit::mBTC: return 1;
-    case RevoltUnit::uBTC: return 2;
+    case RevoltUnit::RVT: return 0;
+    case RevoltUnit::mRVT: return 1;
+    case RevoltUnit::uRVT: return 2;
     case RevoltUnit::SAT: return 3;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -243,9 +243,9 @@ qint8 ToQint8(RevoltUnit unit)
 RevoltUnit FromQint8(qint8 num)
 {
     switch (num) {
-    case 0: return RevoltUnit::BTC;
-    case 1: return RevoltUnit::mBTC;
-    case 2: return RevoltUnit::uBTC;
+    case 0: return RevoltUnit::RVT;
+    case 1: return RevoltUnit::mRVT;
+    case 2: return RevoltUnit::uRVT;
     case 3: return RevoltUnit::SAT;
     }
     assert(false);
