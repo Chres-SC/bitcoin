@@ -3,7 +3,7 @@
 # Copyright 2016-2017 The Revolt Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test framework for bitcoin utils.
+"""Test framework for revolt utils.
 
 Runs automatically during `make check`.
 
