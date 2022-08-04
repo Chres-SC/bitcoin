@@ -61,7 +61,7 @@ To run:
 
 * UI elements like RevoltAmountField, which inherit from QWidget.
 * `revoltstrings.cpp`: automatically generated
-* `revoltunits.(h/cpp)`: BTC / mBTC / etc. handling
+* `revoltunits.(h/cpp)`: RVT / mRVT / etc. handling
 * `callback.h`
 * `guiconstants.h`: UI colors, app name, etc.
 * `guiutil.h`: several helper functions
