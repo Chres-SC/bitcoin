@@ -6,13 +6,13 @@
 
 Verify that a revoltd node can maintain list of wallets loading on startup
 """
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import RevoltTestFramework
 from test_framework.util import (
     assert_equal,
 )
 
 
-class WalletStartupTest(BitcoinTestFramework):
+class WalletStartupTest(RevoltTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

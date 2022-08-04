@@ -4,16 +4,16 @@ Test Shell for Interactive Environments
 This document describes how to use the `TestShell` submodule in the functional
 test suite.
 
-The `TestShell` submodule extends the `BitcoinTestFramework` functionality to
+The `TestShell` submodule extends the `RevoltTestFramework` functionality to
 external interactive environments for prototyping and educational purposes. Just
-like `BitcoinTestFramework`, the `TestShell` allows the user to:
+like `RevoltTestFramework`, the `TestShell` allows the user to:
 
 * Manage regtest revoltd subprocesses.
 * Access RPC interfaces of the underlying revoltd instances.
 * Log events to the functional test logging utility.
 
 The `TestShell` can be useful in interactive environments where it is necessary
-to extend the object lifetime of the underlying `BitcoinTestFramework` between
+to extend the object lifetime of the underlying `RevoltTestFramework` between
 user inputs. Such environments include the Python3 command line interpreter or
 [Jupyter](https://jupyter.org/) notebooks running a Python3 kernel.
 
@@ -30,7 +30,7 @@ importing the `TestShell` class from the `test_shell` sub-package.
 
 ```
 >>> import sys
->>> sys.path.insert(0, "/path/to/bitcoin/test/functional")
+>>> sys.path.insert(0, "/path/to/revolt/test/functional")
 >>> from test_framework.test_shell import TestShell
 ```
 
@@ -40,7 +40,7 @@ processes and logging utilities.
 * `TestShell.setup()`
 * `TestShell.shutdown()`
 
-The `TestShell` inherits all `BitcoinTestFramework` members and methods, such
+The `TestShell` inherits all `RevoltTestFramework` members and methods, such
 as:
 * `TestShell.nodes[index].rpc_method()`
 * `TestShell.log.info("Custom log message")`
@@ -52,10 +52,10 @@ The following sections demonstrate how to initialize, run, and shut down a
 
 ```
 >>> test = TestShell().setup(num_nodes=2, setup_clean_chain=True)
-20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Initializing test directory /path/to/bitcoin_func_test_XXXXXXX
+20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Initializing test directory /path/to/revolt_func_test_XXXXXXX
 ```
 The `TestShell` forwards all functional test parameters of the parent
-`BitcoinTestFramework` object. The full set of argument keywords which can be
+`RevoltTestFramework` object. The full set of argument keywords which can be
 used to initialize the `TestShell` can be found in [section
 #6](#custom-testshell-parameters) of this document.
 
@@ -71,12 +71,20 @@ TestShell is already running!
 
 ## 4. Interacting with the `TestShell`
 
+<<<<<<< HEAD
+Unlike the `RevoltTestFramework` class, the `TestShell` keeps the underlying
+=======
 Unlike the `BitcoinTestFramework` class, the `TestShell` keeps the underlying
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 Revoltd subprocesses (nodes) and logging utilities running until the user
 explicitly shuts down the `TestShell` object.
 
 During the time between the `setup` and `shutdown` calls, all `revoltd` node
+<<<<<<< HEAD
+processes and `RevoltTestFramework` convenience methods can be accessed
+=======
 processes and `BitcoinTestFramework` convenience methods can be accessed
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 interactively.
 
 **Example: Mining a regtest chain**
@@ -137,7 +145,7 @@ instances and remove all temporary data and logging directories.
 ```
 >>> test.shutdown()
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Stopping nodes
-20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Cleaning up /path/to/bitcoin_func_test_XXXXXXX on exit
+20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Cleaning up /path/to/revolt_func_test_XXXXXXX on exit
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Tests successful
 ```
 To prevent the logs from being removed after a shutdown, simply set the
@@ -146,20 +154,24 @@ To prevent the logs from being removed after a shutdown, simply set the
 >>> test.options.nocleanup = True
 >>> test.shutdown()
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Stopping nodes
-20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Not cleaning up dir /path/to/bitcoin_func_test_XXXXXXX on exit
+20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Not cleaning up dir /path/to/revolt_func_test_XXXXXXX on exit
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Tests successful
 ```
 
 The following utility consolidates logs from the revoltd nodes and the
+<<<<<<< HEAD
+underlying `RevoltTestFramework`:
+=======
 underlying `BitcoinTestFramework`:
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 
-* `/path/to/bitcoin/test/functional/combine_logs.py
-  '/path/to/bitcoin_func_test_XXXXXXX'`
+* `/path/to/revolt/test/functional/combine_logs.py
+  '/path/to/revolt_func_test_XXXXXXX'`
 
 ## 6. Custom `TestShell` parameters
 
 The `TestShell` object initializes with the default settings inherited from the
-`BitcoinTestFramework` class. The user can override these in
+`RevoltTestFramework` class. The user can override these in
 `TestShell.setup(key=value)`.
 
 **Note:** `TestShell.reset()` will reset test parameters to default values and
@@ -168,9 +180,15 @@ can be called after the TestShell is shut down.
 | Test parameter key | Default Value | Description |
 |---|---|---|
 | `bind_to_localhost_only` | `True` | Binds revoltd RPC services to `127.0.0.1` if set to `True`.|
+<<<<<<< HEAD
+| `cachedir` | `"/path/to/revolt/test/cache"` | Sets the revoltd datadir directory. |
+| `chain`  | `"regtest"` | Sets the chain-type for the underlying test revoltd processes. |
+| `configfile` | `"/path/to/revolt/test/config.ini"` | Sets the location of the test framework config file. |
+=======
 | `cachedir` | `"/path/to/bitcoin/test/cache"` | Sets the revoltd datadir directory. |
 | `chain`  | `"regtest"` | Sets the chain-type for the underlying test revoltd processes. |
 | `configfile` | `"/path/to/bitcoin/test/config.ini"` | Sets the location of the test framework config file. |
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 | `coveragedir` | `None` | Records revoltd RPC test coverage into this directory if set. |
 | `loglevel` | `INFO` | Logs events at this level and higher. Can be set to `DEBUG`, `INFO`, `WARNING`, `ERROR` or `CRITICAL`. |
 | `nocleanup` | `False` | Cleans up temporary test directory if set to `True` during `shutdown`. |

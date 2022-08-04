@@ -11,7 +11,7 @@ import time
 
 from test_framework.key import ECKey
 from test_framework.script_util import key_to_p2wpkh_script
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import RevoltTestFramework
 from test_framework.util import assert_equal
 from test_framework.wallet_util import bytes_to_wif
 
@@ -19,7 +19,7 @@ from test_framework.wallet_util import bytes_to_wif
 CHALLENGE_PRIVATE_KEY = (42).to_bytes(32, 'big')
 
 
-class SignetMinerTest(BitcoinTestFramework):
+class SignetMinerTest(RevoltTestFramework):
     def set_test_params(self):
         self.chain = "signet"
         self.setup_clean_chain = True
@@ -35,7 +35,7 @@ class SignetMinerTest(BitcoinTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_cli()
         self.skip_if_no_wallet()
-        self.skip_if_no_bitcoin_util()
+        self.skip_if_no_revolt_util()
 
     def run_test(self):
         node = self.nodes[0]
