@@ -651,8 +651,8 @@ AC_ARG_ENABLE([util-wallet],
 AC_ARG_ENABLE([util-util],
   [AS_HELP_STRING([--enable-util-util],
   [build revolt-util])],
-  [build_bitcoin_util=$enableval],
-  [build_bitcoin_util=$build_bitcoin_utils])
+  [build_revolt_util=$enableval],
+  [build_revolt_util=$build_bitcoin_utils])
 
 AC_ARG_ENABLE([experimental-util-chainstate],
   [AS_HELP_STRING([--enable-experimental-util-chainstate],
@@ -1294,7 +1294,7 @@ if test "$enable_fuzz" = "yes"; then
   build_bitcoin_utils=no
   build_revolt_cli=no
   build_revolt_tx=no
-  build_bitcoin_util=no
+  build_revolt_util=no
   build_revolt_chainstate=no
   build_revolt_wallet=no
   build_revoltd=no
@@ -1396,7 +1396,7 @@ if test "$use_usdt" != "no"; then
 fi
 AM_CONDITIONAL([ENABLE_USDT_TRACEPOINTS], [test "$use_usdt" = "yes"])
 
-if test "$build_revolt_cli$build_revolt_tx$build_bitcoin_util$build_revoltd$revolt_enable_qt$use_bench$use_tests" = "nonononononono"; then
+if test "$build_revolt_cli$build_revolt_tx$build_revolt_util$build_revoltd$revolt_enable_qt$use_bench$use_tests" = "nonononononono"; then
   use_upnp=no
   use_natpmp=no
   use_zmq=no
@@ -1680,8 +1680,8 @@ AM_CONDITIONAL([BUILD_REVOLT_WALLET], [test $build_revolt_wallet = "yes"])
 AC_MSG_RESULT($build_revolt_wallet)
 
 AC_MSG_CHECKING([whether to build revolt-util])
-AM_CONDITIONAL([BUILD_BITCOIN_UTIL], [test $build_bitcoin_util = "yes"])
-AC_MSG_RESULT($build_bitcoin_util)
+AM_CONDITIONAL([BUILD_REVOLT_UTIL], [test $build_revolt_util = "yes"])
+AC_MSG_RESULT($build_revolt_util)
 
 AC_MSG_CHECKING([whether to build experimental revolt-chainstate])
 if test "$build_experimental_kernel_lib" = "no"; then

@@ -79,7 +79,7 @@ for a new opcode in the Bitcoin scripting system that in combination with
 on the age of the output being spent.
 
 For more information about the implementation, see
-<https://github.com/bitcoin/bitcoin/pull/7524>
+<https://github.com/revolt/bitcoin/pull/7524>
 
 BIP113 locktime enforcement soft fork
 -------------------------------------

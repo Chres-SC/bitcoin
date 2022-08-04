@@ -1,4 +1,4 @@
-Bitcoin version 0.6.0 is now available for download at:
+Revolt version 0.6.0 is now available for download at:
 http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.6.0/test/
 
 This release includes more than 20 language localizations.
@@ -17,8 +17,8 @@ https://github.com/bitcoin/bitcoin/zipball/v0.6.0  # .zip
 
 For Ubuntu users, there is a ppa maintained by Matt Corallo which
 you can add to your system so that it will automatically keep
-bitcoin up-to-date.  Just type
-sudo apt-add-repository ppa:bitcoin/bitcoin
+revolt up-to-date.  Just type
+sudo apt-add-repository ppa:revolt/revolt
 in your terminal, then install the revolt-qt package.
 
 
@@ -30,7 +30,7 @@ because database writes are queued to speed up download
 time.
 
 
-NEW FEATURES SINCE BITCOIN VERSION 0.5
+NEW FEATURES SINCE REVOLT VERSION 0.5
 
 Initial network synchronization should be much faster
 (one or two hours on a typical machine instead of ten or more
@@ -44,13 +44,13 @@ and receiving addresses.
 New context menu on addresses to copy/edit/delete them.
 
 New Sign Message dialog that allows you to prove that you
-own a bitcoin address by creating a digital
+own a revolt address by creating a digital
 signature.
 
 New wallets created with this version will
 use 33-byte 'compressed' public keys instead of
 65-byte public keys, resulting in smaller
-transactions and less traffic on the bitcoin
+transactions and less traffic on the revolt
 network. The shorter keys are already supported
 by the network but wallet.dat files containing
 short keys are not compatible with earlier
@@ -104,11 +104,11 @@ attacks were fixed.
 
 NOT YET IMPLEMENTED FEATURES
 
-Support for clicking on bitcoin: URIs and
+Support for clicking on revolt: URIs and
 opening/launching Revolt-Qt is available only on Linux,
 and only if you configure your desktop to launch
 Revolt-Qt. All platforms support dragging and dropping
-bitcoin: URIs onto the Revolt-Qt window to start
+revolt: URIs onto the Revolt-Qt window to start
 payment.
 
 
@@ -131,7 +131,7 @@ once enough of the network has upgraded so relaying
 and validating them is robust.
 
 For this release, creation and testing of multisignature
-transactions is limited to the bitcoin test network using
+transactions is limited to the revolt test network using
 the "addmultisigaddress" JSON-RPC api call.
 
 Short multisignature address support is included in this

@@ -172,7 +172,7 @@ improved by making the signatures constant time and deterministic.
 
 This change is a result of switching signing to use libsecp256k1
 instead of OpenSSL. Libsecp256k1 is a cryptographic library
-optimized for the curve Bitcoin uses which was created by Bitcoin
+optimized for the curve Revolt uses which was created by Revolt
 Core developer Pieter Wuille.
 
 There exist attacks[1] against most ECC implementations where an
@@ -187,7 +187,7 @@ long time, but this functionality has still not made its
 way into a released version of OpenSSL. Libsecp256k1 achieves
 significantly stronger protection: As far as we're aware this is
 the only deployed implementation of constant time signing for
-the curve Bitcoin uses and we have reason to believe that
+the curve Revolt uses and we have reason to believe that
 libsecp256k1 is better tested and more thoroughly reviewed
 than the implementation in OpenSSL.
 
@@ -225,7 +225,7 @@ Consensus library
 Starting from 0.10.0, the Revolt Core distribution includes a consensus library.
 
 The purpose of this library is to make the verification functionality that is
-critical to Bitcoin's consensus available to other applications, e.g. to language
+critical to Revolt's consensus available to other applications, e.g. to language
 bindings such as [python-bitcoinlib](https://pypi.python.org/pypi/python-bitcoinlib) or
 alternative node implementations.
 
@@ -247,7 +247,7 @@ Standard script rules relaxed for P2SH addresses
 The IsStandard() rules have been almost completely removed for P2SH
 redemption scripts, allowing applications to make use of any valid
 script type, such as "n-of-m OR y", hash-locked oracle addresses, etc.
-While the Bitcoin protocol has always supported these types of script,
+While the Revolt protocol has always supported these types of script,
 actually using them on mainnet has been previously inconvenient as
 standard Revolt Core nodes wouldn't relay them to miners, nor would
 most miners include them in blocks they mined.
@@ -265,7 +265,7 @@ manipulation of revolt transactions. A summary of its operation may be
 obtained via "revolt-tx --help" Transactions may be created or signed in a
 manner similar to the RPC raw tx API. Transactions may be updated, deleting
 inputs or outputs, or appending new inputs and outputs. Custom scripts may be
-easily composed using a simple text notation, borrowed from the bitcoin test
+easily composed using a simple text notation, borrowed from the revolt test
 suite.
 
 This tool may be used for experimenting with new transaction types, signing
@@ -273,7 +273,7 @@ multi-party transactions, and many other uses. Long term, the goal is to
 deprecate and remove "pure function" RPC API calls, as those do not require a
 server round-trip to execute.
 
-Other utilities "bitcoin-key" and "bitcoin-script" have been proposed, making
+Other utilities "revolt-key" and "revolt-script" have been proposed, making
 key and script operations easily accessible via command line.
 
 Mining and relay policy enhancements
@@ -282,7 +282,7 @@ Mining and relay policy enhancements
 Revolt Core's block templates are now for version 3 blocks only, and any mining
 software relying on its `getblocktemplate` must be updated in parallel to use
 libblkmaker either version 0.4.2 or any version from 0.5.1 onward.
-If you are solo mining, this will affect you the moment you upgrade Bitcoin
+If you are solo mining, this will affect you the moment you upgrade Revolt
 Core, which must be done prior to BIP66 achieving its 951/1001 status.
 If you are mining with the stratum mining protocol: this does not affect you.
 If you are mining with the getblocktemplate protocol to a pool: this will affect
@@ -315,7 +315,7 @@ BIP 66: strict DER encoding for signatures
 
 Revolt Core 0.10 implements BIP 66, which introduces block version 3, and a new
 consensus rule, which prohibits non-DER signatures. Such transactions have been
-non-standard since Bitcoin v0.8.0 (released in February 2013), but were
+non-standard since Revolt v0.8.0 (released in February 2013), but were
 technically still permitted inside blocks.
 
 This change breaks the dependency on OpenSSL's signature parsing, and is
@@ -624,7 +624,7 @@ Tests:
 Miscellaneous:
 - `122549f` Fix incorrect checkpoint data for testnet3
 - `5bd02cf` Log used config file to debug.log on startup
-- `68ba85f` Updated Debian example bitcoin.conf with config from wiki + removed some cruft and updated comments
+- `68ba85f` Updated Debian example revolt.conf with config from wiki + removed some cruft and updated comments
 - `e5ee8f0` Remove -beta suffix
 - `38405ac` Add comment regarding experimental-use service bits
 - `be873f6` Issue warning if collecting RandSeed data failed

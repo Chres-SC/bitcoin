@@ -55,11 +55,11 @@ OSX: use 'FD_FULLSYNC' with LevelDB, which will (hopefully!)
 prevent the database corruption issues many people have
 experienced on OSX.
 
-Linux: clicking on bitcoin: links was broken if you were using
+Linux: clicking on revolt: links was broken if you were using
 a Gnome-based desktop.
 
 Fix a hang-at-shutdown bug that only affects users that compile
-their own version of Bitcoin against Boost versions 1.50-1.52.
+their own version of Revolt against Boost versions 1.50-1.52.
 
 Other changes
 -------------

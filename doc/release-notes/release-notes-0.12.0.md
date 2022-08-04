@@ -263,7 +263,7 @@ Various improvements have been made to how the wallet calculates
 transaction fees.
 
 Users can decide to pay a predefined fee rate by setting `-paytxfee=<n>`
-(or `settxfee <n>` rpc during runtime). A value of `n=0` signals Bitcoin
+(or `settxfee <n>` rpc during runtime). A value of `n=0` signals Revolt
 Core to use floating fees. By default, Revolt Core will use floating
 fees.
 
@@ -320,7 +320,7 @@ However, rescans as well as the RPCs `importwallet`, `importaddress`,
 `importprivkey` are disabled.
 
 To enable block pruning set `prune=<N>` on the command line or in
-`bitcoin.conf`, where `N` is the number of MiB to allot for
+`revolt.conf`, where `N` is the number of MiB to allot for
 raw block & undo data.
 
 A value of 0 disables pruning. The minimal value above 0 is 550. Your
@@ -429,7 +429,7 @@ caching. A sample config for apache2 could look like:
     SSLCertificateFile /etc/apache2/ssl/server.crt
     SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
-    <Location /bitcoinrpc>
+    <Location /revoltrpc>
         ProxyPass http://127.0.0.1:8332/
         ProxyPassReverse http://127.0.0.1:8332/
         # optional enable digest auth
@@ -438,7 +438,7 @@ caching. A sample config for apache2 could look like:
 
         # optional bypass revoltd rpc basic auth
         # RequestHeader set Authorization "Basic <hash>"
-        # get the <hash> from the shell with: base64 <<< bitcoinrpc:<password>
+        # get the <hash> from the shell with: base64 <<< revoltrpc:<password>
     </Location>
 
     # Or, balance the load:
@@ -639,7 +639,7 @@ git merge commit are mentioned.
 - #6210 `0e4f2a0` build: disable optional use of gmp in internal secp256k1 build (Wladimir J. van der Laan)
 - #6214 `87406aa` [OSX] revert renaming of Revolt-Qt.app and use CFBundleDisplayName (partial revert of #6116) (Jonas Schnelli)
 - #6218 `9d67b10` build/gitian misc updates (Cory Fields)
-- #6269 `d4565b6` gitian: Use the new bitcoin-detached-sigs git repo for OSX signatures (Cory Fields)
+- #6269 `d4565b6` gitian: Use the new revolt-detached-sigs git repo for OSX signatures (Cory Fields)
 - #6418 `d4a910c` Add autogen.sh to source tarball. (randy-waterhouse)
 - #6373 `1ae3196` depends: non-qt bumps for 0.12 (Cory Fields)
 - #6434 `059b352` Preserve user-passed CXXFLAGS with --enable-debug (Gavin Andresen)
@@ -750,7 +750,7 @@ git merge commit are mentioned.
 - #7063 `6abf6eb` [Tests] Add prioritisetransaction RPC test (Suhas Daftuar)
 - #7137 `16f4a6e` Tests: Explicitly set chain limits in replace-by-fee test (Suhas Daftuar)
 - #7216 `9572e49` Removed offline testnet DNSSeed 'alexykot.me'. (tnull)
-- #7209 `f3ad812` test: don't override REVOLTD and BITCOINCLI if they're set (Wladimir J. van der Laan)
+- #7209 `f3ad812` test: don't override REVOLTD and REVOLTCLI if they're set (Wladimir J. van der Laan)
 - #7226 `301f16a` Tests: Add more tests to p2p-fullblocktest (Suhas Daftuar)
 - #7153 `9ef7c54` [Tests] Add mempool_limit.py test (Jonas Schnelli)
 - #7170 `453c567` tests: Disable Tor interaction (Wladimir J. van der Laan)

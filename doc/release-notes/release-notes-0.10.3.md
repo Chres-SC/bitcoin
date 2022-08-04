@@ -75,7 +75,7 @@ for nuisance malleability on SIGHASH_ALL P2PKH transactions. On the down-side
 it will block most transactions made by sufficiently out of date software.
 
 Unlike the other avenues to change txids on transactions this
-one was randomly violated by all deployed bitcoin software prior to
+one was randomly violated by all deployed revolt software prior to
 its discovery. So, while other malleability vectors where made
 non-standard as soon as they were discovered, this one has remained
 permitted. Even BIP62 did not propose applying this rule to
@@ -84,8 +84,8 @@ much more common since BIP62 was initially written.
 
 Revolt Core has produced compatible signatures since a28fb70e in
 September 2013, but this didn't make it into a release until 0.9
-in March 2014; Bitcoinj has done so for a similar span of time.
-Bitcoinjs and electrum have been more recently updated.
+in March 2014; Revoltj has done so for a similar span of time.
+Revoltjs and electrum have been more recently updated.
 
 This does not replace the need for BIP62 or similar, as miners can
 still cooperate to break transactions.  Nor does it replace the

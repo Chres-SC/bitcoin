@@ -69,7 +69,7 @@ Changed configuration options
 -----------------------------
 
 - `-includeconf=<file>` can be used to include additional configuration files.
-  Only works inside the `bitcoin.conf` file, not inside included files or from
+  Only works inside the `revolt.conf` file, not inside included files or from
   command-line. Multiple files may be included. Can be disabled from command-
   line via `-noincludeconf`. Note that multi-argument commands like
   `-includeconf` will override preceding `-noincludeconf`, i.e.
@@ -78,7 +78,7 @@ Changed configuration options
   includeconf=relative.conf
   ```
 
-  as bitcoin.conf will still include `relative.conf`.
+  as revolt.conf will still include `relative.conf`.
 
 GUI changes
 -----------
@@ -109,7 +109,7 @@ same as before.
 Dynamic loading and creation of wallets
 ---------------------------------------
 
-Previously, wallets could only be loaded or created at startup, by specifying `-wallet` parameters on the command line or in the bitcoin.conf file. It is now possible to load, create and unload wallets dynamically at runtime:
+Previously, wallets could only be loaded or created at startup, by specifying `-wallet` parameters on the command line or in the revolt.conf file. It is now possible to load, create and unload wallets dynamically at runtime:
 
 - Existing wallets can be loaded by calling the `loadwallet` RPC. The wallet can be specified as file/directory basename (which must be located in the `walletdir` directory), or as an absolute path to a file/directory.
 - New wallets can be created (and loaded) by calling the `createwallet` RPC. The provided name must not match a wallet file in the `walletdir` directory or the name of a wallet that is currently loaded.
@@ -131,8 +131,8 @@ It is now possible for a single configuration file to set different
 options for different networks. This is done by using sections or by
 prefixing the option with the network, such as:
 
-    main.uacomment=bitcoin
-    test.uacomment=bitcoin-testnet
+    main.uacomment=revolt
+    test.uacomment=revolt-testnet
     regtest.uacomment=regtest
     [main]
     mempoolsize=300
@@ -290,9 +290,9 @@ Low-level RPC changes
    `fee`, `modifiedfee`, `ancestorfee` and `descendantfee`.
 - The new RPC `getzmqnotifications` returns information about active ZMQ
   notifications.
-- When bitcoin is not started with any `-wallet=<path>` options, the name of
+- When revolt is not started with any `-wallet=<path>` options, the name of
   the default wallet returned by `getwalletinfo` and `listwallets` RPCs is
-  now the empty string `""` instead of `"wallet.dat"`. If bitcoin is started
+  now the empty string `""` instead of `"wallet.dat"`. If revolt is started
   with any `-wallet=<path>` options, there is no change in behavior, and the
   name of any wallet is just its `<path>` string.
 - Passing an empty string (`""`) as the `address_type` parameter to
@@ -568,7 +568,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #12080 `56cc022` Add support to search the address book (promag)
 - #12621 `2bac3e4` Avoid querying unnecessary model data when filtering transactions (promag)
 - #12721 `e476826` remove "new" button during receive-mode in addressbook (jonasschnelli)
-- #12723 `310dc61` Qt5: Warning users about invalid-BIP21 URI bitcoin:// (krab)
+- #12723 `310dc61` Qt5: Warning users about invalid-BIP21 URI revolt:// (krab)
 - #12610 `25cf18f` Multiwallet for the GUI (jonasschnelli)
 - #12779 `f4353da` Remove unused method setupAmountWidget(…) (practicalswift)
 - #12795 `68484d6` do not truncate .dat extension for wallets in gui (instagibbs)
@@ -623,7 +623,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13465 `81069a7` Avoid concurrency issue when make multiple target (ken2812221)
 - #13454 `45c00f8` Make sure `LC_ALL=C` is set in all shell scripts (practicalswift)
 - #13480 `31145a3` Avoid copies in range-for loops and add a warning to detect them (theuni)
-- #13486 `66e1a08` Move rpc/util.cpp from librevolt-util to libbitcoin-server (ken2812221)
+- #13486 `66e1a08` Move rpc/util.cpp from librevolt-util to librevolt-server (ken2812221)
 - #13580 `40334c7` Detect if char equals `int8_t` (ken2812221)
 - #12788 `287e4ed` Tune wildcards for LIBSECP256K1 target (kallewoof)
 - #13611 `b55f0c3` bugfix: Use `__cpuid_count` for gnu C to avoid gitian build fail (ken2812221)
@@ -652,12 +652,12 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #12252 `8d57319` Require all tests to follow naming convention (ajtowns)
 - #12295 `935eb8d` Enable flake8 warnings for all currently non-violated rules (practicalswift)
 - #11858 `b4d8549` Prepare tests for Windows (MarcoFalke)
-- #11771 `2dbc4a4` Change invalidtxrequest to use BitcoinTestFramework (jnewbery)
+- #11771 `2dbc4a4` Change invalidtxrequest to use RevoltTestFramework (jnewbery)
 - #12200 `d09968f` Bind functional test nodes to 127.0.0.1 (Sjors)
 - #12425 `26dc2da` Add some script tests (richardkiss)
 - #12455 `23481fa` Fix bip68 sequence test to reflect updated rpc error message (Empact)
 - #12477 `acd1e61` Plug memory leaks and stack-use-after-scope (MarcoFalke)
-- #12443 `07090c5` Move common args to bitcoin.conf (MarcoFalke)
+- #12443 `07090c5` Move common args to revolt.conf (MarcoFalke)
 - #12570 `39dcac2` Add test cases for HexStr (`std::reverse_iterator` and corner cases) (kostaz)
 - #12582 `6012f1c` Fix ListCoins test failure due to unset `g_wallet_allow_fallback_fee` (ryanofsky)
 - #12516 `7f99964` Avoid unintentional unsigned integer wraparounds in tests (practicalswift)
@@ -665,7 +665,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #12600 `29088b1` Add a test for large tx output scripts with segwit input (richardkiss)
 - #12627 `791c3ea` Fix some tests to work on native windows (MarcoFalke)
 - #12405 `0f58d7f` travis: Full clone for git subtree check (MarcoFalke)
-- #11772 `0630974` Change invalidblockrequest to use BitcoinTestFramework (jnewbery)
+- #11772 `0630974` Change invalidblockrequest to use RevoltTestFramework (jnewbery)
 - #12681 `1846296` Fix ComputeTimeSmart test failure with `-DDEBUG_LOCKORDER` (ryanofsky)
 - #12682 `9f04c8e` travis: Clone depth 1 unless `$check_doc` (MarcoFalke)
 - #12710 `00d1680` Append scripts to new `test_list` array to fix bad assignment (jeffrade)
@@ -678,9 +678,9 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #12806 `18606eb` Fix function names in `feature_blocksdir` (MarcoFalke)
 - #12811 `0d8fc8d` Make summary row bold-red if any test failed and show failed tests at end of table (laanwj)
 - #12790 `490644d` Use blockmaxweight where tests previously had blockmaxsize (conscott)
-- #11773 `f0f9732` Change `feature_block.py` to use BitcoinTestFramework (jnewbery)
+- #11773 `f0f9732` Change `feature_block.py` to use RevoltTestFramework (jnewbery)
 - #12839 `40f4baf` Remove travis checkout depth (laanwj)
-- #11817 `2a09a78` Change `feature_csv_activation.py` to use BitcoinTestFramework (jnewbery)
+- #11817 `2a09a78` Change `feature_csv_activation.py` to use RevoltTestFramework (jnewbery)
 - #12284 `fa5825d` Remove assigned but never used local variables. Enable Travis checking for unused local variables (practicalswift)
 - #12719 `9beded5` Add note about test suite naming convention in developer-notes.md (practicalswift)
 - #12861 `c564424` Stop `feature_block.py` from blowing up memory (jnewbery)
@@ -690,7 +690,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #12766 `69310a3` Tidy up REST interface functional tests (romanz)
 - #12849 `83c7533` Add logging in loops in `p2p_sendhears.py` (ccdle12)
 - #12895 `d6f10b2` Add note about test suite name uniqueness requirement to developer notes (practicalswift)
-- #12856 `27278df` Add Metaclass for BitcoinTestFramework (WillAyd)
+- #12856 `27278df` Add Metaclass for RevoltTestFramework (WillAyd)
 - #12918 `6fc5a05` Assert on correct variable (kallewoof)
 - #11878 `a04440f` Add Travis check for duplicate includes (practicalswift)
 - #12917 `cf8073f` Windows fixups for functional tests (MarcoFalke)
@@ -763,7 +763,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13663 `cbc9b50` Avoid read/write to default datadir (MarcoFalke)
 - #13682 `f8a32a3` bench: Remove unused variable (practicalswift)
 - #13638 `6fcdb5e` Use `MAX_SCRIPT_ELEMENT_SIZE` from script.py (domob1812)
-- #13687 `9d26b69` travis: Check that ~/.bitcoin is never created (MarcoFalke)
+- #13687 `9d26b69` travis: Check that ~/.revolt is never created (MarcoFalke)
 - #13715 `e1260a7` fixes mininode's P2PConnection sending messages on closing transport (marcoagner)
 - #13729 `aa9429a` travis: Avoid unnecessarily setting env variables on the lint build (Empact)
 - #13747 `ab28b5b` Skip P2PConnection's `is_closing()` check when not available (domob1812)
@@ -774,7 +774,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13779 `d25079a` travis: Improve readability of travis.yml and log outputs (scravy)
 - #13822 `0fb9c87` bench: Make coinselection output groups pass eligibility filter (achow101)
 - #13247 `e83d82a` Add tests to SingleThreadedSchedulerClient() and document the memory model (skeees)
-- #13811 `660abc1` travis: Run `revolt_bitcoin` once (MarcoFalke)
+- #13811 `660abc1` travis: Run `revolt_revolt` once (MarcoFalke)
 - #13837 `990e182` Extract `rpc_timewait` as test param (MarcoFalke)
 - #13851 `9c4324d` fix locale for lint-shell (scravy)
 - #13823 `489b51b` quote path in authproxy for external multiwallets (MarcoFalke)
@@ -840,7 +840,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13228 `d792e47` Add script to detect circular dependencies between source modules (sipa)
 - #13320 `e08c130` Ensure gitian-build.sh uses bash (jhfrontz)
 - #13301 `e4082d5` lint: Add linter to error on `#include <*.cpp>` (Empact)
-- #13374 `56f6936` utils and libraries: checking for bitcoin address in translations (kaplanmaxe)
+- #13374 `56f6936` utils and libraries: checking for revolt address in translations (kaplanmaxe)
 - #13230 `7c32b41` Simplify include analysis by enforcing the developer guide's include syntax (practicalswift)
 - #13450 `32bf4c6` Add linter: Enforce the source code file naming convention described in the developer notes (practicalswift)
 - #13479 `fa2ea37` contrib: Fix cve-2018-12356 by hardening the regex (loganaden)
@@ -915,7 +915,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13165 `627c376` Mention good first issue list in CONTRIBUTING.md (fanquake)
 - #13295 `fb77310` Update OpenBSD build instructions for OpenBSD 6.3 (practicalswift)
 - #13340 `3a8e3f4` remove leftover check-doc documentation (fanquake)
-- #13346 `60f0358` update bitcoin-dot-org links in release-process.md (fanquake)
+- #13346 `60f0358` update revolt-dot-org links in release-process.md (fanquake)
 - #13372 `f014933` split FreeBSD build instructions out of build-unix.md (steverusso)
 - #13366 `861de3b` Rename “OS X” to the newer “macOS” convention (giulio92)
 - #13369 `f8bcef3` update transifex doc link (mess110)
@@ -935,7 +935,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13625 `7146672` Add release notes for -printtoconsole and -debuglogfile changes (satwo)
 - #13718 `f7f574d` Specify preferred Python string formatting technique (masonicboom)
 - #12764 `10b9a81` Remove field in getblocktemplate help that has never been used (conscott)
-- #13742 `d2186b3` Adjust bitcoincore.org links (MarcoFalke)
+- #13742 `d2186b3` Adjust revoltcore.org links (MarcoFalke)
 - #13706 `94dd89e` Minor improvements to release-process.md (MitchellCash)
 - #13775 `ef4fac0` Remove newlines from error message (practicalswift)
 - #13803 `feb7dd9` add note to contributor docs about warranted PR's (kallewoof)

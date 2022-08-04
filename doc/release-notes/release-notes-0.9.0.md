@@ -14,14 +14,14 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), uninstall all
-earlier versions of Bitcoin, then run the installer (on Windows) or just copy
+earlier versions of Revolt, then run the installer (on Windows) or just copy
 over /Applications/Revolt-Qt (on Mac) or revoltd/revolt-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.0 your blockchain files will be re-indexed, which will take anywhere from 
 30 minutes to several hours, depending on the speed of your machine.
 
-On Windows, do not forget to uninstall all earlier versions of the Bitcoin
+On Windows, do not forget to uninstall all earlier versions of the Revolt
 client first, especially if you are switching to the 64-bit version.
 
 Windows 64-bit installer
@@ -74,7 +74,7 @@ blockchain.  This change is not an endorsement of storing data in the
 blockchain.  The OP_RETURN change creates a provably-prunable output,
 to avoid data storage schemes -- some of which were already deployed --
 that were storing arbitrary data such as images as forever-unspendable
-TX outputs, bloating bitcoin's UTXO database.
+TX outputs, bloating revolt's UTXO database.
 
 Storing arbitrary data in the blockchain is still a bad idea; it is less
 costly and far more efficient to store non-currency data elsewhere.
@@ -254,7 +254,7 @@ Protocol and network:
 - Improve logging of failed connections
 - Bump protocol version to 70002
 - Add some additional logging to give extra network insight
-- Added new DNS seed from bitcoinstats.com
+- Added new DNS seed from revoltstats.com
 
 Validation:
 
@@ -299,14 +299,14 @@ GUI:
 - Move initialization/shutdown to a thread. This prevents "Not responding"
   messages during startup. Also show a window during shutdown.
 - Don't regenerate autostart link on every client startup
-- Show and store message of normal bitcoin:URI
+- Show and store message of normal revolt:URI
 - Fix richtext detection hang issue on very old Qt versions
 - OS X: Make use of the 10.8+ user notification center to display Growl-like 
   notifications
 - OS X: Added NSHighResolutionCapable flag to Info.plist for better font
   rendering on Retina displays.
 - OS X: Fix revolt-qt startup crash when clicking dock icon
-- Linux: Fix Gnome bitcoin: URI handler
+- Linux: Fix Gnome revolt: URI handler
 
 Miscellaneous:
 

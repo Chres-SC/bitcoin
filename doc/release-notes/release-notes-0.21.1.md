@@ -32,7 +32,7 @@ Compatibility
 ==============
 
 Revolt Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
+using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Revolt
 Core should also work on most other Unix-like systems but is not as
 frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.
@@ -53,7 +53,7 @@ for schnorr signatures (BIP340) and tapscript (BIP342).
 If activated, these improvements will allow users of single-signature
 scripts, multisignature scripts, and complex contracts to all use
 identical-appearing commitments that enhance their privacy and the
-fungibility of all bitcoins. Spenders will enjoy lower fees and the
+fungibility of all revolts. Spenders will enjoy lower fees and the
 ability to resolve many multisig scripts and complex contracts with the
 same efficiency, low fees, and large anonymity set as single-sig users.
 Taproot and schnorr also include efficiency improvements for full nodes
@@ -109,8 +109,8 @@ For more information about taproot, please see the following resources:
   - [BIP342 Validation of Taproot scripts](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki)
 
 - Popular articles;
-  - [Taproot Is Coming: What It Is, and How It Will Benefit Bitcoin](https://bitcoinmagazine.com/technical/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
-  - [What do Schnorr Signatures Mean for Bitcoin?](https://academy.binance.com/en/articles/what-do-schnorr-signatures-mean-for-bitcoin)
+  - [Taproot Is Coming: What It Is, and How It Will Benefit Revolt](https://bitcoinmagazine.com/technical/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
+  - [What do Schnorr Signatures Mean for Revolt?](https://academy.binance.com/en/articles/what-do-schnorr-signatures-mean-for-bitcoin)
   - [The Schnorr Signature & Taproot Softfork Proposal](https://blog.bitmex.com/the-schnorr-signature-taproot-softfork-proposal/)
 
 - Development history overview
@@ -174,7 +174,7 @@ Updated RPCs
 - #20861 BIP 350: Implement Bech32m and use it for v1+ segwit addresses (sipa)
 
 ### Documentation
-- #21384 add signet to bitcoin.conf documentation (jonatack)
+- #21384 add signet to revolt.conf documentation (jonatack)
 - #21342 Remove outdated comment (hebasto)
 
 Credits

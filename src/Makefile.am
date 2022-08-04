@@ -27,7 +27,7 @@ BITCOIN_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(src
 
 LIBREVOLT_NODE=librevolt_node.a
 LIBREVOLT_COMMON=librevolt_common.a
-LIBBITCOIN_CONSENSUS=libbitcoin_consensus.a
+LIBREVOLT_CONSENSUS=librevolt_consensus.a
 LIBREVOLT_CLI=librevolt_cli.a
 LIBREVOLT_UTIL=librevolt_util.a
 LIBREVOLT_CRYPTO_BASE=crypto/librevolt_crypto_base.la
@@ -75,7 +75,7 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(w
 EXTRA_LIBRARIES += \
   $(LIBREVOLT_UTIL) \
   $(LIBREVOLT_COMMON) \
-  $(LIBBITCOIN_CONSENSUS) \
+  $(LIBREVOLT_CONSENSUS) \
   $(LIBREVOLT_NODE) \
   $(LIBREVOLT_CLI) \
   $(LIBBITCOIN_IPC) \
@@ -105,7 +105,7 @@ if BUILD_REVOLT_WALLET
 endif
 endif
 
-if BUILD_BITCOIN_UTIL
+if BUILD_REVOLT_UTIL
   bin_PROGRAMS += revolt-util
 endif
 
@@ -719,7 +719,7 @@ bitcoin_bin_ldadd = \
   $(LIBREVOLT_UTIL) \
   $(LIBUNIVALUE) \
   $(LIBREVOLT_ZMQ) \
-  $(LIBBITCOIN_CONSENSUS) \
+  $(LIBREVOLT_CONSENSUS) \
   $(LIBREVOLT_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
@@ -772,7 +772,7 @@ revolt_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBREVOLT_COMMON) \
   $(LIBREVOLT_UTIL) \
-  $(LIBBITCOIN_CONSENSUS) \
+  $(LIBREVOLT_CONSENSUS) \
   $(LIBREVOLT_CRYPTO) \
   $(LIBSECP256K1)
 #
@@ -789,7 +789,7 @@ revolt_wallet_LDADD = \
   $(LIBREVOLT_COMMON) \
   $(LIBREVOLT_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_CONSENSUS) \
+  $(LIBREVOLT_CONSENSUS) \
   $(LIBREVOLT_CRYPTO) \
   $(LIBSECP256K1) \
   $(BDB_LIBS) \
@@ -814,7 +814,7 @@ bitcoin_util_LDADD = \
   $(LIBREVOLT_COMMON) \
   $(LIBREVOLT_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_CONSENSUS) \
+  $(LIBREVOLT_CONSENSUS) \
   $(LIBREVOLT_CRYPTO) \
   $(LIBSECP256K1)
 #

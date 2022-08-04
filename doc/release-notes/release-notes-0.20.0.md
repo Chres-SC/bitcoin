@@ -32,7 +32,7 @@ Compatibility
 ==============
 
 Revolt Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
+using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Revolt
 Core should also work on most other Unix-like systems but is not as
 frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.
@@ -72,7 +72,7 @@ Nodes on the network can not generally be trusted to send valid messages
 connected to a trusted node.  Please use the alternatives recommended
 below if you rely on this removed feature:
 
-- Testing or debugging of implementations of the Bitcoin P2P network protocol
+- Testing or debugging of implementations of the Revolt P2P network protocol
   should be done by inspecting the log messages that are produced by a recent
   version of Revolt Core. Revolt Core logs debug messages
   (`-debug=<category>`) to a stream (`-printtoconsole`) or to a file
@@ -528,7 +528,7 @@ Build system
 - #17756 Remove `WINDOWS_BITS` from build system (fanquake)
 - #17769 Set `AC_PREREQ` to 2.69 (fanquake)
 - #17880 Add -Wdate-time to Werror flags (fanquake)
-- #17910 Remove double `LIBBITCOIN_SERVER` linking (fanquake)
+- #17910 Remove double `LIBREVOLT_SERVER` linking (fanquake)
 - #17928 Consistent use of package variable (Bushstar)
 - #17933 guix: Pin Guix using `guix time-machine` (dongcarl)
 - #17948 pass -fno-ident in Windows gitian descriptor (fanquake)
@@ -544,9 +544,9 @@ Build system
 - #18290 Set minimum Automake version to 1.13 (hebasto)
 - #18320 guix: Remove now-unnecessary gcc make flag (dongcarl)
 - #18331 Use git archive as source tarball (hebasto)
-- #18397 Fix libevent linking for `revolt_bitcoin` binary (hebasto)
+- #18397 Fix libevent linking for `revolt_revolt` binary (hebasto)
 - #18426 scripts: `Previous_release`: improve behaviour on failed download (theStack)
-- #18429 Remove double `LIBBITCOIN_SERVER` from bench-Makefile (brakmic)
+- #18429 Remove double `LIBREVOLT_SERVER` from bench-Makefile (brakmic)
 - #18528 Create `test_fuzz` library from src/test/fuzz/fuzz.cpp (brakmic)
 - #18558 Fix boost detection for arch armv7l (hebasto)
 - #18598 gitian: Add missing automake package to gitian-win-signer.yml (achow101)
@@ -608,7 +608,7 @@ Build system
 - #17140 Fix bug in `blockfilter_index_tests` (jimpo)
 - #17199 use default address type (bech32) for `wallet_bumpfee` tests (theStack)
 - #17205 ci: Enable address sanitizer (asan) stack-use-after-return checking (practicalswift)
-- #17206 Add testcase to simulate bitcoin schema in leveldb (adamjonas)
+- #17206 Add testcase to simulate revolt schema in leveldb (adamjonas)
 - #17209 Remove no longer needed UBSan suppressions (issues fixed). Add documentation (practicalswift)
 - #17220 Add unit testing for the CompressScript function (adamjonas)
 - #17225 Test serialisation as part of deserialisation fuzzing. Test round-trip equality where possible (practicalswift)
@@ -687,7 +687,7 @@ Build system
 - #18109 Avoid hitting some known minor tinyformat issues when fuzzing strprintf(…) (practicalswift)
 - #18155 Add harness which fuzzes EvalScript and VerifyScript using a fuzzed signature checker (practicalswift)
 - #18159 Add --valgrind option to `test/fuzz/test_runner.py` for running fuzzing test cases under valgrind (practicalswift)
-- #18166 ci: Run fuzz testing test cases (bitcoin-core/qa-assets) under valgrind to catch memory errors (practicalswift)
+- #18166 ci: Run fuzz testing test cases (revolt-core/qa-assets) under valgrind to catch memory errors (practicalswift)
 - #18172 Transaction expiry from mempool (0xB10C)
 - #18181 Remove incorrect assumptions in `validation_flush_tests` (MarcoFalke)
 - #18183 Set `catch_system_errors=no` on boost unit tests (MarcoFalke)
@@ -717,7 +717,7 @@ Build system
 - #18393 Don't assume presence of `__builtin_mul_overflow(…)` in `MultiplicationOverflow(…)` fuzzing harness (practicalswift)
 - #18406 add executable flag for `rpc_estimatefee.py` (theStack)
 - #18420 listsinceblock block height checks (jonatack)
-- #18430 ci: Only clone bitcoin-core/qa-assets when fuzzing (MarcoFalke)
+- #18430 ci: Only clone revolt-core/qa-assets when fuzzing (MarcoFalke)
 - #18438 ci: Use homebrew addon on native macos (hebasto)
 - #18447 Add coverage for script parse error in ParseScript (pierreN)
 - #18472 Remove unsafe `BOOST_TEST_MESSAGE` (MarcoFalke)
@@ -775,7 +775,7 @@ Build system
 - #17503 Remove bitness from revolt-qt help message and manpage (laanwj)
 - #17539 Update and improve Developer Notes (hebasto)
 - #17561 Changed MiniUPnPc link to https in dependencies.md (sandakersmann)
-- #17596 Change doxygen URL to doxygen.bitcoincore.org (laanwj)
+- #17596 Change doxygen URL to doxygen.revoltcore.org (laanwj)
 - #17598 Update release process with latest changes (MarcoFalke)
 - #17617 Unify unix epoch time descriptions (jonatack)
 - #17637 script: Add keyserver to verify-commits readme (emilengler)

@@ -78,7 +78,7 @@ New settings
 
 - `-blockfilterindex` enables the creation of BIP158 block filters for
   the entire blockchain.  Filters will be created in the background and
-  currently use about 4 GiB of space.  Note: this version of Bitcoin
+  currently use about 4 GiB of space.  Note: this version of Revolt
   Core does not serve block filters over the P2P network, although the
   local user may obtain block filters using the `getblockfilter` RPC.
   (#14121)
@@ -333,7 +333,7 @@ Mempool and transaction relay
   segwit versions) are now accepted into the mempool, relayed, and
   mined.  Attempting to spend those outputs remains forbidden by policy
   ("non-standard").  When this change has been widely deployed, wallets
-  and services can accept any valid bech32 Bitcoin address without
+  and services can accept any valid bech32 Revolt address without
   concern that transactions paying future segwit versions will become
   stuck in an unconfirmed state. (#15846)
 
@@ -424,7 +424,7 @@ Build system changes
 - #15834 Fix transaction relay bugs introduced in #14897 and expire transactions from peer in-flight map (sdaftuar)
 - #15651 torcontrol: Use the default/standard network port for Tor hidden services, even if the internal port is set differently (luke-jr)
 - #16188 Document what happens to getdata of unknown type (MarcoFalke)
-- #15649 Add ChaCha20Poly1305@Bitcoin AEAD (jonasschnelli)
+- #15649 Add ChaCha20Poly1305@Revolt AEAD (jonasschnelli)
 - #16152 Disable bloom filtering by default (TheBlueMatt)
 - #15993 Drop support of the insecure miniUPnPc versions (hebasto)
 - #16197 Use mockable time for tx download (MarcoFalke)
@@ -443,7 +443,7 @@ Build system changes
 - #15508 Refactor analyzepsbt for use outside RPC code (gwillen)
 - #15747 Remove plethora of Get*Balance (MarcoFalke)
 - #15728 Refactor relay transactions (jnewbery)
-- #15639 revolt-wallet tool: Drop libbitcoin_server.a dependency (ryanofsky)
+- #15639 revolt-wallet tool: Drop librevolt_server.a dependency (ryanofsky)
 - #15853 Remove unused import checkpoints.h (MarcoFalke)
 - #15780 add cachable amounts for caching credit/debit values (kallewoof)
 - #15778 Move maxtxfee from node to wallet (jnewbery)
@@ -618,7 +618,7 @@ Build system changes
 - #15919 Remove unused OpenSSL includes to make it more clear where OpenSSL is used (practicalswift)
 - #15978 .gitignore: Don't ignore depends patches (dongcarl)
 - #15939 gitian: Remove windows 32 bit build (MarcoFalke)
-- #15239 scripts and tools: Move non-linux build source tarballs to "bitcoin-binaries/version" directory (hebasto)
+- #15239 scripts and tools: Move non-linux build source tarballs to "revolt-binaries/version" directory (hebasto)
 - #14047 Add HKDF_HMAC256_L32 and method to negate a private key (jonasschnelli)
 - #16051 add patch to common dependencies (fanquake)
 - #16049 switch to secure download of all dependencies (Kemu)
@@ -654,7 +654,7 @@ Build system changes
 - #16654 build: update RapidCheck Makefile (jonatack)
 - #16370 cleanup package configure flags (fanquake)
 - #16746 msbuild: Ignore linker warning (sipsorcery)
-- #16750 msbuild: adds revolt_bitcoin to auto generated project files (sipsorcery)
+- #16750 msbuild: adds revolt_revolt to auto generated project files (sipsorcery)
 - #16810 guix: Remove ssp spec file hack (dongcarl)
 - #16477 skip deploying plugins we dont use in macdeployqtplus (fanquake)
 - #16413 Bump QT to LTS release 5.9.8 (THETCR)
@@ -688,7 +688,7 @@ Build system changes
 - #15771 Prevent concurrency issues reading .cookie file (promag)
 - #15693 travis: Switch to ubuntu keyserver to avoid timeouts (MarcoFalke)
 - #15629 init: Throw error when network specific config is ignored (MarcoFalke)
-- #15773 Add BitcoinTestFramework::sync_* methods (MarcoFalke)
+- #15773 Add RevoltTestFramework::sync_* methods (MarcoFalke)
 - #15797 travis: Bump second timeout to 33 minutes, add rationale (MarcoFalke)
 - #15788 Unify testing setups for fuzz, bench, and unit tests (MarcoFalke)
 - #15352 Reduce noise level in test_revolt output (practicalswift)
@@ -859,11 +859,11 @@ Build system changes
 - #17095 util: Filter control characters out of log messages (laanwj)
 - #17085 init: Change fallback locale to C.UTF-8 (laanwj)
 - #16957 9% less memory: make SaltedOutpointHasher noexcept (martinus)
-- #17449 fix uninitialized variable nMinerConfirmationWindow (bitcoinVBR)
+- #17449 fix uninitialized variable nMinerConfirmationWindow (revoltVBR)
 
 ### Documentation
 - #15514 Update Transifex links (fanquake)
-- #15513 add "sections" info to example bitcoin.conf (fanquake)
+- #15513 add "sections" info to example revolt.conf (fanquake)
 - #15530 Move wallet lock annotations to header (MarcoFalke)
 - #15562 remove duplicate clone step in build-windows.md (fanquake)
 - #15565 remove release note fragments (fanquake)
@@ -873,7 +873,7 @@ Build system changes
 - #15611 Add Gitian key for droark (droark)
 - #15626 Update ACK description in CONTRIBUTING.md (jonatack)
 - #15603 Add more tips to productivity.md (gwillen)
-- #15683 Comment for seemingly duplicate LIBBITCOIN_SERVER (Bushstar)
+- #15683 Comment for seemingly duplicate LIBREVOLT_SERVER (Bushstar)
 - #15685 rpc-mining: Clarify error messages (MarcoFalke)
 - #15760 Clarify sendrawtransaction::maxfeerate==0 help (MarcoFalke)
 - #15659 fix findFork comment (r8921039)
@@ -915,7 +915,7 @@ Build system changes
 - #16484 update labels in CONTRIBUTING.md (MarcoFalke)
 - #16483 update Python command in msvc readme (sipsorcery)
 - #16504 Add release note for the deprecated totalFee option of bumpfee (promag)
-- #16448 add note on precedence of options in bitcoin.conf (fanquake)
+- #16448 add note on precedence of options in revolt.conf (fanquake)
 - #16536 Update and extend benchmarking.md (ariard)
 - #16530 Fix grammar and punctuation in developer notes (Tech1k)
 - #16574 Add historical release notes for 0.18.1 (laanwj)
@@ -933,7 +933,7 @@ Build system changes
 - #16629 Add documentation for the new whitelist permissions (NicolasDorier)
 - #16723 Update labels in CONTRIBUTING.md (hebasto)
 - #16461 Tidy up shadowing section (promag)
-- #16621 add default bitcoin.conf locations (GChuf)
+- #16621 add default revolt.conf locations (GChuf)
 - #16752 Delete stale URL in test README (michaelfolkson)
 - #14862 Declare BLOCK_VALID_HEADER reserved (MarcoFalke)
 - #16806 Add issue templates for bug and feature request (MarcoFalke)
@@ -941,7 +941,7 @@ Build system changes
 - #16863 Add a missing closing parenthesis in the revolt-wallet's help (darosior)
 - #16757 CChainState return values (MarcoFalke)
 - #16847 add comments clarifying how local services are advertised (jamesob)
-- #16812 Fix whitespace errs in .md files, bitcoin.conf, and Info.plist.in (ch4ot1c)
+- #16812 Fix whitespace errs in .md files, revolt.conf, and Info.plist.in (ch4ot1c)
 - #16885 Update tx-size-small comment with relevant CVE disclosure (instagibbs)
 - #16900 Fix doxygen comment for SignTransaction in rpc/rawtransaction_util (MarcoFalke)
 - #16914 Update homebrew instruction for doxygen (Sjors)
@@ -1086,4 +1086,4 @@ Thanks to everyone who directly contributed to this release:
 - Wladimir J. van der Laan
 - zenosage
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/revolt/bitcoin/).
