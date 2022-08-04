@@ -73,7 +73,7 @@ P2P and network changes
 
 - This release adds support for Tor version 3 hidden services, and rumoring them
   over the network to other peers using
-  [BIP155](https://github.com/revolt/bips/blob/master/bip-0155.mediawiki).
+  [BIP155](https://github.com/bitcoin/bips/blob/master/bip-0155.mediawiki).
   Version 2 hidden services are still fully supported by Revolt Core, but the
   Tor network will start
   [deprecating](https://blog.torproject.org/v2-deprecation-timeline) them in the
