@@ -17,7 +17,7 @@ pkg install autoconf automake boost-libs git gmake libevent libtool pkgconf
 See [dependencies.md](dependencies.md) for a complete overview.
 
 ### 2. Clone Bitcoin Repo
-Now that `git` and all the required dependencies are installed, let's clone the Revolt core repository to a directory. All build scripts and commands will run from this directory.
+Now that `git` and all the required dependencies are installed, let's clone the Revolt Core repository to a directory. All build scripts and commands will run from this directory.
 ``` bash
 git clone https://github.com/bitcoin/bitcoin.git
 ```
@@ -47,7 +47,7 @@ pkg install db5
 #### GUI Dependencies
 ###### Qt5
 
-Revolt core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install `qt5`. Skip if you don't intend to use the GUI.
+Revolt Core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install `qt5`. Skip if you don't intend to use the GUI.
 ```bash
 pkg install qt5
 ```
@@ -62,7 +62,7 @@ pkg install libqrencode
 #### Notifications
 ###### ZeroMQ
 
-Revolt core can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
+Revolt Core can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
 ```bash
 pkg install libzmq4
 ```
@@ -76,11 +76,11 @@ pkg install python3
 ```
 ---
 
-## Building Revolt core
+## Building Revolt Core
 
 ### 1. Configuration
 
-There are many ways to configure Revolt core, here are a few common examples:
+There are many ways to configure Revolt Core, here are a few common examples:
 
 ##### Descriptor Wallet and GUI:
 This explicitly enables the GUI and disables legacy wallet support, assuming `sqlite` and `qt` are installed.

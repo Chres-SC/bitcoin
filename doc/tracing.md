@@ -1,6 +1,6 @@
-# User-space, Statically Defined Tracing (USDT) for Revolt core
+# User-space, Statically Defined Tracing (USDT) for Revolt Core
 
-Revolt core includes statically defined tracepoints to allow for more
+Revolt Core includes statically defined tracepoints to allow for more
 observability during development, debugging, code review, and production usage.
 These tracepoints make it possible to keep track of custom statistics and
 enable detailed monitoring of otherwise hidden internals. They have
@@ -112,7 +112,7 @@ Arguments passed:
 
 The following tracepoints cover the in-memory UTXO cache. UTXOs are, for example,
 added to and removed (spent) from the cache when we connect a new block.
-**Note**: Revolt core uses temporary clones of the _main_ UTXO cache
+**Note**: Revolt Core uses temporary clones of the _main_ UTXO cache
 (`chainstate.CoinsTip()`). For example, the RPCs `generateblock` and
 `getblocktemplate` call `TestBlockValidity()`, which applies the UTXO set
 changes to a temporary cache. Similarly, mempool consistency checks, which are
@@ -211,7 +211,7 @@ Arguments passed:
 4. The expected transaction fee as an `int64`
 5. The position of the change output as an `int32`
 
-## Adding tracepoints to Revolt core
+## Adding tracepoints to Revolt Core
 
 To add a new tracepoint, `#include <util/trace.h>` in the compilation unit where
 the tracepoint is inserted. Use one of the `TRACEx` macros listed below
@@ -311,7 +311,7 @@ USDT support.
 
 ### GDB - GNU Project Debugger
 
-To list probes in Revolt core, use `info probes` in `gdb`:
+To list probes in Revolt Core, use `info probes` in `gdb`:
 
 ```
 $ gdb ./src/revoltd
@@ -326,7 +326,7 @@ stap validation block_connected  0x00000000002fb10c /src/revoltd
 
 ### With `readelf`
 
-The `readelf` tool can be used to display the USDT tracepoints in Revolt core.
+The `readelf` tool can be used to display the USDT tracepoints in Revolt Core.
 Look for the notes with the description `NT_STAPSDT`.
 
 ```

@@ -10,10 +10,10 @@
 
     <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
 
-    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="Revolt core">
+    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="Revolt Core">
         <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
                   android:name="org.bitcoincore.qt.BitcoinQtActivity"
-                  android:label="Revolt core"
+                  android:label="Revolt Core"
                   android:icon="@drawable/bitcoin"
                   android:screenOrientation="unspecified"
                   android:launchMode="singleTop">

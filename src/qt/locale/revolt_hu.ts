@@ -2205,8 +2205,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Külső aláíró szkript elérési útvonala</translation>
     </message>
     <message>
-        <source>Full path to a Revolt core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Revolt core kompatibilis szkript teljes elérésí útvonala (pl. C:\Letöltések\hwi.exe vagy /Users/felhasznalo/Letöltések/hwi.py). Vigyázat: rosszindulatú programok ellophatják az érméit!</translation>
+        <source>Full path to a Revolt Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Revolt Core kompatibilis szkript teljes elérésí útvonala (pl. C:\Letöltések\hwi.exe vagy /Users/felhasznalo/Letöltések/hwi.py). Vigyázat: rosszindulatú programok ellophatják az érméit!</translation>
     </message>
     <message>
         <source>Automatically open the Revolt client port on the router. This only works when your router supports UPnP and it is enabled.</source>

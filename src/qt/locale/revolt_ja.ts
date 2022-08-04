@@ -2223,7 +2223,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">HWIのパス(&amp;E)</translation>
     </message>
     <message>
-        <source>Full path to a Revolt core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <source>Full path to a Revolt Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
         <translation type="unfinished">Revolt core対応のプログラムのフルパス (例: C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py)。 注意: マルウエアはあなたのコインを盗む恐れがあります！</translation>
     </message>
     <message>

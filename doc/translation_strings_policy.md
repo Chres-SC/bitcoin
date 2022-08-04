@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the Revolt core software.
+This document provides guidelines for internationalization of the Revolt Core software.
 
 How to translate?
 ------------------

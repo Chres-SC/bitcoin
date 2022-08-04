@@ -2090,8 +2090,8 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">&amp;Pot do zunanjega podpisnika</translation>
     </message>
     <message>
-        <source>Full path to a Revolt core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Polna pot do datoteke s skripto, združljivo z Revolt core (n.pr. C:\Downloads\hwi.exe ali /Users/jaz/Downloads/hwi.py). Previdno: zlonamerna programska oprema vam lahko ukrade novce!</translation>
+        <source>Full path to a Revolt Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Polna pot do datoteke s skripto, združljivo z Revolt Core (n.pr. C:\Downloads\hwi.exe ali /Users/jaz/Downloads/hwi.py). Previdno: zlonamerna programska oprema vam lahko ukrade novce!</translation>
     </message>
     <message>
         <source>Automatically open the Revolt client port on the router. This only works when your router supports UPnP and it is enabled.</source>

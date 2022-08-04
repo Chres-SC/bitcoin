@@ -1,7 +1,7 @@
 22.0 Release Notes
 ==================
 
-Revolt core version 22.0 is now available from:
+Revolt Core version 22.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-22.0/>
 
@@ -24,33 +24,33 @@ shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
 or `revoltd`/`revolt-qt` (on Linux).
 
-Upgrading directly from a version of Revolt core that has reached its EOL is
+Upgrading directly from a version of Revolt Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Revolt core are generally supported.
+wallet versions of Revolt Core are generally supported.
 
 Compatibility
 ==============
 
-Revolt core is supported and extensively tested on operating systems
+Revolt Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.14+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Revolt core on
+frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.
 
-From Revolt core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
+From Revolt Core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
 
 Notable changes
 ===============
 
 P2P and network changes
 -----------------------
-- Added support for running Revolt core as an
+- Added support for running Revolt Core as an
   [I2P (Invisible Internet Project)](https://en.wikipedia.org/wiki/I2P) service
   and connect to such services. See [i2p.md](https://github.com/bitcoin/bitcoin/blob/22.x/doc/i2p.md) for details. (#20685)
 - This release removes support for Tor version 2 hidden services in favor of Tor
   v3 only, as the Tor network [dropped support for Tor
   v2](https://blog.torproject.org/v2-deprecation-timeline) with the release of
-  Tor version 0.4.6.  Henceforth, Revolt core ignores Tor v2 addresses; it
+  Tor version 0.4.6.  Henceforth, Revolt Core ignores Tor v2 addresses; it
   neither rumors them over the network to other peers, nor stores them in memory
   or to `peers.dat`.  (#22050)
 
@@ -137,7 +137,7 @@ Files
 - The list of banned hosts and networks (via `setban` RPC) is now saved on disk
   in JSON format in `banlist.json` instead of `banlist.dat`. `banlist.dat` is
   only read on startup if `banlist.json` is not present. Changes are only written to the new
-  `banlist.json`. A future version of Revolt core may completely ignore
+  `banlist.json`. A future version of Revolt Core may completely ignore
   `banlist.dat`. (#20966)
 
 New settings
@@ -160,7 +160,7 @@ Tools and Utilities
 - A new CLI `-addrinfo` command returns the number of addresses known to the
   node per network type (including Tor v2 versus v3) and total. This can be
   useful to see if the node knows enough addresses in a network to use options
-  like `-onlynet=<network>` or to upgrade to this release of Revolt core 22.0
+  like `-onlynet=<network>` or to upgrade to this release of Revolt Core 22.0
   that supports Tor v3 only.  (#21595)
 
 - A new `-rpcwaittimeout` argument to `revolt-cli` sets the timeout

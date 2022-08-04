@@ -1,4 +1,4 @@
-<!-- This issue tracker is only for technical issues related to Revolt core.
+<!-- This issue tracker is only for technical issues related to Revolt Core.
 
 General revolt questions and/or support requests are best directed to the Revolt StackExchange at https://bitcoin.stackexchange.com.
 
@@ -17,7 +17,7 @@ https://github.com/bitcoin-core/gui/issues/
 
 <!--- How reliably can you reproduce the issue, what are the steps to do so? -->
 
-<!-- What version of Revolt core are you using, where did you get it (website, self-compiled, etc)? -->
+<!-- What version of Revolt Core are you using, where did you get it (website, self-compiled, etc)? -->
 
 <!-- What type of machine are you observing the error on (OS/CPU and disk type)? -->
 

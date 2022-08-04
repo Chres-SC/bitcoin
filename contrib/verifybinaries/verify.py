@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020-2021 The Revolt core developers
+# Copyright (c) 2020-2021 The Revolt Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Script for verifying Revolt core release binaries
+"""Script for verifying Revolt Core release binaries
 
 This script attempts to download the signature file SHA256SUMS.asc from
 bitcoincore.org and bitcoin.org and compares them.
@@ -131,7 +131,7 @@ def main(args):
         if retval == 1:
             print("Bad signature.")
         elif retval == 2:
-            print("gpg error. Do you have the Revolt core binary release "
+            print("gpg error. Do you have the Revolt Core binary release "
                   "signing key installed?")
         print("gpg output:")
         print(indent(output, '\t'))

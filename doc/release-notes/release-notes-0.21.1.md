@@ -1,7 +1,7 @@
 0.21.1 Release Notes
 ====================
 
-Revolt core version 0.21.1 is now available from:
+Revolt Core version 0.21.1 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.21.1/>
 
@@ -24,21 +24,21 @@ shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
 or `revoltd`/`revolt-qt` (on Linux).
 
-Upgrading directly from a version of Revolt core that has reached its EOL is
+Upgrading directly from a version of Revolt Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Revolt core are generally supported.
+wallet versions of Revolt Core are generally supported.
 
 Compatibility
 ==============
 
-Revolt core is supported and extensively tested on operating systems
+Revolt Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Revolt core on
+frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.
 
-From Revolt core 0.20.0 onwards, macOS versions earlier than 10.12 are no
-longer supported. Additionally, Revolt core does not yet change appearance
+From Revolt Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
+longer supported. Additionally, Revolt Core does not yet change appearance
 when macOS "dark mode" is activated.
 
 Notable changes
@@ -80,7 +80,7 @@ payments to such addresses are not secure until taproot activates.
 It also includes the ability to relay and mine taproot transactions
 after activation.  Beyond those two basic capabilities, this release
 does not include any code that allows anyone to directly use taproot.
-The addition of taproot-related features to Revolt core's wallet is
+The addition of taproot-related features to Revolt Core's wallet is
 expected in later releases once taproot activation is assured.
 
 All users, businesses, and miners are encouraged to upgrade to this

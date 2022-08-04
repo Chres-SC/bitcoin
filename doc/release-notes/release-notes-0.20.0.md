@@ -1,7 +1,7 @@
 0.20.0 Release Notes
 ====================
 
-Revolt core version 0.20.0 is now available from:
+Revolt Core version 0.20.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.20.0/>
 
@@ -24,21 +24,21 @@ shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
 or `revoltd`/`revolt-qt` (on Linux).
 
-Upgrading directly from a version of Revolt core that has reached its EOL is
+Upgrading directly from a version of Revolt Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Revolt core are generally supported.
+wallet versions of Revolt Core are generally supported.
 
 Compatibility
 ==============
 
-Revolt core is supported and extensively tested on operating systems
+Revolt Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Revolt core on
+frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.
 
-From Revolt core 0.20.0 onwards, macOS versions earlier than 10.12 are no
-longer supported. Additionally, Revolt core does not yet change appearance
+From Revolt Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
+longer supported. Additionally, Revolt Core does not yet change appearance
 when macOS "dark mode" is activated.
 
 Known Bugs
@@ -61,12 +61,12 @@ Notable changes
 P2P and network changes
 -----------------------
 
-#### Removal of BIP61 reject network messages from Revolt core
+#### Removal of BIP61 reject network messages from Revolt Core
 
 The `-enablebip61` command line option to enable BIP61 has been removed.
 (#17004)
 
-This feature has been disabled by default since Revolt core version 0.18.0.
+This feature has been disabled by default since Revolt Core version 0.18.0.
 Nodes on the network can not generally be trusted to send valid messages
 (including reject messages), so this should only ever be used when
 connected to a trusted node.  Please use the alternatives recommended
@@ -74,7 +74,7 @@ below if you rely on this removed feature:
 
 - Testing or debugging of implementations of the Bitcoin P2P network protocol
   should be done by inspecting the log messages that are produced by a recent
-  version of Revolt core. Revolt core logs debug messages
+  version of Revolt Core. Revolt Core logs debug messages
   (`-debug=<category>`) to a stream (`-printtoconsole`) or to a file
   (`-debuglogfile=<debug.log>`).
 
@@ -138,9 +138,9 @@ Updated RPCs
 Build System
 ------------
 
-- OpenSSL is no longer used by Revolt core.  (#17265)
+- OpenSSL is no longer used by Revolt Core.  (#17265)
 
-- BIP70 support has been fully removed from Revolt core. The
+- BIP70 support has been fully removed from Revolt Core. The
   `--enable-bip70` option remains, but it will throw an error during configure.
   (#17165)
 
@@ -172,7 +172,7 @@ New settings
 Updated settings
 ----------------
 
-- All custom settings configured when Revolt core starts are now
+- All custom settings configured when Revolt Core starts are now
   written to the `debug.log` file to assist troubleshooting.  (#16115)
 
 - Importing blocks upon startup via the `bootstrap.dat` file no longer
@@ -198,7 +198,7 @@ Removed settings
 GUI changes
 -----------
 
-- The "Start Revolt core on system login" option has been removed on macOS.
+- The "Start Revolt Core on system login" option has been removed on macOS.
   (#17567)
 
 - In the Peers window, the details for a peer now displays a `Mapped AS`
@@ -208,7 +208,7 @@ GUI changes
 
 - A "known bug" [announced](https://bitcoincore.org/en/releases/0.18.0/#wallet-gui)
   in the release notes of version 0.18 has been fixed.  The issue
-  affected anyone who simultaneously used multiple Revolt core wallets
+  affected anyone who simultaneously used multiple Revolt Core wallets
   and the GUI coin control feature. (#18894)
 
 - For watch-only wallets, creating a new transaction in the Send screen
@@ -216,7 +216,7 @@ GUI changes
   automatically copy a Partially-Signed Revolt Transaction (PSBT) to
   the system clipboard.  This can then be pasted into an external
   program such as [HWI](https://github.com/bitcoin-core/HWI) for
-  signing.  Future versions of Revolt core should support a GUI option
+  signing.  Future versions of Revolt Core should support a GUI option
   for finalizing and broadcasting PSBTs, but for now the debug console
   may be used with the `finalizepsbt` and `sendrawtransaction` RPCs.
   (#16944, #17492)
@@ -246,7 +246,7 @@ Wallet
 Documentation changes
 ---------------------
 
-- Revolt core's automatically-generated source code documentation is
+- Revolt Core's automatically-generated source code documentation is
   now available at https://doxygen.bitcoincore.org.  (#17596)
 
 Low-level changes
@@ -747,7 +747,7 @@ Build system
 
 ### Documentation
 - #16947 Doxygen-friendly script/descriptor.h comments (ch4ot1c)
-- #16983 Add detailed info about Revolt core files (hebasto)
+- #16983 Add detailed info about Revolt Core files (hebasto)
 - #16986 Doxygen-friendly CuckooCache comments (ch4ot1c)
 - #17022 move-only: Steps for "before major release branch-off" (MarcoFalke)
 - #17026 Update bips.md for default bech32 addresses in 0.20.0 (MarcoFalke)

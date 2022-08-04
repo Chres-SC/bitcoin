@@ -102,7 +102,7 @@ Generate list of authors:
 
 ### Setup and perform Guix builds
 
-Checkout the Revolt core version you'd like to build:
+Checkout the Revolt Core version you'd like to build:
 
 ```sh
 pushd ./bitcoin
@@ -270,7 +270,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
       - Install [golang](https://golang.org/doc/install)
 
-      - Install the new Revolt core release
+      - Install the new Revolt Core release
 
       - Run revoltd on regtest
 
@@ -296,9 +296,9 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
   - bitcoin-dev and revolt-core-dev mailing list
 
-  - Revolt core announcements list https://bitcoincore.org/en/list/announcements/join/
+  - Revolt Core announcements list https://bitcoincore.org/en/list/announcements/join/
 
-  - Revolt core Twitter https://twitter.com/bitcoincoreorg
+  - Revolt Core Twitter https://twitter.com/bitcoincoreorg
 
   - Celebrate
 

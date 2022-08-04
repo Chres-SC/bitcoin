@@ -37,7 +37,7 @@ Some of them might no longer be applicable. So if you are interested, but
 unsure, you might want to leave a comment on the issue first.
 
 You may also participate in the weekly
-[Revolt core PR Review Club](https://bitcoincore.reviews/) meeting.
+[Revolt Core PR Review Club](https://bitcoincore.reviews/) meeting.
 
 ### Good First Issue Label
 
@@ -170,7 +170,7 @@ mailing list discussions).
 The description for a new pull request should not contain any `@` mentions. The
 PR description will be included in the commit message when the PR is merged and
 any users mentioned in the description will be annoyingly notified each time a
-fork of Revolt core copies the merge. Instead, make any username mentions in a
+fork of Revolt Core copies the merge. Instead, make any username mentions in a
 subsequent comment to the PR.
 
 ### Translation changes
@@ -289,11 +289,11 @@ workload on reviewing.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the Revolt core project (and related
+The following applies to code changes to the Revolt Core project (and related
 projects such as libsecp256k1), and is not to be confused with overall Bitcoin
 Network Protocol consensus changes.
 
-Whether a pull request is merged into Revolt core rests with the project merge
+Whether a pull request is merged into Revolt Core rests with the project merge
 maintainers.
 
 Maintainers will take into consideration if a patch is in line with the general

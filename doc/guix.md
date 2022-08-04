@@ -1,3 +1,3 @@
-# Bootstrappable Revolt core Builds
+# Bootstrappable Revolt Core Builds
 
 See [contrib/guix/README.md](../contrib/guix/README.md)

@@ -5,7 +5,7 @@ for the process.*
 *version* Release Notes Draft
 ===============================
 
-Revolt core version *version* is now available from:
+Revolt Core version *version* is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-*version*/>
 
@@ -28,17 +28,17 @@ shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Revolt-Qt` (on Mac)
 or `revoltd`/`revolt-qt` (on Linux).
 
-Upgrading directly from a version of Revolt core that has reached its EOL is
+Upgrading directly from a version of Revolt Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Revolt core are generally supported.
+wallet versions of Revolt Core are generally supported.
 
 Compatibility
 ==============
 
-Revolt core is supported and extensively tested on operating systems
+Revolt Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.15+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Revolt core on
+frequently tested on them.  It is not recommended to use Revolt Core on
 unsupported systems.
 
 Notable changes

@@ -1,4 +1,4 @@
-Revolt core version 0.9.2 is now available from:
+Revolt Core version 0.9.2 is now available from:
 
   https://bitcoin.org/bin/0.9.2/
 

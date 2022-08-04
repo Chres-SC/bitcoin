@@ -1861,7 +1861,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">مسیر اسکریپت امضاکنندهٔ جانبی</translation>
     </message>
     <message>
-        <source>Full path to a Revolt core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <source>Full path to a Revolt Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
         <translation type="unfinished">نشانی کامل اسکریپ تطابق پذیر هسته بیتکوین
  (مثال: C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). آگاه باش: بدافزار میتواند سکه های شما را بدزد!</translation>
     </message>

@@ -1,15 +1,15 @@
-Revolt core
+Revolt Core
 =============
 
 Setup
 ---------------------
-Revolt core is the original Bitcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Revolt Transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Revolt Core is the original Bitcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Revolt Transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Revolt core, visit [bitcoincore.org](https://bitcoincore.org/en/download/).
+To download Revolt Core, visit [bitcoincore.org](https://bitcoincore.org/en/download/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Revolt core on your native platform.
+The following are some helpful notes on how to run Revolt Core on your native platform.
 
 ### Unix
 
@@ -24,7 +24,7 @@ Unpack the files into a directory, and then run revolt-qt.exe.
 
 ### macOS
 
-Drag Revolt core to your applications folder, and then run Revolt core.
+Drag Revolt Core to your applications folder, and then run Revolt Core.
 
 ### Need Help?
 
@@ -36,7 +36,7 @@ for help and more information.
 
 Building
 ---------------------
-The following are developer notes on how to build Revolt core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Revolt Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)

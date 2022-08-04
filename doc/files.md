@@ -1,4 +1,4 @@
-# Revolt core file system
+# Revolt Core file system
 
 **Contents**
 
@@ -20,7 +20,7 @@
 
 ## Data directory location
 
-The data directory is the default location where the Revolt core files are stored.
+The data directory is the default location where the Revolt Core files are stored.
 
 1. The default data directory paths for supported platforms are:
 
@@ -109,7 +109,7 @@ Subdirectory | File                 | Description
 
 ## Legacy subdirectories and files
 
-These subdirectories and files are no longer used by Revolt core:
+These subdirectories and files are no longer used by Revolt Core:
 
 Path           | Description | Repository notes
 ---------------|-------------|-----------------
