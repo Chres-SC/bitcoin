@@ -5,9 +5,9 @@ Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
 Source: https://github.com/bitcoin/bitcoin
 
 Files: *
-Copyright: 2009-2022, Revolt core Developers
+Copyright: 2009-2022, Revolt Core Developers
 License: Expat
-Comment: The Revolt core Developers encompasses the current developers listed on bitcoin.org,
+Comment: The Revolt Core Developers encompasses the current developers listed on bitcoin.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*
