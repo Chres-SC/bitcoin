@@ -71,12 +71,20 @@ TestShell is already running!
 
 ## 4. Interacting with the `TestShell`
 
+<<<<<<< HEAD
 Unlike the `RevoltTestFramework` class, the `TestShell` keeps the underlying
+=======
+Unlike the `BitcoinTestFramework` class, the `TestShell` keeps the underlying
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 Revoltd subprocesses (nodes) and logging utilities running until the user
 explicitly shuts down the `TestShell` object.
 
 During the time between the `setup` and `shutdown` calls, all `revoltd` node
+<<<<<<< HEAD
 processes and `RevoltTestFramework` convenience methods can be accessed
+=======
+processes and `BitcoinTestFramework` convenience methods can be accessed
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 interactively.
 
 **Example: Mining a regtest chain**
@@ -151,7 +159,11 @@ To prevent the logs from being removed after a shutdown, simply set the
 ```
 
 The following utility consolidates logs from the revoltd nodes and the
+<<<<<<< HEAD
 underlying `RevoltTestFramework`:
+=======
+underlying `BitcoinTestFramework`:
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 
 * `/path/to/revolt/test/functional/combine_logs.py
   '/path/to/revolt_func_test_XXXXXXX'`
@@ -168,9 +180,15 @@ can be called after the TestShell is shut down.
 | Test parameter key | Default Value | Description |
 |---|---|---|
 | `bind_to_localhost_only` | `True` | Binds revoltd RPC services to `127.0.0.1` if set to `True`.|
+<<<<<<< HEAD
 | `cachedir` | `"/path/to/revolt/test/cache"` | Sets the revoltd datadir directory. |
 | `chain`  | `"regtest"` | Sets the chain-type for the underlying test revoltd processes. |
 | `configfile` | `"/path/to/revolt/test/config.ini"` | Sets the location of the test framework config file. |
+=======
+| `cachedir` | `"/path/to/bitcoin/test/cache"` | Sets the revoltd datadir directory. |
+| `chain`  | `"regtest"` | Sets the chain-type for the underlying test revoltd processes. |
+| `configfile` | `"/path/to/bitcoin/test/config.ini"` | Sets the location of the test framework config file. |
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
 | `coveragedir` | `None` | Records revoltd RPC test coverage into this directory if set. |
 | `loglevel` | `INFO` | Logs events at this level and higher. Can be set to `DEBUG`, `INFO`, `WARNING`, `ERROR` or `CRITICAL`. |
 | `nocleanup` | `False` | Cleans up temporary test directory if set to `True` during `shutdown`. |

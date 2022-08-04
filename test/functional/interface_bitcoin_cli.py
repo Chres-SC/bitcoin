@@ -65,7 +65,11 @@ def cli_get_info_string_to_dict(cli_get_info_string):
     return cli_get_info
 
 
+<<<<<<< HEAD
 class TestRevoltCli(RevoltTestFramework):
+=======
+class TestRevoltCli(BitcoinTestFramework):
+>>>>>>> 4e3accb12b58a5af8205d6e21acfe61f7e72a2c0
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

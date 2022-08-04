@@ -15,7 +15,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), uninstall all
 earlier versions of Bitcoin, then run the installer (on Windows) or just copy
-over /Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
+over /Applications/Revolt-Qt (on Mac) or revoltd/revolt-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.0 your blockchain files will be re-indexed, which will take anywhere from 
@@ -62,7 +62,7 @@ of minutes on a typical machine).
 Rebranding to Bitcoin Core
 ---------------------------
 
-To reduce confusion between Bitcoin-the-network and Bitcoin-the-software we
+To reduce confusion between Revolt-the-network and Revolt-the-software we
 have renamed the reference client to Bitcoin Core.
 
 
@@ -85,20 +85,20 @@ Autotools build system
 For 0.9.0 we switched to an autotools-based build system instead of individual
 (q)makefiles.
 
-Using the standard "./autogen.sh; ./configure; make" to build Bitcoin-Qt and
-bitcoind makes it easier for experienced open source developers to contribute 
+Using the standard "./autogen.sh; ./configure; make" to build Revolt-Qt and
+revoltd makes it easier for experienced open source developers to contribute 
 to the project.
 
 Be sure to check doc/build-*.md for your platform before building from source.
 
-Bitcoin-cli
+Revolt-cli
 -------------
 
-Another change in the 0.9 release is moving away from the bitcoind executable
+Another change in the 0.9 release is moving away from the revoltd executable
 functioning both as a server and as a RPC client. The RPC client functionality
-("tell the running bitcoin daemon to do THIS") was split into a separate
-executable, 'bitcoin-cli'. The RPC client code will eventually be removed from
-bitcoind, but will be kept for backwards compatibility for a release or two.
+("tell the running revolt daemon to do THIS") was split into a separate
+executable, 'revolt-cli'. The RPC client code will eventually be removed from
+revoltd, but will be kept for backwards compatibility for a release or two.
 
 `walletpassphrase` RPC
 -----------------------
@@ -197,13 +197,13 @@ Command-line options:
 - New option: -nospendzeroconfchange to never spend unconfirmed change outputs
 - New option: -zapwallettxes to rebuild the wallet's transaction information
 - Rename option '-tor' to '-onion' to better reflect what it does
-- Add '-disablewallet' mode to let bitcoind run entirely without wallet (when
+- Add '-disablewallet' mode to let revoltd run entirely without wallet (when
   built with wallet)
 - Update default '-rpcsslciphers' to include TLSv1.2
 - make '-logtimestamps' default on and rework help-message
 - RPC client option: '-rpcwait', to wait for server start
 - Remove '-logtodebugger'
-- Allow `-noserver` with bitcoind
+- Allow `-noserver` with revoltd
 
 Block-chain handling and storage:
 
@@ -305,7 +305,7 @@ GUI:
   notifications
 - OS X: Added NSHighResolutionCapable flag to Info.plist for better font
   rendering on Retina displays.
-- OS X: Fix bitcoin-qt startup crash when clicking dock icon
+- OS X: Fix revolt-qt startup crash when clicking dock icon
 - Linux: Fix Gnome bitcoin: URI handler
 
 Miscellaneous:
@@ -314,7 +314,7 @@ Miscellaneous:
 - Add '-regtest' mode, similar to testnet but private with instant block
   generation with 'setgenerate' RPC.
 - Add 'linearize.py' script to contrib, for creating bootstrap.dat
-- Add separate bitcoin-cli client
+- Add separate revolt-cli client
 
 Credits
 --------

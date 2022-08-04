@@ -17,8 +17,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
-bitcoind/bitcoin-qt (on Linux).
+installer (on Windows) or just copy over /Applications/Revolt-Qt (on Mac) or
+revoltd/revolt-qt (on Linux).
 
 Downgrade warning
 ------------------
@@ -93,7 +93,7 @@ still cooperate to break transactions.  Nor does it replace the
 need for wallet software to handle malleability sanely[1]. This
 only eliminates the cheap and irritating DOS attack.
 
-[1] On the Malleability of Bitcoin Transactions
+[1] On the Malleability of Revolt Transactions
 Marcin Andrychowicz, Stefan Dziembowski, Daniel Malinowski, Łukasz Mazurek
 http://fc15.ifca.ai/preproceedings/bitcoin/paper_9.pdf
 
@@ -124,7 +124,7 @@ git merge commit are mentioned.
 - #6384 `8e5a969` qt: Force TLS1.0+ for SSL connections
 - #6471 `92401c2` Depends: bump to qt 5.5
 - #6224 `93b606a` Be even stricter in processing unrequested blocks
-- #6571 `100ac4e` libbitcoinconsensus: avoid a crash in multi-threaded environments
+- #6571 `100ac4e` librevoltconsensus: avoid a crash in multi-threaded environments
 - #6545 `649f5d9` Do not store more than 200 timedata samples.
 - #6694 `834e299` [QT] fix thin space word wrap line break issue
 - #6703 `1cd7952` Backport bugfixes to 0.11

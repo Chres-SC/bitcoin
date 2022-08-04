@@ -7,22 +7,22 @@ export LC_ALL=C
 TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 BUILDDIR=${BUILDDIR:-$TOPDIR}
 BINDIR=${BINDIR:-$BUILDDIR/src}
-BITCOIND=${BITCOIND:-$BINDIR/bitcoind}
+REVOLTD=${REVOLTD:-$BINDIR/revoltd}
 SHARE_EXAMPLES_DIR=${SHARE_EXAMPLES_DIR:-$TOPDIR/share/examples}
 EXAMPLE_CONF_FILE=${EXAMPLE_CONF_FILE:-$SHARE_EXAMPLES_DIR/bitcoin.conf}
 
-[ ! -x "$BITCOIND" ] && echo "$BITCOIND not found or not executable." && exit 1
+[ ! -x "$REVOLTD" ] && echo "$REVOLTD not found or not executable." && exit 1
 
 DIRTY=""
-VERSION_OUTPUT=$($BITCOIND --version)
+VERSION_OUTPUT=$($REVOLTD --version)
 if [[ $VERSION_OUTPUT == *"dirty"* ]]; then
-  DIRTY="${DIRTY}${BITCOIND}\n"
+  DIRTY="${DIRTY}${REVOLTD}\n"
 fi
 
 if [ -n "$DIRTY" ]
 then
-  echo -e "WARNING: $BITCOIND was built from a dirty tree.\n"
-  echo -e "To safely generate a bitcoin.conf file, please commit your changes to $BITCOIND, rebuild, then run this script again.\n"
+  echo -e "WARNING: $REVOLTD was built from a dirty tree.\n"
+  echo -e "To safely generate a bitcoin.conf file, please commit your changes to $REVOLTD, rebuild, then run this script again.\n"
 fi
 
 echo 'Generating example bitcoin.conf file in share/examples/'
@@ -46,10 +46,10 @@ cat > "${EXAMPLE_CONF_FILE}" << 'EOF'
 ### Options
 EOF
 
-# parse the output from bitcoind --help
+# parse the output from revoltd --help
 # adding newlines is a bit funky to ensure portability for BSD
 # see here for more details: https://stackoverflow.com/a/24575385
-${BITCOIND} --help \
+${REVOLTD} --help \
     | sed '1,/Print this help message and exit/d' \
     | sed -E 's/^[[:space:]]{2}\-/#/' \
     | sed -E 's/^[[:space:]]{7}/# /' \

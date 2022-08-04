@@ -65,7 +65,7 @@ public:
     virtual std::string getName() = 0;
 };
 
-//! Top-level interface for a revolt node (bitcoind process).
+//! Top-level interface for a revolt node (revoltd process).
 class Node
 {
 public:
