@@ -1160,4 +1160,4 @@ Thanks to everyone who directly contributed to this release:
 - Zero
 
 As well as to everyone that helped with translations on
-[Transifex](https://www.transifex.com/revolt/revolt/).
+[Transifex](https://www.transifex.com/bitcoin/bitcoin/).
