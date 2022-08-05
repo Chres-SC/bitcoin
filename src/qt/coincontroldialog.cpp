@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -507,7 +507,7 @@ void CoinControlDialog::updateLabels(CCoinControl& m_coin_control, WalletModel *
     }
 
     // actually update labels
-    RevoltUnit nDisplayUnit = RevoltUnit::BTC;
+    RevoltUnit nDisplayUnit = RevoltUnit::RVT;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 

@@ -1,0 +1,33 @@
+# /etc/conf.d/revoltd: config file for /etc/init.d/revoltd
+
+# Config file location
+#REVOLTD_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $REVOLTD_USER)
+#REVOLTD_PIDDIR="/var/run/revoltd"
+
+# What filename to give the pidfile
+#REVOLTD_PIDFILE="${REVOLTD_PIDDIR}/revoltd.pid"
+
+# Where to write revoltd data (be mindful that the blockchain is large)
+#REVOLTD_DATADIR="/var/lib/revoltd"
+
+# User and group to own revoltd process
+#REVOLTD_USER="bitcoin"
+#REVOLTD_GROUP="bitcoin"
+
+# Path to revoltd executable
+#REVOLTD_BIN="/usr/bin/revoltd"
+
+# Nice value to run revoltd under
+#REVOLTD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#REVOLTD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for revoltd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+REVOLTD_SIGTERM_TIMEOUT=600

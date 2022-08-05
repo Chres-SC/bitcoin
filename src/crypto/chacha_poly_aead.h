@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2021 The Bitcoin Core developers
+// Copyright (c) 2019-2021 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -96,7 +96,7 @@ static constexpr int AAD_PACKAGES_PER_ROUND = 21;        /* 64 / 3 round down*/
  * the receive channel, <code>K_1_B, K_2_B</code> MUST be used to encrypt messages
  * on the send channel.
  *
- * Optimized implementations of ChaCha20-Poly1305@bitcoin are relatively fast in
+ * Optimized implementations of ChaCha20-Poly1305@revolt are relatively fast in
  * general, therefore it is very likely that encrypted messages require not more
  * CPU cycles per bytes then the current unencrypted p2p message format
  * (ChaCha20/Poly1305 versus double SHA256).

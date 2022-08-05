@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -125,7 +125,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = GUIUtil::TextWidth(fm, RevoltUnits::format(RevoltUnit::BTC, RevoltUnits::maxMoney(), false, RevoltUnits::SeparatorStyle::ALWAYS));
+            int w = GUIUtil::TextWidth(fm, RevoltUnits::format(RevoltUnit::RVT, RevoltUnits::maxMoney(), false, RevoltUnits::SeparatorStyle::ALWAYS));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -150,7 +150,7 @@ public:
     }
 
 private:
-    RevoltUnit currentUnit{RevoltUnit::BTC};
+    RevoltUnit currentUnit{RevoltUnit::RVT};
     CAmount singleStep{CAmount(100000)}; // satoshis
     mutable QSize cachedMinimumSizeHint;
     bool m_allow_empty{true};

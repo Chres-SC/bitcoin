@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -166,13 +166,13 @@ bool OptionsModel::Init(bilingual_str& error)
 
     // Display
     if (!settings.contains("DisplayRevoltUnit")) {
-        settings.setValue("DisplayRevoltUnit", QVariant::fromValue(RevoltUnit::BTC));
+        settings.setValue("DisplayRevoltUnit", QVariant::fromValue(RevoltUnit::RVT));
     }
     QVariant unit = settings.value("DisplayRevoltUnit");
     if (unit.canConvert<RevoltUnit>()) {
         m_display_revolt_unit = unit.value<RevoltUnit>();
     } else {
-        m_display_revolt_unit = RevoltUnit::BTC;
+        m_display_revolt_unit = RevoltUnit::RVT;
         settings.setValue("DisplayRevoltUnit", QVariant::fromValue(m_display_revolt_unit));
     }
 
@@ -184,10 +184,10 @@ bool OptionsModel::Init(bilingual_str& error)
         settings.setValue("fCoinControlFeatures", false);
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
 
-    if (!settings.contains("enable_psbt_controls")) {
-        settings.setValue("enable_psbt_controls", false);
+    if (!settings.contains("enable_psrvt_controls")) {
+        settings.setValue("enable_psrvt_controls", false);
     }
-    m_enable_psbt_controls = settings.value("enable_psbt_controls", false).toBool();
+    m_enable_psrvt_controls = settings.value("enable_psrvt_controls", false).toBool();
 
     // These are shared with the core or have a command-line parameter
     // and we want command-line parameters to overwrite the GUI settings.
@@ -421,8 +421,8 @@ QVariant OptionsModel::getOption(OptionID option) const
         return m_use_embedded_monospaced_font;
     case CoinControlFeatures:
         return fCoinControlFeatures;
-    case EnablePSBTControls:
-        return settings.value("enable_psbt_controls");
+    case EnablePSRVTControls:
+        return settings.value("enable_psrvt_controls");
     case Prune:
         return PruneEnabled(setting());
     case PruneSize:
@@ -574,9 +574,9 @@ bool OptionsModel::setOption(OptionID option, const QVariant& value)
         settings.setValue("fCoinControlFeatures", fCoinControlFeatures);
         Q_EMIT coinControlFeaturesChanged(fCoinControlFeatures);
         break;
-    case EnablePSBTControls:
-        m_enable_psbt_controls = value.toBool();
-        settings.setValue("enable_psbt_controls", m_enable_psbt_controls);
+    case EnablePSRVTControls:
+        m_enable_psrvt_controls = value.toBool();
+        settings.setValue("enable_psrvt_controls", m_enable_psrvt_controls);
         break;
     case Prune:
         if (changed()) {

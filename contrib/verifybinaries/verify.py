@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020-2021 The Bitcoin Core developers
+# Copyright (c) 2020-2021 The Revolt Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Script for verifying Revolt Core release binaries
@@ -23,7 +23,7 @@ WORKINGDIR = "/tmp/revolt_verify_binaries"
 HASHFILE = "hashes.tmp"
 HOST1 = "https://bitcoincore.org"
 HOST2 = "https://bitcoin.org"
-VERSIONPREFIX = "bitcoin-core-"
+VERSIONPREFIX = "revolt-core-"
 SIGNATUREFILENAME = "SHA256SUMS.asc"
 
 

@@ -1,9 +1,9 @@
-// Copyright (c) 2018 The Bitcoin Core developers
+// Copyright (c) 2018 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <init.h>
-#include <qt/bitcoin.h>
+#include <qt/revolt.h>
 #include <qt/guiutil.h>
 #include <qt/test/optiontests.h>
 #include <test/util/setup_common.h>
@@ -93,8 +93,8 @@ void OptionTests::parametersInteraction()
 {
     // Test that the bug https://github.com/bitcoin-core/gui/issues/567 does not resurface.
     // It was fixed via https://github.com/bitcoin-core/gui/pull/568.
-    // With fListen=false in ~/.config/Bitcoin/Bitcoin-Qt.conf and all else left as default,
-    // bitcoin-qt should set both -listen and -listenonion to false and start successfully.
+    // With fListen=false in ~/.config/Revolt/Revolt-Qt.conf and all else left as default,
+    // revolt-qt should set both -listen and -listenonion to false and start successfully.
     gArgs.LockSettings([&](util::Settings& s) {
         s.forced_settings.erase("listen");
         s.forced_settings.erase("listenonion");

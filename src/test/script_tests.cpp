@@ -1526,7 +1526,7 @@ BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_returns_true)
     BOOST_CHECK_EQUAL(err, bitcoinconsensus_ERR_OK);
 }
 
-/* Test bitcoinconsensus_verify_script returns invalid tx index err*/
+/* Test Revoltconsensus_verify_script returns invalid tx index err*/
 BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_tx_index_err)
 {
     unsigned int libconsensus_flags = 0;
@@ -1549,7 +1549,7 @@ BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_tx_index_err)
     BOOST_CHECK_EQUAL(err, bitcoinconsensus_ERR_TX_INDEX);
 }
 
-/* Test bitcoinconsensus_verify_script returns tx size mismatch err*/
+/* Test Revoltconsensus_verify_script returns tx size mismatch err*/
 BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_tx_size)
 {
     unsigned int libconsensus_flags = 0;
@@ -1572,7 +1572,7 @@ BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_tx_size)
     BOOST_CHECK_EQUAL(err, bitcoinconsensus_ERR_TX_SIZE_MISMATCH);
 }
 
-/* Test bitcoinconsensus_verify_script returns invalid tx serialization error */
+/* Test Revoltconsensus_verify_script returns invalid tx serialization error */
 BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_tx_serialization)
 {
     unsigned int libconsensus_flags = 0;
@@ -1595,7 +1595,7 @@ BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_tx_serialization)
     BOOST_CHECK_EQUAL(err, bitcoinconsensus_ERR_TX_DESERIALIZE);
 }
 
-/* Test bitcoinconsensus_verify_script returns amount required error */
+/* Test Revoltconsensus_verify_script returns amount required error */
 BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_amount_required_err)
 {
     unsigned int libconsensus_flags = bitcoinconsensus_SCRIPT_FLAGS_VERIFY_WITNESS;
@@ -1618,7 +1618,7 @@ BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_amount_required_err)
     BOOST_CHECK_EQUAL(err, bitcoinconsensus_ERR_AMOUNT_REQUIRED);
 }
 
-/* Test bitcoinconsensus_verify_script returns invalid flags err */
+/* Test Revoltconsensus_verify_script returns invalid flags err */
 BOOST_AUTO_TEST_CASE(bitcoinconsensus_verify_script_invalid_flags)
 {
     unsigned int libconsensus_flags = 1 << 3;

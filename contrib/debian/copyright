@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Revolt
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
- irc://#bitcoin-core-dev@libera.chat
+ irc://#revolt-core-dev@libera.chat
 Source: https://github.com/bitcoin/bitcoin
 
 Files: *
@@ -77,7 +77,7 @@ Comment: Modifications of Stephen Hutchings' Typicons
 
 Files: src/qt/res/icons/bitcoin.*
        share/pixmaps/bitcoin*
-       src/qt/res/src/bitcoin.svg
+       src/qt/res/src/revolt.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
 Comment: Site: https://bitcointalk.org/?topic=1756.0

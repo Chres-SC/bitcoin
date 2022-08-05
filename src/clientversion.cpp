@@ -13,7 +13,7 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both bitcoind and bitcoin-qt, to make it harder for attackers to
+ * for both revoltd and revolt-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
 const std::string CLIENT_NAME("Satoshi");
@@ -82,7 +82,7 @@ std::string CopyrightHolders(const std::string& strPrefix)
     const auto copyright_devs = strprintf(_(COPYRIGHT_HOLDERS).translated, COPYRIGHT_HOLDERS_SUBSTITUTION);
     std::string strCopyrightHolders = strPrefix + copyright_devs;
 
-    // Make sure REVOLT Core copyright is not removed by accident
+    // Make sure Revolt Core copyright is not removed by accident
     if (copyright_devs.find("Revolt Core") == std::string::npos) {
         strCopyrightHolders += "\n" + strPrefix + "The Revolt Core developers";
     }

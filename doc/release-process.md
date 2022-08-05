@@ -8,7 +8,7 @@ Release Process
 * Update translations see [translation_process.md](https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#synchronising-translations).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`).
 * Update manpages (after rebuilding the binaries), see [gen-manpages.py](https://github.com/bitcoin/bitcoin/blob/master/contrib/devtools/README.md#gen-manpagespy).
-* Update bitcoin.conf and commit, see [gen-bitcoin-conf.sh](https://github.com/bitcoin/bitcoin/blob/master/contrib/devtools/README.md#gen-bitcoin-confsh).
+* Update bitcoin.conf and commit, see [gen-revolt-conf.sh](https://github.com/bitcoin/bitcoin/blob/master/contrib/devtools/README.md#gen-bitcoin-confsh).
 
 ### Before every major and minor release
 
@@ -46,11 +46,11 @@ Release Process
 - Clear the release notes and move them to the wiki (see "Write the release notes" below).
 - Translations on Transifex:
     - Pull translations from Transifex into the master branch.
-    - Create [a new resource](https://www.transifex.com/bitcoin/bitcoin/content/) named after the major version with the slug `[bitcoin.qt-translation-<RRR>x]`, where `RRR` is the major branch number padded with zeros. Use `src/qt/locale/bitcoin_en.xlf` to create it.
+    - Create [a new resource](https://www.transifex.com/bitcoin/bitcoin/content/) named after the major version with the slug `[revolt.qt-translation-<RRR>x]`, where `RRR` is the major branch number padded with zeros. Use `src/qt/locale/revolt_en.xlf` to create it.
     - In the project workflow settings, ensure that [Translation Memory Fill-up](https://docs.transifex.com/translation-memory/enabling-autofill) is enabled and that [Translation Memory Context Matching](https://docs.transifex.com/translation-memory/translation-memory-with-context) is disabled.
     - Update the Transifex slug in [`.tx/config`](/.tx/config) to the slug of the resource created in the first step. This identifies which resource the translations will be synchronized from.
     - Make an announcement that translators can start translating for the new version. You can use one of the [previous announcements](https://www.transifex.com/bitcoin/bitcoin/announcements/) as a template.
-    - Change the auto-update URL for the resource to `master`, e.g. `https://raw.githubusercontent.com/bitcoin/bitcoin/master/src/qt/locale/bitcoin_en.xlf`. (Do this only after the previous steps, to prevent an auto-update from interfering.)
+    - Change the auto-update URL for the resource to `master`, e.g. `https://raw.githubusercontent.com/bitcoin/bitcoin/master/src/qt/locale/revolt_en.xlf`. (Do this only after the previous steps, to prevent an auto-update from interfering.)
 
 #### After branch-off (on the major release branch)
 
@@ -59,7 +59,7 @@ Release Process
 - Clear the release notes: `cp doc/release-notes-empty-template.md doc/release-notes.md`
 - Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/bitcoin/bitcoin/issues/17079) for an example) and provide a link to it in the release announcements where useful.
 - Translations on Transifex
-    - Change the auto-update URL for the new major version's resource away from `master` and to the branch, e.g. `https://raw.githubusercontent.com/bitcoin/bitcoin/<branch>/src/qt/locale/bitcoin_en.xlf`. Do not forget this or it will keep tracking the translations on master instead, drifting away from the specific major release.
+    - Change the auto-update URL for the new major version's resource away from `master` and to the branch, e.g. `https://raw.githubusercontent.com/bitcoin/bitcoin/<branch>/src/qt/locale/revolt_en.xlf`. Do not forget this or it will keep tracking the translations on master instead, drifting away from the specific major release.
 
 #### Before final release
 
@@ -102,7 +102,7 @@ Generate list of authors:
 
 ### Setup and perform Guix builds
 
-Checkout the Bitcoin Core version you'd like to build:
+Checkout the Revolt Core version you'd like to build:
 
 ```sh
 pushd ./bitcoin
@@ -158,7 +158,7 @@ popd
 
 ### Windows codesigner only: Create detached Windows signatures
 
-    tar xf bitcoin-win-unsigned.tar.gz
+    tar xf revolt-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
@@ -215,7 +215,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 ```
 
 
-- Upload to the bitcoincore.org server (`/var/www/bin/bitcoin-core-${VERSION}/`):
+- Upload to the bitcoincore.org server (`/var/www/bin/revolt-core-${VERSION}/`):
     1. The contents of each `./bitcoin/guix-build-${VERSION}/output/${HOST}/` directory, except for
        `*-debug*` files.
 
@@ -232,15 +232,15 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
        nor put them in the torrent*.
 
        ```sh
-       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@bitcoincore.org:/var/www/bin/bitcoin-core-${VERSION} \;
+       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@bitcoincore.org:/var/www/bin/revolt-core-${VERSION} \;
        ```
 
     2. The `SHA256SUMS` file
 
     3. The `SHA256SUMS.asc` combined signature file you just created
 
-- Create a torrent of the `/var/www/bin/bitcoin-core-${VERSION}` directory such
-  that at the top level there is only one file: the `bitcoin-core-${VERSION}`
+- Create a torrent of the `/var/www/bin/revolt-core-${VERSION}` directory such
+  that at the top level there is only one file: the `revolt-core-${VERSION}`
   directory containing everything else. Name the torrent
   `bitcoin-${VERSION}.torrent` (note that there is no `-core-` in this name).
 
@@ -270,19 +270,19 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
       - Install [golang](https://golang.org/doc/install)
 
-      - Install the new Bitcoin Core release
+      - Install the new Revolt Core release
 
-      - Run bitcoind on regtest
+      - Run revoltd on regtest
 
       - Clone the [bitcoincore.org repository](https://github.com/bitcoin-core/bitcoincore.org)
 
-      - Run: `go run generate.go` while being in `contrib/doc-gen` folder, and with bitcoin-cli in PATH
+      - Run: `go run generate.go` while being in `contrib/doc-gen` folder, and with revolt-cli in PATH
 
       - Add the generated files to git
 
   - Update packaging repo
 
-      - Push the flatpak to flathub, e.g. https://github.com/flathub/org.bitcoincore.bitcoin-qt/pull/2
+      - Push the flatpak to flathub, e.g. https://github.com/flathub/org.bitcoincore.revolt-qt/pull/2
 
       - Push the snap, see https://github.com/bitcoin-core/packaging/blob/master/snap/build.md
 
@@ -294,11 +294,11 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
 - Announce the release:
 
-  - bitcoin-dev and bitcoin-core-dev mailing list
+  - bitcoin-dev and revolt-core-dev mailing list
 
-  - Bitcoin Core announcements list https://bitcoincore.org/en/list/announcements/join/
+  - Revolt Core announcements list https://bitcoincore.org/en/list/announcements/join/
 
-  - Bitcoin Core Twitter https://twitter.com/bitcoincoreorg
+  - Revolt Core Twitter https://twitter.com/bitcoincoreorg
 
   - Celebrate
 

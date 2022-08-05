@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -245,7 +245,7 @@ void OptionsDialog::setMapper()
     mapper->addMapping(ui->coinControlFeatures, OptionsModel::CoinControlFeatures);
     mapper->addMapping(ui->subFeeFromAmount, OptionsModel::SubFeeFromAmount);
     mapper->addMapping(ui->externalSignerPath, OptionsModel::ExternalSignerPath);
-    mapper->addMapping(ui->m_enable_psbt_controls, OptionsModel::EnablePSBTControls);
+    mapper->addMapping(ui->m_enable_psrvt_controls, OptionsModel::EnablePSRVTControls);
 
     /* Network */
     mapper->addMapping(ui->mapPortUpnp, OptionsModel::MapPortUPnP);

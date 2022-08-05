@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Revolt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -181,7 +181,7 @@ std::string PSBTOperationsDialog::renderTransaction(const PartiallySignedTransac
         ExtractDestination(out.scriptPubKey, address);
         totalAmount += out.nValue;
         tx_description.append(tr(" * Sends %1 to %2")
-            .arg(RevoltUnits::formatWithUnit(RevoltUnit::BTC, out.nValue))
+            .arg(RevoltUnits::formatWithUnit(RevoltUnit::RVT, out.nValue))
             .arg(QString::fromStdString(EncodeDestination(address))));
         tx_description.append("<br>");
     }
@@ -193,7 +193,7 @@ std::string PSBTOperationsDialog::renderTransaction(const PartiallySignedTransac
         tx_description.append(tr("Unable to calculate transaction fee or total transaction amount."));
     } else {
         tx_description.append(tr("Pays transaction fee: "));
-        tx_description.append(RevoltUnits::formatWithUnit(RevoltUnit::BTC, *analysis.fee));
+        tx_description.append(RevoltUnits::formatWithUnit(RevoltUnit::RVT, *analysis.fee));
 
         // add total amount in all subdivision units
         tx_description.append("<hr />");

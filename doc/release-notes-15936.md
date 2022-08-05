@@ -1,10 +1,10 @@
 GUI changes
 -----------
 
-Configuration changes made in the bitcoin GUI (such as the pruning setting,
+Configuration changes made in the revolt-gui (such as the pruning setting,
 proxy settings, UPNP preferences) are now saved to `<datadir>/settings.json`
 file rather than to the Qt settings backend (windows registry or unix desktop
-config files), so these settings will now apply to bitcoind, instead of being
+config files), so these settings will now apply to revoltd, instead of being
 ignored.
 
 Also, the interaction between GUI settings and `bitcoin.conf` settings is
