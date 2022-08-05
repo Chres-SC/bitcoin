@@ -39,9 +39,9 @@ fi
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef BITCOIN_CONFIG_H])
-AH_TOP([#define BITCOIN_CONFIG_H])
-AH_BOTTOM([#endif //BITCOIN_CONFIG_H])
+AH_TOP([#ifndef REVOLT_CONFIG_H])
+AH_TOP([#define REVOLT_CONFIG_H])
+AH_BOTTOM([#endif //REVOLT_CONFIG_H])
 
 dnl Automake init set-up and checks
 AM_INIT_AUTOMAKE([1.13 no-define subdir-objects foreign])
@@ -627,32 +627,32 @@ CORE_CPPFLAGS="$CORE_CPPFLAGS -DHAVE_BUILD_INFO"
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
   [build revolt-cli revolt-tx revolt-util revolt-wallet (default=yes)])],
-  [build_bitcoin_utils=$withval],
-  [build_bitcoin_utils=yes])
+  [build_revolt_utils=$withval],
+  [build_revolt_utils=yes])
 
 AC_ARG_ENABLE([util-cli],
   [AS_HELP_STRING([--enable-util-cli],
   [build revolt-cli])],
   [build_revolt_cli=$enableval],
-  [build_revolt_cli=$build_bitcoin_utils])
+  [build_revolt_cli=$build_revolt_utils])
 
 AC_ARG_ENABLE([util-tx],
   [AS_HELP_STRING([--enable-util-tx],
   [build revolt-tx])],
   [build_revolt_tx=$enableval],
-  [build_revolt_tx=$build_bitcoin_utils])
+  [build_revolt_tx=$build_revolt_utils])
 
 AC_ARG_ENABLE([util-wallet],
   [AS_HELP_STRING([--enable-util-wallet],
   [build revolt-wallet])],
   [build_revolt_wallet=$enableval],
-  [build_revolt_wallet=$build_bitcoin_utils])
+  [build_revolt_wallet=$build_revolt_utils])
 
 AC_ARG_ENABLE([util-util],
   [AS_HELP_STRING([--enable-util-util],
   [build revolt-util])],
   [build_revolt_util=$enableval],
-  [build_revolt_util=$build_bitcoin_utils])
+  [build_revolt_util=$build_revolt_utils])
 
 AC_ARG_ENABLE([experimental-util-chainstate],
   [AS_HELP_STRING([--enable-experimental-util-chainstate],
@@ -668,7 +668,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([experimental-kernel-lib],
   [AS_HELP_STRING([--with-experimental-kernel-lib],
-  [build experimental bitcoinkernel library (default is to build if we're building libraries and the experimental build-chainstate executable)])],
+  [build experimental revoltkernel library (default is to build if we're building libraries and the experimental build-chainstate executable)])],
   [build_experimental_kernel_lib=$withval],
   [build_experimental_kernel_lib=auto])
 
@@ -1291,7 +1291,7 @@ AC_DEFUN([SUPPRESS_WARNINGS],
 dnl enable-fuzz should disable all other targets
 if test "$enable_fuzz" = "yes"; then
   AC_MSG_WARN([enable-fuzz will disable all other targets and force --enable-fuzz-binary=yes])
-  build_bitcoin_utils=no
+  build_revolt_utils=no
   build_revolt_cli=no
   build_revolt_tx=no
   build_revolt_util=no
@@ -1312,10 +1312,10 @@ if test "$enable_fuzz" = "yes"; then
 
   AX_CHECK_PREPROC_FLAG([-DABORT_ON_FAILED_ASSUME], [DEBUG_CPPFLAGS="$DEBUG_CPPFLAGS -DABORT_ON_FAILED_ASSUME"], [], [$CXXFLAG_WERROR])
 else
-  BITCOIN_QT_INIT
+  REVOLT_QT_INIT
 
   dnl sets $revolt_enable_qt, $revolt_enable_qt_test, $revolt_enable_qt_dbus
-  BITCOIN_QT_CONFIGURE([5.11.3])
+  REVOLT_QT_CONFIGURE([5.11.3])
 
   dnl Keep a copy of the original $QT_INCLUDES and use it when invoking qt's moc
   QT_INCLUDES_UNSUPPRESSED=$QT_INCLUDES
@@ -1599,7 +1599,7 @@ fi
 dnl QR Code encoding library check
 
 if test "$use_qr" != "no"; then
-  BITCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
+  REVOLT_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
 fi
 
 dnl ZMQ check
@@ -1685,7 +1685,7 @@ AC_MSG_RESULT($build_revolt_util)
 
 AC_MSG_CHECKING([whether to build experimental revolt-chainstate])
 if test "$build_experimental_kernel_lib" = "no"; then
-AC_MSG_ERROR([experimental revolt-chainstate cannot be built without the experimental bitcoinkernel library. Use --with-experimental-kernel-lib]);
+AC_MSG_ERROR([experimental revolt-chainstate cannot be built without the experimental revoltkernel library. Use --with-experimental-kernel-lib]);
 else
   AM_CONDITIONAL([BUILD_REVOLT_CHAINSTATE], [test $build_revolt_chainstate = "yes"])
 fi
@@ -1699,7 +1699,7 @@ if test "$build_revolt_libs" = "yes"; then
   AC_CONFIG_FILES([librevoltconsensus.pc:librevoltconsensus.pc.in])
 fi
 
-AM_CONDITIONAL([BUILD_BITCOIN_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_revolt_chainstate" = "yes" )])
+AM_CONDITIONAL([BUILD_REVOLT_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_revolt_chainstate" = "yes" )])
 
 AC_MSG_RESULT($build_revolt_libs)
 
@@ -1969,7 +1969,7 @@ AC_CONFIG_LINKS([contrib/devtools/security-check.py:contrib/devtools/security-ch
 AC_CONFIG_LINKS([contrib/devtools/symbol-check.py:contrib/devtools/symbol-check.py])
 AC_CONFIG_LINKS([contrib/devtools/test-security-check.py:contrib/devtools/test-security-check.py])
 AC_CONFIG_LINKS([contrib/devtools/test-symbol-check.py:contrib/devtools/test-symbol-check.py])
-AC_CONFIG_LINKS([contrib/devtools/iwyu/bitcoin.core.imp:contrib/devtools/iwyu/bitcoin.core.imp])
+AC_CONFIG_LINKS([contrib/devtools/iwyu/revolt.core.imp:contrib/devtools/iwyu/revolt.core.imp])
 AC_CONFIG_LINKS([contrib/filter-lcov.py:contrib/filter-lcov.py])
 AC_CONFIG_LINKS([contrib/macdeploy/background.tiff:contrib/macdeploy/background.tiff])
 AC_CONFIG_LINKS([src/.bear-tidy-config:src/.bear-tidy-config])
