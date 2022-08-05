@@ -1,0 +1,93 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/revolt/.revolt" ]; then
+	REVOLTD_DEFAULT_DATADIR="/var/lib/revolt/.revolt"
+else
+	REVOLTD_DEFAULT_DATADIR="/var/lib/revoltd"
+fi
+
+REVOLTD_CONFIGFILE=${REVOLTD_CONFIGFILE:-/etc/revolt/revolt.conf}
+REVOLTD_PIDDIR=${REVOLTD_PIDDIR:-/var/run/revoltd}
+REVOLTD_PIDFILE=${REVOLTD_PIDFILE:-${REVOLTD_PIDDIR}/revoltd.pid}
+REVOLTD_DATADIR=${REVOLTD_DATADIR:-${REVOLTD_DEFAULT_DATADIR}}
+REVOLTD_USER=${REVOLTD_USER:-${REVOLT_USER:-revolt}}
+REVOLTD_GROUP=${REVOLTD_GROUP:-revolt}
+REVOLTD_BIN=${REVOLTD_BIN:-/usr/bin/revoltd}
+REVOLTD_NICE=${REVOLTD_NICE:-${NICELEVEL:-0}}
+REVOLTD_OPTS="${REVOLTD_OPTS:-${REVOLT_OPTS}}"
+
+name="Revolt Core Daemon"
+description="Revolt cryptocurrency P2P network daemon"
+
+command="/usr/bin/revoltd"
+command_args="-pid=\"${REVOLTD_PIDFILE}\" \
+		-conf=\"${REVOLTD_CONFIGFILE}\" \
+		-datadir=\"${REVOLTD_DATADIR}\" \
+		-daemon \
+		${REVOLTD_OPTS}"
+
+required_files="${REVOLTD_CONFIGFILE}"
+start_stop_daemon_args="-u ${REVOLTD_USER} \
+			-N ${REVOLTD_NICE} -w 2000"
+pidfile="${REVOLTD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${REVOLTD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${REVOLTD_USER}:${REVOLTD_GROUP}" \
+	"${REVOLTD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${REVOLTD_USER}:${REVOLTD_GROUP}" \
+	"${REVOLTD_PIDDIR}"
+
+	checkpath -f \
+	-o "${REVOLTD_USER}:${REVOLTD_GROUP}" \
+	-m 0660 \
+	"${REVOLTD_CONFIGFILE}"
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if grep -qs '^rpcuser=' "${REVOLTD_CONFIGFILE}" && \
+		! grep -qs '^rpcpassword=' "${REVOLTD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run revoltd."
+		eerror "The setting must appear in ${REVOLTD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Revolt Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

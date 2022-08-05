@@ -132,7 +132,7 @@ chain for " target " development."))
 (define base-gcc gcc-10)
 (define base-linux-kernel-headers linux-libre-headers-5.15)
 
-(define* (make-bitcoin-cross-toolchain target
+(define* (make-revolt-cross-toolchain target
                                        #:key
                                        (base-gcc-for-libc base-gcc)
                                        (base-kernel-headers base-linux-kernel-headers)
@@ -540,7 +540,7 @@ inspecting signatures in Mach-O binaries.")
                                            "glibc-2.24-fcommon.patch"
                                            "glibc-2.24-guix-prefix.patch"))))))
 
-(define-public glibc-2.27/bitcoin-patched
+(define-public glibc-2.27/revolt-patched
   (package
     (inherit glibc-2.31)
     (version "2.27")
@@ -606,11 +606,11 @@ inspecting signatures in Mach-O binaries.")
                  osslsigncode))
           ((string-contains target "-linux-")
            (list (cond ((string-contains target "riscv64-")
-                        (make-bitcoin-cross-toolchain target
-                                                      #:base-libc (make-glibc-without-werror glibc-2.27/bitcoin-patched)
+                        (make-revolt-cross-toolchain target
+                                                      #:base-libc (make-glibc-without-werror glibc-2.27/revolt-patched)
                                                       #:base-kernel-headers base-linux-kernel-headers))
                        (else
-                        (make-bitcoin-cross-toolchain target)))))
+                        (make-revolt-cross-toolchain target)))))
           ((string-contains target "darwin")
            (list clang-toolchain-10 binutils cmake xorriso python-signapple))
           (else '())))))

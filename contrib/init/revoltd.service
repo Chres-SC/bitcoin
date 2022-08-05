@@ -5,7 +5,7 @@
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/bitcoin/bitcoin.conf, but keep in mind those explicitly
+# /etc/revolt/revolt.conf, but keep in mind those explicitly
 # specified as arguments in ExecStart= will override those in the
 # config file.
 
@@ -20,12 +20,12 @@ Wants=network-online.target
 [Service]
 ExecStart=/usr/bin/revoltd -daemonwait \
                             -pid=/run/revoltd/revoltd.pid \
-                            -conf=/etc/bitcoin/bitcoin.conf \
+                            -conf=/etc/revolt/revolt.conf \
                             -datadir=/var/lib/revoltd
 
 # Make sure the config directory is readable by the service user
 PermissionsStartOnly=true
-ExecStartPre=/bin/chgrp bitcoin /etc/bitcoin
+ExecStartPre=/bin/chgrp revolt /etc/revolt
 
 # Process management
 ####################
@@ -39,16 +39,16 @@ TimeoutStopSec=600
 # Directory creation and permissions
 ####################################
 
-# Run as bitcoin:bitcoin
-User=bitcoin
-Group=bitcoin
+# Run as revolt:revolt
+User=revolt
+Group=revolt
 
 # /run/revoltd
 RuntimeDirectory=revoltd
 RuntimeDirectoryMode=0710
 
-# /etc/bitcoin
-ConfigurationDirectory=bitcoin
+# /etc/revolt
+ConfigurationDirectory=revolt
 ConfigurationDirectoryMode=0710
 
 # /var/lib/revoltd

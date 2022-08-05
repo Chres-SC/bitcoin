@@ -12,7 +12,7 @@ if [ -z "${1}" ]; then
   echo "Usage: $0 <base-dir> [<extra-bdb-configure-flag> ...]"
   echo
   echo "Must specify a single argument: the directory in which db4 will be built."
-  echo "This is probably \`pwd\` if you're at the root of the bitcoin repository."
+  echo "This is probably \`pwd\` if you're at the root of the revolt repository."
   exit 1
 fi
 
@@ -229,7 +229,7 @@ EOF
 
 # The packaged config.guess and config.sub are ancient (2009) and can cause build issues.
 # Replace them with modern versions.
-# See https://github.com/bitcoin/bitcoin/issues/16064
+# See https://github.com/revolt/revolt/issues/16064
 CONFIG_GUESS_URL='https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=4550d2f15b3a7ce2451c1f29500b9339430c877f'
 CONFIG_GUESS_HASH='c8f530e01840719871748a8071113435bdfdf75b74c57e78e47898edea8754ae'
 CONFIG_SUB_URL='https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=4550d2f15b3a7ce2451c1f29500b9339430c877f'
